@@ -113,6 +113,7 @@ content="Find custom mechanical keyboard builders and artisans across India.">
 .contact-icon.ci-phone{background:var(--green);color:#111;border-color:var(--border)}
 .contact-icon.ci-whatsapp{background:#25D366;color:#fff;border-color:var(--border)}
 .contact-icon.ci-discord{background:#5865F2;color:#fff;border-color:var(--border)}
+.contact-icon.ci-reddit{background:#FF4500;color:#fff;border-color:var(--border)}
 .builder-page-wrap{padding-bottom:80px}
 /* Info box */
 .info-box{background:var(--border);border:2px solid var(--border);box-shadow:var(--sh-lg);padding:28px;color:var(--surface)}
@@ -353,6 +354,7 @@ document.addEventListener("DOMContentLoaded", () => {
           ${b.phone ? `<a href="tel:${b.phone}" class="contact-icon ci-phone">📱 Call</a>` : ""}
           ${b.whatsapp ? `<a href="https://wa.me/${b.whatsapp.replace(/\D/g,'')}" target="_blank" rel="noopener" class="contact-icon ci-whatsapp">💬 WhatsApp</a>` : ""}
           ${b.discord ? `<a href="${b.discord}" target="_blank" rel="noopener" class="contact-icon ci-discord">🎧 Discord</a>` : ""}
+          ${b.reddit ? `<a href="${b.reddit}" target="_blank" rel="noopener" class="contact-icon ci-reddit">🟠 Reddit</a>` : ""}
         </div>
       </div>
     `;
