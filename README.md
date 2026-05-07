@@ -9,12 +9,27 @@
       Vendors · Builders · Brand Stores · No ads. No affiliates. Just data.<br><br>
       <a href="https://keydir.in">🌐 keydir.in</a> &nbsp;·&nbsp;
       <a href="https://github.com/SHADOW269/keydir.in/issues/new">🐛 Report an issue</a> &nbsp;·&nbsp;
-      <a href="https://github.com/SHADOW269/keydir.in/fork">🍴 Fork & contribute</a>
+      <a href="https://github.com/SHADOW269/keydir.in/fork">🍴 Fork & contribute</a> &nbsp;·&nbsp;
+      <a href="https://github.com/SHADOW269/App.Keydir.in">🚀 App (WIP)</a>
     </td>
   </tr>
 </table>
 
 ---
+
+## 📌 Quick Navigation
+
+- [What's inside](#whats-inside)
+- [Categories](#categories)
+- [Features](#features)
+- [Tech stack](#tech-stack)
+- [Project structure](#project-structure)
+- [Contributing](#contributing)
+- [Reporting issues](#reporting-issues)
+- [Project goals](#project-goals)
+- [Roadmap](#️-roadmap)
+- [Related projects](#related-projects)
+- [License](#license)
 
 ## What's inside
 
@@ -23,7 +38,7 @@
 | **Vendors** | Verified Indian keyboard vendors, filterable by category |
 | **DIY Builders** | Custom cable makers, artisan keycap crafters, bespoke keyboard services |
 | **Brand Stores** | Official India storefronts — Keychron, Redragon, TVS, and more |
-| **Marketplace** | Amazon India & Flipkart keyboard search links |
+| **Surface** | Verified Indian Mousepad deskpad and glasspad vendors.  |
 | **Beginner's Guide** | Friendly mechanical keyboard buying & modding guide |
 
 ---
@@ -32,7 +47,7 @@
 
 The vendor directory supports filtering across **15 categories**:
 
-`Pre-built` `Barebone` `Switches` `Keycaps` `Parts / Tools` `Accessories` `Mouse` `Deskpad` `Glasspads` `PC Parts` `Hall Effect` `Alice` `Split` `Low Profile`
+`Pre-built` `Barebone` `Switches` `Keycaps` `Parts / Tools` `Accessories` `Mouse` `Mousepad` `Deskpad` `Glass-pad` `PC Parts` `Hall Effect` `Alice` `Split` `Low-Profile`
 
 ---
 
@@ -40,10 +55,11 @@ The vendor directory supports filtering across **15 categories**:
 
 - 🇮🇳 India-focused vendor discovery
 - ⚡ Fast static site — no frameworks, no bloat
-- 🔍 Category-based filtering
+- 🔍 Multi-select category filtering with search
+- 🏷️ Clickable category badges on each vendor card
 - 🧩 Builder and brand store listings
 - ⚠️ Community warning flags for vendor concerns
-- 📚 Beginner-friendly guide
+- 📚 Beginner-friendly modding guide
 - 🧼 Zero ads, zero tracking, zero affiliate links
 
 ---
@@ -75,8 +91,10 @@ keydir.in/
 ├── assets/
 │   ├── img/
 │   ├── css/
+│   │   └── style.css
 │   └── js/
-│       └── shared.js       ← edit vendor data here
+│       ├── shared.js       ← edit vendor data here
+│       └── theme.js
 └── README.md
 ```
 
@@ -118,7 +136,7 @@ https://github.com/SHADOW269/keydir.in/fork
 
 ✅ Vendor operates in India  
 ✅ URL is live and working  
-✅ Categories match `CAT_META`  
+✅ Categories match `CAT_META` in `shared.js`  
 ✅ Descriptions are neutral and factual  
 ❌ No affiliate links  
 ❌ No sponsored placements  
@@ -158,9 +176,44 @@ KEYDIR exists to:
 
 ---
 
+## 🗺️ Roadmap
+
+### Directory Improvements
+
+* Clickable category badges for quick filtering
+* Separate keyboard and mouse/deskpad vendor sections
+* Vendors selling both categories will appear in both using tags
+* Better filtering for accessories, switches, keycaps, and deskpads
+* Vendor last-verified dates
+* Group buy tracker
+
+### Aggregator — App.Keydir.in
+
+[App.Keydir.in](https://github.com/SHADOW269/App.Keydir.in) is an advanced keyboard product aggregator currently in development.
+
+Current progress includes:
+
+* Multi-vendor product scraping
+* Product normalization and aggregation
+* Search and filtering system
+* Product comparison UI
+* Docker-based local development setup
+* PCPartPicker-style comparison platform for Indian keyboard vendors
+
+---
+
+## Related projects
+
+| Project | Description |
+| --- | --- |
+| [KEYDIR.in](https://keydir.in) | This repo — static community directory |
+| [App.Keydir.in](https://github.com/SHADOW269/App.Keydir.in) | Advanced keyboard aggregator app (WIP) |
+
+---
+
 ## License
 
-[MIT](LICENSE) — free to fork, modify, and redistribute. Attribution appreciated but not required.
+Non-Commercial Community Use License — free to fork, modify, and use for non-commercial purposes. Attribution required. See [LICENSE](LICENSE) for full terms.
 
 ---
 
