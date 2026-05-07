@@ -84,7 +84,7 @@ keydir.in/
 ├── vendors/index.html
 ├── builders/index.html
 ├── brands/index.html
-├── marketplace/index.html
+├── surfaces/index.html
 ├── guide/index.html
 ├── about/index.html
 ├── Terms-and-Conditions/index.html
@@ -93,6 +93,7 @@ keydir.in/
 │   ├── css/
 │   │   └── style.css
 │   └── js/
+│       ├── keydir-popup.js ← mention the new updates here
 │       ├── shared.js       ← edit vendor data here
 │       └── theme.js
 └── README.md
