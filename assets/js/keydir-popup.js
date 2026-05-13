@@ -18,6 +18,12 @@ const POPUP_DATA = {
   /* ── NEW VENDORS ── */
   new_vendors: [
     {
+      name: "Conceptkart",
+      url: "https://conceptkart.com/pages/keyboard-mouse",
+      cats: ["Pre-built","Hall Effect","Mouse","Accessories"],
+      added: "May 2026"
+    },
+    {
       name: "Friction builds",
       url: "https://docs.google.com/document/d/e/2PACX-1vQlbWhsI1WGu0wSb3qZKR7EIvoXzU4ZlMLlk3Xd4xf6R7GtLIC9vGeFDsoyMzWxa2y7p9L-60B5mtpP/pub",
       cats: ["Split-keyboards"],
@@ -28,18 +34,6 @@ const POPUP_DATA = {
       url: "https://docs.google.com/document/d/e/2PACX-1vTgzL4WWdAgfIhWp30W5CC2cd7HodrE8Pbhl9rsO7SG3YdN6rYHc-2U0nX4amCVsrrW7sGc3XoDJWWP/pub",
       cats: ["Split-keyboards"],
       added: "May 2026"
-    },
-    {
-      name: "CredKeys",
-      url: "https://credkeys.com/",
-      cats: ["Pre-built","Switches","Keycaps","Parts/Tools","Accessories"],
-      added: "April 2026"
-    },
-    {
-      name: "ClawGear",
-      url: "https://clawgears.in/",
-      cats: ["Mouse-pad"],
-      added: "April 2026"
     },
   ],
 
@@ -482,8 +476,33 @@ function buildKeyDirPopup() {
   });
 }
 
-/* ── Show popup after page loads ── */
+/* ── Show popup only once every 7 days ── */
+
+const POPUP_KEY = "keydir_popup_last_seen";
+const WEEK_IN_MS = 7 * 24 * 60 * 60 * 1000;
+
 document.addEventListener("DOMContentLoaded", () => {
-  /* Slight delay so the page has time to render first */
-  setTimeout(buildKeyDirPopup, 600);
+
+  function shouldShowPopup() {
+    const lastSeen = localStorage.getItem(POPUP_KEY);
+
+    // First visit
+    if (!lastSeen) return true;
+
+    // Show again after 7 days
+    return (Date.now() - parseInt(lastSeen, 10)) > WEEK_IN_MS;
+  }
+
+  if (shouldShowPopup()) {
+
+    /* Slight delay so the page has time to render first */
+    setTimeout(() => {
+      buildKeyDirPopup();
+
+      // Save current timestamp
+      localStorage.setItem(POPUP_KEY, Date.now());
+    }, 600);
+
+  }
+
 });
