@@ -18,6 +18,12 @@ const POPUP_DATA = {
   /* ── NEW VENDORS ── */
   new_vendors: [
     {
+      name: "Ajazz Official",
+      url: "https://www.ajazz.in/",
+      cats: ["Pre-built","Hall Effect","Mouse"],
+      added: "May 2026"
+    },
+    {
       name: "Conceptkart",
       url: "https://conceptkart.com/pages/keyboard-mouse",
       cats: ["Pre-built","Hall Effect","Mouse","Accessories"],
