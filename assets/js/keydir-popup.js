@@ -13,10 +13,16 @@
 const POPUP_DATA = {
 
   /* Version string — increment this to re-show popup to returning visitors */
-  version: "2026-05-01",
+  version: "2026-05-25",
 
   /* ── NEW VENDORS ── */
   new_vendors: [
+    {
+      name: "erikaSKOOL",
+      url: "https://docs.google.com/document/d/1xcAW0eiM7f9JBxXdp6SL5fg15mM-IWZvxRduPwHza0M/edit?tab=t.0",
+      cats: ["Build-Services"],
+      added: "May 2026"
+    },
     {
       name: "SmallFormFactor",
       url: "https://smallformfactor.in/collections/keycaps",
@@ -26,34 +32,22 @@ const POPUP_DATA = {
     {
       name: "Ajazz Official LAUNCHING 20TH MAY 2026",
       url: "https://www.ajazz.in/",
-      cats: ["Pre-built","Hall Effect","Mouse"],
+      cats: ["Pre-built", "Hall Effect", "Mouse"],
       added: "May 2026"
     },
     {
       name: "Conceptkart",
       url: "https://conceptkart.com/pages/keyboard-mouse",
-      cats: ["Pre-built","Hall Effect","Mouse","Accessories"],
-      added: "May 2026"
-    },
-    {
-      name: "Friction builds",
-      url: "https://docs.google.com/document/d/e/2PACX-1vQlbWhsI1WGu0wSb3qZKR7EIvoXzU4ZlMLlk3Xd4xf6R7GtLIC9vGeFDsoyMzWxa2y7p9L-60B5mtpP/pub",
-      cats: ["Split-keyboards"],
-      added: "May 2026"
-    },
-    {
-      name: "Moon's Peripheral Assembly & Repair Hub",
-      url: "https://docs.google.com/document/d/e/2PACX-1vTgzL4WWdAgfIhWp30W5CC2cd7HodrE8Pbhl9rsO7SG3YdN6rYHc-2U0nX4amCVsrrW7sGc3XoDJWWP/pub",
-      cats: ["Split-keyboards"],
+      cats: ["Pre-built", "Hall Effect", "Mouse", "Accessories"],
       added: "May 2026"
     },
   ],
 
   /* ── UPDATES / CHANGELOG ── */
   updates: [
+    { icon: "🛠", text: "8 new builders have been added to the directory." },
     { icon: "⬛", text: "Added Mousepad and Glass-pad as separate Pages as Surfaces" },
-    { icon: "⬛", text: "Added Mousepad and Glass-pad as separate filter categories" },
-    { icon: "⌨", text:  "21 vendors now listed — up from 19 last month" },
+    { icon: "⌨", text: "24 vendors now listed — up from 19 last month" },
     { icon: "📏", text: "Third-party sellers section expanded to 15 entries" },
   ],
 
@@ -326,13 +320,14 @@ const POPUP_DATA = {
 /* ══════════════════════════════════════════════════════════════
    POPUP RENDERER
    ══════════════════════════════════════════════════════════════ */
-function buildKeyDirPopup() {
+function buildKeyDirPopup(force = false) {
   const { new_vendors, updates, version } = POPUP_DATA;
 
   /* ── Already dismissed this version? Skip. ── */
   const seen = localStorage.getItem("kd-popup-seen");
-  if (seen === version) return;
-
+  if (!force && seen === version) {
+    return;
+  }
   /* ── Build HTML ── */
   const overlay = document.createElement("div");
   overlay.id = "kd-overlay";
@@ -455,15 +450,15 @@ function buildKeyDirPopup() {
   document.body.appendChild(overlay);
 
   /* ── Tab switching ── */
-  const tabs    = overlay.querySelectorAll(".kd-tab");
-  const panels  = overlay.querySelectorAll(".kd-panel-content");
+  const tabs = overlay.querySelectorAll(".kd-tab");
+  const panels = overlay.querySelectorAll(".kd-panel-content");
 
   tabs.forEach(tab => {
     tab.addEventListener("click", () => {
-      tabs.forEach(t  => { t.classList.remove("active"); t.setAttribute("aria-selected","false"); });
+      tabs.forEach(t => { t.classList.remove("active"); t.setAttribute("aria-selected", "false"); });
       panels.forEach(p => p.classList.remove("active"));
       tab.classList.add("active");
-      tab.setAttribute("aria-selected","true");
+      tab.setAttribute("aria-selected", "true");
       const target = overlay.querySelector(`#kd-panel-${tab.dataset.panel}`);
       if (target) target.classList.add("active");
     });
