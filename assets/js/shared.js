@@ -151,7 +151,6 @@ const VENDORS = [
   {name:"NeoMacro",       url:"https://neomacro.in/",                          cats:["Pre-built","Hall Effect","Barebone","Split","Keycaps","Switches","Parts/Tools","Accessories","Mouse","Deskpad","Glass-pad","Mousepad"]},
   {name:"NMPC",           url:"https://nmpc.in/",                              cats:["Pre-built","Hall Effect","Mouse","Deskpad"]},
   {name:"RyuGear",        url:"https://ryugear.in/",                           cats:["Pre-built","Hall Effect","Keycaps","Accessories","Mouse","Mousepad","Glass-pad"]},
-  {name:"SmallFormFactor",url:"https://smallformfactor.in/collections/keycaps",cats:["Keycaps"]},
   {name:"StacksKB",       url:"https://stackskb.com/",                         cats:["Pre-built","Barebone","Split","Keycaps","Switches","Parts/Tools","Accessories"]},
   {name:"Thock Shop",     url:"https://thethockshop.com/",                     cats:["Pre-built","Alice","Switches","Accessories","Mouse"]},
   {name:"URX",            url:"https://urx.co.in/",                            cats:["Pre-built","Hall Effect","Low-Profile","Mouse"]},
