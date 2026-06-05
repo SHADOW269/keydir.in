@@ -24,12 +24,6 @@ const POPUP_DATA = {
       added: "May 2026"
     },
     {
-      name: "SmallFormFactor",
-      url: "https://smallformfactor.in/collections/keycaps",
-      cats: ["keycaps"],
-      added: "May 2026"
-    },
-    {
       name: "Ajazz Official LAUNCHING 20TH MAY 2026",
       url: "https://www.ajazz.in/",
       cats: ["Pre-built", "Hall Effect", "Mouse"],

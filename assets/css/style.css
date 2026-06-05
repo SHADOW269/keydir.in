@@ -517,13 +517,14 @@ footer{
 
 /* ── CTA wrap (index.html) ── */
 [data-theme="dark"] .cta-wrap{
-  background:var(--cta-bg) !important;
-  border-color:var(--border) !important;
+  background:var(--yellow) !important;
+  border-color:#111 !important;
 }
-[data-theme="dark"] .cta-wrap *{color:var(--cta-text) !important}
-[data-theme="dark"] .cta-wrap p{color:var(--cta-text-muted) !important}
-[data-theme="dark"] .cta-wrap .btn-primary{background:var(--yellow);color:#111 !important;border-color:#111}
-[data-theme="dark"] .cta-wrap .btn-secondary{background:transparent;color:var(--yellow) !important;border-color:var(--yellow)}
+[data-theme="dark"] .cta-wrap h2{color:#111 !important}
+[data-theme="dark"] .cta-wrap p{color:#333 !important}
+[data-theme="dark"] .cta-wrap .section-tag-label{background:#111;color:var(--yellow)}
+[data-theme="dark"] .cta-wrap .btn-primary{background:#111;color:var(--yellow) !important;border-color:#111}
+[data-theme="dark"] .cta-wrap .btn-secondary{background:transparent !important;color:#111 !important;border-color:#111 !important;box-shadow:4px 4px 0 #111 !important}
 
 /* ── Brand cards (brands.html) ── */
 [data-theme="dark"] .brand-card{background:var(--surface);border-color:var(--border)}
@@ -643,4 +644,3 @@ footer{
   .f-bottom{flex-direction:column;align-items:flex-start;gap:10px}
   .section-tag-label{font-size:.62rem;padding:4px 10px}
 }
-
