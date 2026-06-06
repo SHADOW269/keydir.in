@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
 
 <!-- Basic Setup -->
@@ -67,253 +69,323 @@ content="Get in touch with KEYDIR.in. Send feedback or suggestions.">
 <link rel="stylesheet" href="/assets/css/style.css">
 <script src="/assets/js/theme.js"></script>
 <style>
-/* ── Contact page specific ── */
-.contact-hero {
-  padding: calc(var(--nav-h) + 100px) 24px 80px;
-  max-width: 1380px;
-  margin: 0 auto;
+/* ── ARTIFACT SCROLLBAR KILL OVERRIDES ── */
+.navbar, .nav-links {
+  overflow: visible !important;
 }
 
-.contact-title {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: clamp(3rem, 8vw, 6.5rem);
-  font-weight: 800;
-  line-height: .85;
-  letter-spacing: -.06em;
-  text-transform: uppercase;
-  margin-bottom: 1.25rem;
+#cursor, #prog {
+  pointer-events: none !important;
 }
 
-.contact-title .outline {
-  -webkit-text-stroke: 3px var(--text);
-  color: transparent
-}
-
-.contact-sub {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: .9rem;
-  line-height: 1.8;
-  background: #ffff00;
-  border: 2px solid var(--text);
-  padding: 14px 18px;
-  box-shadow: 4px 4px 0 var(--text);
-  transform: rotate(.3deg);
+/* ── Dropdown nav (FIXED & BLACK HOVER) ── */
+.nav-dropdown {
+  position: relative;
   display: inline-block;
-  margin-bottom: 2rem;
-  max-width: 540px;
-  color: #000 !important;
 }
 
-/* Form container */
-.contact-form-wrap {
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 24px;
-}
-
-.form-label {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: .8rem;
+.nav-dropdown-btn {
+  font-family: var(--f-m);
+  font-size: .75rem;
   font-weight: 700;
-  letter-spacing: .08em;
-  text-transform: uppercase;
   color: var(--text);
-  margin-bottom: 8px;
+  background: none;
+  border: none;
+  padding: 6px 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: all .1s;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Turn text black and background to text color (White in dark mode, Black/Yellow in light) */
+.nav-dropdown:hover .nav-dropdown-btn,
+.nav-dropdown.active .nav-dropdown-btn {
+  background: var(--text);
+  color: #000000 !important; /* Force text color to black on hover/active states */
+}
+
+.nav-dropdown-btn::after {
+  content: '▾';
+  font-size: .6rem;
+  transition: transform 0.2s ease;
+}
+
+.nav-dropdown.active .nav-dropdown-btn::after {
+  transform: rotate(180deg);
+}
+
+.nav-dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: auto;
+  background: var(--surface);
+  border: 2px solid var(--border);
+  box-shadow: var(--sh-lg);
+  z-index: 999999 !important;
+  min-width: 160px;
+  flex-direction: column;
+  margin-top: 2px;
+  height: auto !important;
+}
+
+/* Hover Interface Padding Bridge */
+.nav-dropdown-menu::before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: 0;
+  right: 0;
+  height: 12px;
+}
+
+.nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown.active .nav-dropdown-menu {
+  display: flex !important;
+}
+
+.nav-dropdown-menu a {
+  font-family: var(--f-m);
+  font-size: .75rem;
+  font-weight: 700;
+  color: var(--text);
+  text-decoration: none;
+  padding: 10px 16px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  border-bottom: 1px solid var(--border-subtle);
+  transition: all .1s;
   display: block;
+}
+
+.nav-dropdown-menu a:last-child {
+  border-bottom: none;
+}
+
+.nav-dropdown-menu a:hover {
+  background: var(--text);
+  color: #000000 !important; /* Turns item link text black on hover inside menu */
+}
+
+.nav-dropdown-menu a.active {
+  background: var(--yellow);
+  color: #111;
+}
+
+[data-theme="dark"] .nav-dropdown-menu { background: var(--surface); border-color: var(--border); }
+[data-theme="dark"] .nav-dropdown-menu a { border-color: var(--border-subtle); }
+[data-theme="dark"] .nav-dropdown-btn { color: var(--text); }
+
+
+/* ── Contact page specific ── */
+.contact-hero{
+  padding:calc(var(--nav-h) + 100px) 24px 80px;
+  max-width:1380px;
+  margin:0 auto;
+}
+
+.contact-title{
+  font-family:'Space Grotesk',sans-serif;
+  font-size:clamp(3rem,8vw,6.5rem);
+  font-weight:800;
+  line-height:.85;
+  letter-spacing:-.06em;
+  text-transform:uppercase;
+  margin-bottom:1.25rem;
+}
+
+.contact-title .outline{
+  -webkit-text-stroke:3px var(--text);
+  color:transparent;
+}
+
+.contact-sub{
+  font-family:'JetBrains Mono',monospace;
+  font-size:.9rem;
+  line-height:1.8;
+  background:var(--yellow);
+  border:2px solid var(--border);
+  padding:14px 18px;
+  box-shadow:var(--sh);
+  transform:rotate(.3deg);
+  display:inline-block;
+  margin-bottom:2rem;
+  max-width:540px;
+  color:#000 !important;
+}
+
+.contact-form-wrap{
+  max-width:700px;
+  margin:0 auto;
+}
+
+.form-group{
+  display:flex;
+  flex-direction:column;
+  margin-bottom:24px;
+}
+
+.form-label{
+  font-family:'JetBrains Mono',monospace;
+  font-size:.8rem;
+  font-weight:700;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:var(--text);
+  margin-bottom:8px;
+  display:block;
 }
 
 .form-input,
-.form-textarea {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: .9rem;
-  padding: 14px 16px;
-  border: 2px solid var(--text);
-  background: var(--surface);
-  color: var(--text);
-  box-shadow: var(--sh);
-  transition: all .12s;
+.form-textarea{
+  font-family:'JetBrains Mono',monospace;
+  font-size:.9rem;
+  padding:14px 16px;
+  border:2px solid var(--border);
+  background:var(--surface);
+  color:var(--text);
+  box-shadow:var(--sh);
+  transition:all .12s;
 }
 
 .form-input:focus,
-.form-textarea:focus {
-  outline: none;
-  box-shadow: 4px 4px 0 var(--text);
-  transform: translate(-2px, -2px);
+.form-textarea:focus{
+  outline:none;
+  box-shadow:4px 4px 0 var(--border);
+  transform:translate(-2px,-2px);
 }
 
-.form-textarea {
-  resize: vertical;
-  min-height: 180px;
-  font-family: 'JetBrains Mono', monospace;
+.form-textarea{
+  resize:vertical;
+  min-height:180px;
+  font-family:'JetBrains Mono',monospace;
 }
 
 .form-input::placeholder,
-.form-textarea::placeholder {
-  color: var(--text-muted);
+.form-textarea::placeholder{color:var(--text-muted)}
+
+.form-info{
+  font-family:'JetBrains Mono',monospace;
+  font-size:.75rem;
+  color:var(--text-dim);
+  margin-top:6px;
+  line-height:1.6;
 }
 
-.form-info {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: .75rem;
-  color: var(--text-dim);
-  margin-top: 6px;
-  line-height: 1.6;
+.btn-submit{
+  background:var(--text);
+  color:var(--bg);
+  border:2px solid var(--border);
+  padding:14px 28px;
+  font-family:'JetBrains Mono',monospace;
+  font-size:.8rem;
+  font-weight:700;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  cursor:pointer;
+  box-shadow:var(--sh);
+  transition:all .12s;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
 }
 
-/* Submit button */
-.btn-submit {
-  background: var(--text);
-  color: var(--bg);
-  border: 2px solid var(--text);
-  padding: 14px 28px;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: .8rem;
-  font-weight: 700;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  cursor: pointer;
-  box-shadow: var(--sh);
-  transition: all .12s;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
+.btn-submit:hover{
+  background:var(--yellow);
+  color:#111;
+  border-color:#111;
+  transform:translate(2px,2px);
+  box-shadow:2px 2px 0 var(--shadow);
 }
 
-.btn-submit:hover {
-  transform: translate(2px, 2px);
-  box-shadow: 2px 2px 0 var(--shadow);
+.btn-submit:active{transform:translate(4px,4px);box-shadow:0 0 0 var(--shadow)}
+.btn-submit:disabled{opacity:0.6;cursor:not-allowed}
+
+.form-status{
+  padding:20px;
+  border:2px solid var(--border);
+  margin-bottom:24px;
+  font-family:'JetBrains Mono',monospace;
+  font-size:.85rem;
+  display:none;
 }
 
-.btn-submit:active {
-  transform: translate(4px, 4px);
-  box-shadow: 0 0 0 var(--shadow);
+.form-status.success{
+  background:var(--yellow);color:#000 !important;
+  border-color:#111;box-shadow:4px 4px 0 #111;display:block;
 }
 
-.btn-submit:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
+.form-status.error{
+  background:var(--red);color:white;
+  border-color:var(--red);box-shadow:4px 4px 0 #111;display:block;
 }
 
-/* Success message */
-.form-status {
-  padding: 20px;
-  border: 2px solid var(--border);
-  margin-bottom: 24px;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: .85rem;
-  display: none;
+.contact-info-box{
+  background:var(--dark-card-bg);
+  border:2px solid var(--border);
+  padding:28px;
+  box-shadow:var(--sh-lg);
+  color:var(--dark-card-text);
+  margin-top:60px;
 }
 
-.form-status.success {
-  background: #ffff00;
-  color: #000 !important;
-  border-color: #ffff00;
-  box-shadow: 4px 4px 0 #ffff00;
-  display: block;
+.contact-info-title{
+  font-family:'JetBrains Mono',monospace;
+  font-size:.75rem;font-weight:700;
+  letter-spacing:.12em;text-transform:uppercase;
+  color:var(--green);margin-bottom:16px;
 }
 
-.form-status.error {
-  background: var(--red);
-  color: white;
-  border-color: var(--red);
-  box-shadow: 4px 4px 0 var(--red);
-  display: block;
+.contact-info-text{
+  font-family:'JetBrains Mono',monospace;
+  font-size:.9rem;line-height:1.8;
+  color:var(--dark-card-muted);
 }
 
-/* Info box */
-.contact-info-box {
-  background: var(--dark-card-bg);
-  border: 2px solid var(--dark-card-bg);
-  padding: 28px;
-  box-shadow: 6px 6px 0 var(--dark-card-bg);
-  color: var(--surface);
-  margin-top: 60px;
+.contact-info-email{color:var(--yellow);text-decoration:none;word-break:break-all}
+.contact-info-email:hover{text-decoration:underline}
+
+/* ── Dark mode overrides ── */
+[data-theme="dark"] .contact-title .outline{-webkit-text-stroke:3px var(--text);color:transparent}
+
+[data-theme="dark"] .form-input,
+[data-theme="dark"] .form-textarea{
+  background:var(--surface);border-color:var(--border);
+  color:var(--text);box-shadow:4px 4px 0 #000;
 }
 
-.contact-info-title {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: .75rem;
-  font-weight: 700;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-  color: var(--green);
-  margin-bottom: 16px;
+[data-theme="dark"] .form-input::placeholder,
+[data-theme="dark"] .form-textarea::placeholder{color:var(--text-dim)}
+
+[data-theme="dark"] .form-input:focus,
+[data-theme="dark"] .form-textarea:focus{
+  background:var(--surface-raised);
+  box-shadow:4px 4px 0 var(--yellow);
+  border-color:var(--yellow);
 }
 
-.contact-info-text {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: .9rem;
-  line-height: 1.8;
-  color: var(--text-dim);
+[data-theme="dark"] .form-label{color:var(--text)}
+[data-theme="dark"] .form-info{color:var(--text-dim)}
+
+[data-theme="dark"] .btn-submit{
+  background:var(--yellow);color:#111;
+  border-color:#111;box-shadow:4px 4px 0 #000;
 }
 
-.contact-info-email {
-  color: var(--yellow);
-  text-decoration: none;
-  word-break: break-all;
-}
+[data-theme="dark"] .btn-submit:hover{background:var(--green);color:#111;border-color:#111}
 
-.contact-info-email:hover {
-  text-decoration: underline;
-}
+[data-theme="dark"] .contact-info-box{background:var(--dark-card-bg);border-color:#333;box-shadow:var(--sh-lg)}
 
-/* Marquee */
-.marquee-strip {
-  background: var(--text);
-  color: var(--bg);
-  overflow: hidden;
-  padding: 12px 0;
-  margin: 60px 0;
-}
-
-.marquee-track {
-  display: flex;
-  gap: 20px;
-  white-space: nowrap;
-  animation: marquee 20s linear infinite;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: .8rem;
-  font-weight: 700;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-}
-
-.marquee-track .sep {
-  color: var(--bg);
-  opacity: .4;
-}
-
-@keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-/* Responsive */
-@media (max-width: 640px) {
-  .contact-hero {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-
-  .form-input,
-  .form-textarea {
-    font-size: .85rem;
-    padding: 12px 14px;
-  }
-
-  .btn-submit {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .contact-info-box {
-    padding: 20px;
-  }
+@media(max-width:640px){
+  .contact-hero{padding-left:16px;padding-right:16px}
+  .form-input,.form-textarea{font-size:.85rem;padding:12px 14px}
+  .btn-submit{width:100%;justify-content:center}
+  .contact-info-box{padding:20px}
 }
 </style>
 </head>
@@ -325,15 +397,19 @@ content="Get in touch with KEYDIR.in. Send feedback or suggestions.">
 <nav class="navbar">
   <a href="/" class="nav-logo">⌨ KEYDIR.in</a>
   <div class="nav-links">
-    <a href="/">_Home</a>
     <a href="/vendors/">_Vendors</a>
     <a href="/builders/">_Builders</a>
     <a href="/brands/">_Brands</a>
     <a href="/surfaces/">_Surfaces</a>
-    <a href="/guide/">_Guide</a>
-    <a href="/about/">_About</a>
-    <a href="/contact/" class="active">_Contact</a>
-    <a href="https://github.com/SHADOW269/Keydir.in" target="_blank" style="background:var(--text);color:var(--bg)">_GitHub</a>
+    <div class="nav-dropdown">
+      <button class="nav-dropdown-btn">_More</button>
+      <div class="nav-dropdown-menu">
+        <a href="/guide/">_Guide</a>
+        <a href="/about/">_About</a>
+        <a href="/contact/" class="active">_Contact</a>
+        <a href="https://github.com/SHADOW269/Keydir.in" target="_blank">_GitHub ↗</a>
+      </div>
+    </div>
   </div>
   <button class="nav-ham" id="ham"><span></span><span></span><span></span></button>
 </nav>
@@ -348,11 +424,13 @@ content="Get in touch with KEYDIR.in. Send feedback or suggestions.">
   <a href="/guide/">_Guide</a>
   <a href="/about/">_About</a>
   <a href="/contact/">_Contact</a>
+  <a href="https://github.com/SHADOW269/Keydir.in" target="_blank">_GitHub ↗</a>
 </div>
 
 <!-- Hero -->
 <div class="contact-hero">
-  <h1 class="contact-title reveal">
+  <div class="section-tag-label reveal"><span class="dot"></span> COMMUNITY FEEDBACK // OPEN INBOX</div>
+  <h1 class="contact-title reveal" style="transition-delay:.06s">
     GET IN<br/><span class="outline">TOUCH</span><br/>WITH US.
   </h1>
   <p class="contact-sub reveal" style="transition-delay:.08s">
@@ -362,61 +440,49 @@ content="Get in touch with KEYDIR.in. Send feedback or suggestions.">
 </div>
 
 <!-- Marquee -->
-<div class="marquee-strip reveal" style="transition-delay:.12s">
+<div class="marquee-strip">
   <div class="marquee-track">
-    <span>FEEDBACK</span><span class="sep">///</span><span>SUGGESTIONS</span><span class="sep">///</span><span>BUG REPORTS</span><span class="sep">///</span><span>VENDOR UPDATES</span><span class="sep">///</span><span>COMMUNITY LOVE</span><span class="sep">///</span><span>FEEDBACK</span><span class="sep">///</span><span>SUGGESTIONS</span><span class="sep">///</span><span>BUG REPORTS</span><span class="sep">///</span><span>VENDOR UPDATES</span><span class="sep">///</span><span>COMMUNITY LOVE</span><span class="sep">///</span>
+    <span>FEEDBACK</span><span class="sep">///</span><span>SUGGESTIONS</span><span class="sep">///</span><span>BUG REPORTS</span><span class="sep">///</span><span>VENDOR UPDATES</span><span class="sep">///</span><span>COMMUNITY LOVE</span><span class="sep">///</span>
+    <span>FEEDBACK</span><span class="sep">///</span><span>SUGGESTIONS</span><span class="sep">///</span><span>BUG REPORTS</span><span class="sep">///</span><span>VENDOR UPDATES</span><span class="sep">///</span><span>COMMUNITY LOVE</span><span class="sep">///</span>
   </div>
 </div>
 
 <!-- Form Section -->
-<div class="page-body">
+<div class="page-body" style="padding-top:60px;padding-bottom:100px">
   <div class="contact-form-wrap reveal" style="transition-delay:.16s">
 
     <div class="form-status" id="formStatus"></div>
 
-    <form id="contactForm" method="POST" action="https://formspree.io/f/xeojdqvj">
+    <form id="contactForm" method="POST" action="https://formsubmit.co/ajax/officialkeydir.in@gmail.com">
+      
+      <!-- FormSubmit.co Configurations -->
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
 
       <div class="form-group">
         <label for="name" class="form-label">Your Name</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          class="form-input"
-          placeholder="Enter your full name"
-          required>
+        <input type="text" id="name" name="name" class="form-input"
+          placeholder="Enter your full name" required>
         <div class="form-info">Required. We use this to know who you are.</div>
       </div>
 
       <div class="form-group">
         <label for="email" class="form-label">Your Email</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          class="form-input"
-          placeholder="your.email@example.com"
-          required>
+        <input type="email" id="email" name="email" class="form-input"
+          placeholder="your.email@example.com" required>
         <div class="form-info">Required. We'll use this to respond to you.</div>
       </div>
 
       <div class="form-group">
         <label for="link" class="form-label">Link (Optional)</label>
-        <input
-          type="url"
-          id="link"
-          name="link"
-          class="form-input"
+        <input type="url" id="link" name="link" class="form-input"
           placeholder="https://example.com">
         <div class="form-info">Share a link to a vendor, article, or resource.</div>
       </div>
 
       <div class="form-group">
         <label for="message" class="form-label">Your Message</label>
-        <textarea
-          id="message"
-          name="message"
-          class="form-textarea"
+        <textarea id="message" name="message" class="form-textarea"
           placeholder="Tell us what's on your mind... feedback, bug reports, vendor suggestions, or just say hello!"
           required></textarea>
         <div class="form-info">Required. Be as detailed as you'd like.</div>
@@ -463,8 +529,8 @@ content="Get in touch with KEYDIR.in. Send feedback or suggestions.">
         <li><a href="/vendors/">_Vendors</a></li>
         <li><a href="/builders/">_Builders</a></li>
         <li><a href="/brands/">_Brands</a></li>
-        <li><a href="/guide/">_Guide</a></li>
         <li><a href="/surfaces/">_Surfaces</a></li>
+        <li><a href="/guide/">_Guide</a></li>
         <li><a href="/about/">_About</a></li>
         <li><a href="/contact/">_Contact</a></li>
       </ul>
@@ -485,14 +551,10 @@ content="Get in touch with KEYDIR.in. Send feedback or suggestions.">
       <h4>Project</h4>
       <ul>
         <li>
-          <a href="https://github.com/SHADOW269/Keydir.in" target="_blank" rel="noopener">
-            _GitHub
-          </a>
+          <a href="https://github.com/SHADOW269/Keydir.in" target="_blank" rel="noopener">_GitHub</a>
         </li>
         <li>
-          <a href="https://github.com/SHADOW269/Keydir.in/issues" target="_blank" rel="noopener">
-            _Report Issue
-          </a>
+          <a href="https://github.com/SHADOW269/Keydir.in/issues" target="_blank" rel="noopener">_Report Issue</a>
         </li>
         <li><a href="/Terms-and-Conditions/">_Terms & Conditions</a></li>
       </ul>
@@ -504,7 +566,6 @@ content="Get in touch with KEYDIR.in. Send feedback or suggestions.">
     <div class="f-copy">
       © 2026 KEYDIR.in // COMMUNITY PROJECT // NOT AFFILIATED WITH ANY VENDOR // SYSTEM_END
     </div>
-
     <button class="theme-toggle" onclick="toggleTheme()">
       <span class="tt-icon">◑</span>
       <span class="tt-label">DARK MODE</span>
@@ -517,47 +578,64 @@ content="Get in touch with KEYDIR.in. Send feedback or suggestions.">
 <script src="/assets/js/shared.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded', () => {
-  const form = document.getElementById('contactForm');
+  // ── Form Submissions Handler (FormSubmit.co AJAX Fixed Version) ──
+  const form      = document.getElementById('contactForm');
   const statusDiv = document.getElementById('formStatus');
   const submitBtn = document.getElementById('submitBtn');
-  const btnIcon = document.getElementById('btnIcon');
+  const btnIcon   = document.getElementById('btnIcon');
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    submitBtn.disabled = true;
-    btnIcon.textContent = '...';
-    statusDiv.textContent = 'Sending your message...';
-    statusDiv.className = 'form-status';
+    submitBtn.disabled      = true;
+    btnIcon.textContent     = '...';
+    statusDiv.textContent   = 'Sending your message...';
+    statusDiv.className     = 'form-status';
+    statusDiv.style.display = 'block';
 
     try {
+      // Send directly as FormData instead of converting to JSON string
       const response = await fetch(form.action, {
-        method: 'POST',
-        body: new FormData(form),
-        headers: {
-          'Accept': 'application/json'
-        }
+        method:  'POST',
+        headers: { 
+          'Accept': 'application/json' 
+        },
+        body: new FormData(form)
       });
 
-      if (response.ok) {
-        statusDiv.textContent = '✓ Message sent! We\'ll get back to you soon.';
-        statusDiv.className = 'form-status success';
-        form.reset();
-        submitBtn.disabled = false;
-        btnIcon.textContent = '→';
+      const result = await response.json();
 
-        setTimeout(() => {
-          statusDiv.style.display = 'none';
-        }, 5000);
+      // FormSubmit returns a JSON status object when using /ajax/
+      if (response.ok && (result.success === "true" || result.success === true)) {
+        statusDiv.textContent = '✓ Message sent! We\'ll get back to you soon.';
+        statusDiv.className   = 'form-status success';
+        form.reset();
+        submitBtn.disabled  = false;
+        btnIcon.textContent = '→';
+        setTimeout(() => { statusDiv.style.display = 'none'; }, 5000);
       } else {
-        throw new Error('Failed to send message');
+        throw new Error(result.message || 'FormSubmit rejected submission');
       }
     } catch (error) {
-      statusDiv.textContent = '✗ Failed to send message. Please try emailing us directly or check your connection.';
-      statusDiv.className = 'form-status error';
-      submitBtn.disabled = false;
+      console.error(error); // Logs the exact issue to your browser console
+      statusDiv.textContent = '✗ Failed to send. Please email us directly or check your connection.';
+      statusDiv.className   = 'form-status error';
+      submitBtn.disabled  = false;
       btnIcon.textContent = '→';
     }
+  });
+
+  // ── Dropdown logic handling click/touch event layers ──
+  const dropdown = document.querySelector('.nav-dropdown');
+  const dropdownBtn = document.querySelector('.nav-dropdown-btn');
+
+  dropdownBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    dropdown.classList.toggle('active');
+  });
+
+  document.addEventListener('click', () => {
+    dropdown.classList.remove('active');
   });
 });
 </script>

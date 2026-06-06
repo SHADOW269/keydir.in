@@ -1,16 +1,13 @@
 <head>
 
-  <!-- Basic Setup -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>KEYDIR.in — India Mechanical Keyboard Directory</title>
 
-  <!-- Umami Analytics | popup message-->
   <script defer src="https://cloud.umami.is/script.js" data-website-id="35caf6d4-f14b-4b28-9f07-600b6910a4d3"></script>
   <script src="/assets/js/keydir-popup.js" defer></script>
 
-  <!-- SEO Optimization -->
   <meta name="description"
     content="India’s mechanical keyboard directory. Discover keyboard vendors, custom builders, switches, keycaps, accessories, and group buys across India. Fast. Raw. Community-powered.">
 
@@ -18,20 +15,16 @@
 
   <link rel="canonical" href="https://keydir.in/">
 
-  <!-- Geo Targeting (helps India relevance slightly) -->
   <meta name="geo.region" content="IN">
   <meta name="geo.placename" content="India">
 
-  <!-- Theme color -->
   <meta name="theme-color" content="#000000">
 
-  <!-- Favicon / Branding -->
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
   <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon-192.png">
   <link rel="icon" type="image/png" sizes="512x512" href="/assets/img/favicon-512.png">
   <link rel="apple-touch-icon" href="/assets/img/favicon-512.png">
 
-  <!-- Open Graph (Discord / WhatsApp / Reddit embed preview) -->
   <meta property="og:title" content="KEYDIR.in — India Mechanical Keyboard Directory">
   <meta property="og:description"
     content="Discover keyboard vendors, custom builders, switches, keycaps, accessories, and group buys across India.">
@@ -46,18 +39,15 @@
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:alt" content="KEYDIR.in — India Mechanical Keyboard Directory Banner">
 
-  <!-- Twitter Large Preview -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="KEYDIR.in — India Mechanical Keyboard Directory">
   <meta name="twitter:description"
     content="Find mechanical keyboard vendors, switches, keycaps, accessories, and builders across India.">
   <meta name="twitter:image" content="https://keydir.in/assets/img/Banner.png">
 
-  <!-- Performance hint -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <!-- Organization Schema (Google branding) -->
   <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -69,7 +59,6 @@
 }
 </script>
 
-  <!-- Website Schema (adds sitelinks search eligibility later) -->
   <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -87,6 +76,118 @@
   <link rel="stylesheet" href="/assets/css/style.css">
   <script src="/assets/js/theme.js"></script>
   <style>
+    /* ── ARTIFACT SCROLLBAR KILL OVERRIDES ── */
+    .navbar, .nav-links {
+      overflow: visible !important;
+    }
+
+    #cursor, #prog {
+      pointer-events: none !important;
+    }
+
+    /* ── Dropdown nav (FIXED & BLACK HOVER) ── */
+    .nav-dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .nav-dropdown-btn {
+      font-family: var(--f-m);
+      font-size: .75rem;
+      font-weight: 700;
+      color: var(--text);
+      background: none;
+      border: none;
+      padding: 6px 10px;
+      cursor: pointer;
+      text-transform: uppercase;
+      white-space: nowrap;
+      transition: all .1s;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    /* Turn button text black and background to text color on hover/active states */
+    .nav-dropdown:hover .nav-dropdown-btn,
+    .nav-dropdown.active .nav-dropdown-btn {
+      background: var(--text);
+      color: #000000 !important;
+    }
+
+    .nav-dropdown-btn::after {
+      content: '▾';
+      font-size: .6rem;
+      transition: transform 0.2s ease;
+    }
+
+    .nav-dropdown.active .nav-dropdown-btn::after {
+      transform: rotate(180deg);
+    }
+
+    .nav-dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      left: auto;
+      background: var(--surface);
+      border: 2px solid var(--border);
+      box-shadow: var(--sh-lg);
+      z-index: 999999 !important;
+      min-width: 160px;
+      flex-direction: column;
+      margin-top: 2px;
+      height: auto !important;
+    }
+
+    /* Hover Interface Padding Bridge */
+    .nav-dropdown-menu::before {
+      content: '';
+      position: absolute;
+      top: -12px;
+      left: 0;
+      right: 0;
+      height: 12px;
+    }
+
+    .nav-dropdown:hover .nav-dropdown-menu,
+    .nav-dropdown.active .nav-dropdown-menu {
+      display: flex !important;
+    }
+
+    .nav-dropdown-menu a {
+      font-family: var(--f-m);
+      font-size: .75rem;
+      font-weight: 700;
+      color: var(--text);
+      text-decoration: none;
+      padding: 10px 16px;
+      text-transform: uppercase;
+      white-space: nowrap;
+      border-bottom: 1px solid var(--border-subtle);
+      transition: all .1s;
+      display: block;
+    }
+
+    .nav-dropdown-menu a:last-child {
+      border-bottom: none;
+    }
+
+    .nav-dropdown-menu a:hover {
+      background: var(--text);
+      color: #000000 !important;
+    }
+
+    .nav-dropdown-menu a.active {
+      background: var(--yellow);
+      color: #111;
+    }
+
+    [data-theme="dark"] .nav-dropdown-menu { background: var(--surface); border-color: var(--border); }
+    [data-theme="dark"] .nav-dropdown-menu a { border-color: var(--border-subtle); }
+    [data-theme="dark"] .nav-dropdown-btn { color: var(--text); }
+
     /* ── Home-specific ── */
     .hero-wrap {
       min-height: 100vh;
@@ -274,7 +375,7 @@
       border-right: none
     }
 
-    .feat-item:nth-last-child(-n+4) {
+    .feat-item:nth-tight-child(-n+4) {
       border-bottom: none
     }
 
@@ -542,32 +643,39 @@
   <div id="cursor"></div>
   <div id="prog"></div>
 
-  <nav class="navbar">
-    <a href="/" class="nav-logo">⌨ KEYDIR.in</a>
-    <div class="nav-links">
-      <a href="/" class="active">_Home</a>
-      <a href="/vendors/">_Vendors</a>
-      <a href="/builders/">_Builders</a>
-      <a href="/brands/">_Brands</a>
-      <a href="/surfaces/">_Surfaces</a>
-      <a href="/guide/">_Guide</a>
-      <a href="/about/">_About</a>
-      <a href="https://github.com/SHADOW269/Keydir.in" target="_blank"
-        style="background:var(--text);color:var(--bg)">_GitHub</a>
-    </div>
-    <button class="nav-ham" id="ham"><span></span><span></span><span></span></button>
-  </nav>
-  <div id="mob-nav">
-    <button id="mob-close">[ X ]</button>
-    <a href="/">_Home</a>
+<nav class="navbar">
+  <a href="/" class="nav-logo">⌨ KEYDIR.in</a>
+  <div class="nav-links">
     <a href="/vendors/">_Vendors</a>
     <a href="/builders/">_Builders</a>
     <a href="/brands/">_Brands</a>
     <a href="/surfaces/">_Surfaces</a>
-    <a href="/about/">_About</a>
+    <div class="nav-dropdown">
+      <button class="nav-dropdown-btn">_More</button>
+      <div class="nav-dropdown-menu">
+        <a href="/guide/">_Guide</a>
+        <a href="/about/">_About</a>
+        <a href="/contact/">_Contact</a>
+        <a href="https://github.com/SHADOW269/Keydir.in" target="_blank">_GitHub ↗</a>
+      </div>
+    </div>
   </div>
+  <button class="nav-ham" id="ham"><span></span><span></span><span></span></button>
+</nav>
 
-  <!-- HERO -->
+<div id="mob-nav">
+  <button id="mob-close">[ X ]</button>
+  <a href="/">_Home</a>
+  <a href="/vendors/">_Vendors</a>
+  <a href="/builders/">_Builders</a>
+  <a href="/brands/">_Brands</a>
+  <a href="/surfaces/">_Surfaces</a>
+  <a href="/guide/">_Guide</a>
+  <a href="/about/">_About</a>
+  <a href="/contact/">_Contact</a>
+  <a href="https://github.com/SHADOW269/Keydir.in" target="_blank">_GitHub ↗</a>
+</div>
+
   <div class="hero-wrap">
     <div class="hero-grid">
       <div class="hero-left">
@@ -590,7 +698,7 @@
             <span class="bell-dot"></span>
           </button>
         </div>
-        <div class="hero-stats">
+        <div class="hero-actions hero-stats">
           <div class="stat-box"><span class="stat-num" data-count="24">0</span><span class="stat-label">Vendors</span>
           </div>
           <div class="stat-box"><span class="stat-num" data-count="15">0</span><span
@@ -627,7 +735,6 @@
     </div>
   </div>
 
-  <!-- MARQUEE -->
   <div class="marquee-strip">
     <div class="marquee-track">
       <span>PRE-BUILT</span><span class="sep">///</span><span>SWITCHES</span><span
@@ -645,7 +752,6 @@
     </div>
   </div>
 
-  <!-- WHAT'S INSIDE -->
   <div class="page-body">
     <section style="padding:80px 0 60px">
       <div class="sec-head reveal">
@@ -680,7 +786,6 @@
       </div>
     </section>
 
-    <!-- CATEGORY PREVIEW -->
     <section style="padding:0 0 80px" id="categories">
       <div class="sec-head reveal">
         <h2>BROWSE BY <em style="color:var(--yellow)">CATEGORY</em></h2>
@@ -692,7 +797,6 @@
       </div>
     </section>
 
-    <!-- STATS STRIP -->
     <section style="padding:0 0 80px">
       <div class="stats-row reveal">
         <div class="stat-item">
@@ -714,7 +818,6 @@
       </div>
     </section>
 
-    <!-- CTA -->
     <section style="padding:0 0 80px">
       <div class="cta-wrap reveal">
         <div class="section-tag-label"><span class="dot"></span> READY TO BUILD?</div>
@@ -735,7 +838,6 @@
     </section>
   </div>
 
-  <!-- FOOTER -->
   <footer>
     <div class="footer-inner">
 
@@ -807,7 +909,6 @@
   </footer>
 
   <script src="/assets/js/shared.js"></script>
-  <!-- Primary SEO Generates category preview buttons dynamically -->
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const grid = document.getElementById("catPreview");
@@ -838,8 +939,19 @@
         /* Open popup */
         buildKeyDirPopup();
       });
+
+      // ── Dropdown logic handling click/touch event layers ──
+      const dropdown = document.querySelector('.nav-dropdown');
+      const dropdownBtn = document.querySelector('.nav-dropdown-btn');
+
+      dropdownBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        dropdown.classList.toggle('active');
+      });
+
+      document.addEventListener('click', () => {
+        dropdown.classList.remove('active');
+      });
     });
   </script>
 </body>
-
-</html>
