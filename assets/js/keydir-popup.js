@@ -13,10 +13,16 @@
 const POPUP_DATA = {
 
   /* Version string — increment this to re-show popup to returning visitors */
-  version: "2026-05-25",
+  version: "2026-06-07",
 
   /* ── NEW VENDORS ── */
   new_vendors: [
+    {
+      name: "Keebforge",
+      url: "https://www.keebforge.in/",
+      cats: ["Build-Services"],
+      added: "June 2026"
+    },
     {
       name: "erikaSKOOL",
       url: "https://docs.google.com/document/d/1xcAW0eiM7f9JBxXdp6SL5fg15mM-IWZvxRduPwHza0M/edit?tab=t.0",
@@ -39,9 +45,10 @@ const POPUP_DATA = {
 
   /* ── UPDATES / CHANGELOG ── */
   updates: [
-    { icon: "🛠", text: "8 new builders have been added to the directory." },
+    { icon: "📱", text: "Contact page add for anyone trying to contact the admin" },
+    { icon: "🛠", text: "9 new builders have been added to the directory." },
     { icon: "⬛", text: "Added Mousepad and Glass-pad as separate Pages as Surfaces" },
-    { icon: "⌨", text: "24 vendors now listed — up from 19 last month" },
+    { icon: "⌨", text: "23 vendors now listed — up from 19 last time" },
     { icon: "📏", text: "Third-party sellers section expanded to 15 entries" },
   ],
 
