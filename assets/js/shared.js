@@ -156,7 +156,7 @@ const VENDORS = [
   {name:"Thock Shop",     url:"https://thethockshop.com/",                     cats:["Pre-built","Alice","Switches","Accessories","Mouse"]},
   {name:"URX",            url:"https://urx.co.in/",                            cats:["Pre-built","Hall Effect","Low-Profile","Mouse"]},
   {name:"Waimers",        url:"https://waimers.in/",                           cats:["Hall Effect","Accessories","Switches","Mouse","Glass-pad"]},
-  {name:"Xtro",           url:"https://xtro.gg/",                              cats:["Pre-built","Hall Effect","Accessories","Mouse","PC Parts","Glass-pad"]},
+  {name:"Xtro",           url:"https://xtro.gg/",                              cats:["Pre-built","Barebone","Hall Effect","Accessories","Mouse","PC Parts","Glass-pad"]},
   // {name:"NewVendor",   url:"https://newvendor.in/",                         cats:["Pre-built","Switches"], warning:true, warning_message:"Reports of slow shipping."},
 ];
 
