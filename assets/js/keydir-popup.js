@@ -18,6 +18,12 @@ const POPUP_DATA = {
   /* ── NEW VENDORS ── */
   new_vendors: [
     {
+      name: "FernTech",
+      url: "https://ferntechworld.com/products/aula-f75-gasket-wireless-mechanical-keyboard",
+      cats: ["Pre-built", "Mouse", "Mousepad", "Glass-pad"],
+      added: "June 2026"
+    },
+    {
       name: "Keebforge",
       url: "https://www.keebforge.in/",
       cats: ["Build-Services"],
