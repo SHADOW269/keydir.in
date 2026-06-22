@@ -6,22 +6,27 @@
 
   <title>Mechanical Keyboard Vendors in India — KEYDIR.in</title>
 
+  <!-- Analytics & Core Component Scripts -->
   <script defer src="https://cloud.umami.is/script.js" data-website-id="35caf6d4-f14b-4b28-9f07-600b6910a4d3"></script>
   <script src="/assets/js/keydir-popup.js" defer></script>
 
+  <!-- SEO Optimization -->
   <meta name="description" content="Browse mechanical keyboard vendors in India. Discover stores selling keyboards, switches, keycaps, accessories, DIY kits, and custom keyboard parts across India.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://keydir.in/vendors/">
 
+  <!-- Geo Targeting -->
   <meta name="geo.region" content="IN">
   <meta name="geo.placename" content="India">
   <meta name="theme-color" content="#000000">
 
+  <!-- Favicons -->
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
   <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon-192.png">
   <link rel="icon" type="image/png" sizes="512x512" href="/assets/img/favicon-512.png">
   <link rel="apple-touch-icon" href="/assets/img/favicon-512.png">
 
+  <!-- Open Graph / Facebook -->
   <meta property="og:title" content="Mechanical Keyboard Vendors in India — KEYDIR.in">
   <meta property="og:description" content="Find mechanical keyboard stores across India selling keyboards, switches, keycaps, accessories, and DIY keyboard parts.">
   <meta property="og:url" content="https://keydir.in/vendors/">
@@ -33,14 +38,17 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Mechanical Keyboard Vendors India — KEYDIR.in">
 
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Mechanical Keyboard Vendors in India — KEYDIR.in">
   <meta name="twitter:description" content="Browse mechanical keyboard vendors across India selling keyboards, switches, keycaps, and accessories.">
   <meta name="twitter:image" content="https://keydir.in/assets/img/Banner.png">
 
+  <!-- Core Styles & Theme Configurations -->
   <link rel="stylesheet" href="/assets/css/style.css">
   <script src="/assets/js/theme.js"></script>
 
+  <!-- Schema.org Structural Metadata -->
   <script type="application/ld+json">
   {
    "@context": "https://schema.org",
@@ -397,13 +405,13 @@
     .reset-btn:hover { border-color: var(--yellow); color: var(--yellow); }
 
     /* ═══════════════════════════════════════════
-       4. RESULTS DISPLAY MATRIX
+       4. RESULTS DISPLAY MATRIX & SUGGESTIONS CTA
        ═══════════════════════════════════════════ */
     .result-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 8px; }
     .result-count { font-family: var(--f-m); font-size: .8rem; color: #666; }
     .result-count strong { color: var(--border); font-weight: 800; }
 
-    .vgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(296px, 1fr)); gap: 12px; }
+    .vgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(296px, 1fr)); gap: 12px; margin-bottom: 4rem; }
     
     /* Individual Vendor Card Units */
     .vcard {
@@ -426,6 +434,50 @@
     .badge.hl { animation: pop .2s ease; }
     @keyframes pop { 0% { transform: scale(.8); } 100% { transform: scale(1); } }
 
+    /* Suggest a Vendor Brutalist Box Layout */
+    .info-box {
+      display: flex;
+      align-items: flex-start;
+      gap: 24px;
+      flex-wrap: wrap;
+      background: var(--surface);
+      border: 2px solid var(--border);
+      box-shadow: var(--sh-lg);
+      padding: 32px;
+    }
+    .info-box-icon {
+      font-size: 2rem;
+      flex-shrink: 0;
+      line-height: 1;
+    }
+    .info-box-title {
+      font-family: var(--f-m);
+      font-size: .75rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+    .info-box p {
+      font-family: var(--f-m);
+      font-size: .88rem;
+      line-height: 1.6;
+      color: var(--text);
+      max-width: 720px;
+      margin: 0;
+    }
+    .info-box p a {
+      color: var(--text);
+      font-weight: 700;
+      text-decoration: underline;
+    }
+
+    /* Fix for btn-secondary text visibility on hover in dark mode */
+    .btn-secondary:hover {
+      background: var(--green) !important;
+      color: #111 !important;
+    }
+
     /* ── Empty Fallback State ── */
     .empty {
       grid-column: 1 / -1;
@@ -444,13 +496,14 @@
     @media(max-width:1000px) { .v-hero { grid-template-columns: 1fr; } .v-sidebar { display: none; } }
     @media(max-width:860px) { .cat-grid { grid-template-columns: repeat(3, 1fr); } }
     @media(max-width:640px) { .v-hero { padding-left: 16px; padding-right: 16px; } }
-    @media(max-width:480px) { .cat-grid { grid-template-columns: repeat(2, 1fr); } .vgrid { grid-template-columns: 1fr; } }
+    @media(max-width:480px) { .cat-grid { grid-template-columns: repeat(2, 1fr); } .vgrid { grid-template-columns: 1fr; } .info-box { padding: 24px; gap: 16px; } }
   </style>
 </head>
 <body>
   <div id="cursor"></div>
   <div id="prog"></div>
 
+  <!-- Main Navigation Panel -->
   <nav class="navbar">
     <a href="/" class="nav-logo">⌨ KEYDIR.in</a>
     <div class="nav-links">
@@ -472,6 +525,7 @@
     <button class="nav-ham" id="ham"><span></span><span></span><span></span></button>
   </nav>
 
+  <!-- Mobile Context Overlay Drawer Menu -->
   <div id="mob-nav">
     <button id="mob-close">[ X ]</button>
     <a href="/">_Home</a>
@@ -485,6 +539,7 @@
     <a href="https://github.com/SHADOW269/Keydir.in" target="_blank">_GitHub ↗</a>
   </div>
 
+  <!-- Hero Information Wrapper Section -->
   <div class="v-hero">
     <div>
       <div class="section-tag-label reveal"><span class="dot"></span> INDIA_VENDOR_DB // <span data-stat="vendors">19</span> STORES</div>
@@ -496,6 +551,7 @@
       </p>
     </div>
     
+    <!-- Sidebar Monitor Block Display -->
     <div class="v-sidebar reveal" style="transition-delay:.18s">
       <div class="sidebar-card">
         <div class="s-title">// DB_STATUS</div>
@@ -510,6 +566,7 @@
     </div>
   </div>
 
+  <!-- Continuous Scrolling Infinite Text Strip Ribbon -->
   <div class="marquee-strip">
     <div class="marquee-track">
       <span>PRE-BUILT</span><span class="sep">///</span><span>SWITCHES</span><span class="sep">///</span><span>KEYCAPS</span><span class="sep">///</span><span>HALL EFFECT</span><span class="sep">///</span><span>BAREBONE</span><span class="sep">///</span><span>DESKPADS</span><span class="sep">///</span><span>PARTS &amp; TOOLS</span><span class="sep">///</span><span>MOUSE</span><span class="sep">///</span><span>ACCESSORIES</span><span class="sep">///</span><span>PC PARTS</span><span class="sep">///</span>
@@ -517,32 +574,51 @@
     </div>
   </div>
 
+  <!-- Directory Search Control Station Area Body -->
   <div class="page-body">
+    <!-- Input Element Block -->
     <div class="search-wrap reveal" style="margin-top:3rem; transition-delay:.05s">
       <span class="s-icon">⌕</span>
       <input type="text" id="searchInput" placeholder="SEARCH VENDORS..." autocomplete="off"/>
       <button class="s-clear" id="sClear">×</button>
     </div>
 
+    <!-- Injectable Categories Intersect buttons selection row wrapper -->
     <div class="cat-area reveal" id="cats" style="transition-delay:.1s">
       <div class="cat-area-lbl">// SELECT CATEGORY — MULTI-SELECT ENABLED</div>
       <div class="cat-grid" id="catGrid"></div>
     </div>
 
+    <!-- Active dynamic pills reset control board -->
     <div class="filter-bar" id="filterBar">
       <span class="fb-lbl">&gt; SHOWING VENDORS FOR:</span>
       <div class="pills" id="activePills"></div>
       <button class="reset-btn" id="resetAll">[ CLEAR ALL ]</button>
     </div>
 
+    <!-- Live Counter Header Block -->
     <div class="result-row">
       <div class="result-count"><strong id="rCount">19</strong> vendors found</div>
       <div style="font-family:var(--f-m); font-size:.7rem; color:var(--text-dim)">MULTI-SELECT: CLICK 2+ CATEGORIES TO INTERSECT</div>
     </div>
 
+    <!-- Output Generated Matrix Cards Row -->
     <div class="vgrid" id="vendorGrid"></div>
+
+    <!-- Suggestion Contributor Box CTA Block -->
+    <section style="padding:0 0 80px">
+      <div class="info-box reveal">
+        <div class="info-box-icon">💡</div>
+        <div>
+          <div class="info-box-title">// SUGGEST A VENDOR</div>
+          <p>This directory is community-maintained. Know a keyboard vendor, builder, service provider, or store in India that isn't listed yet? Send us the details through our contact form and we'll review it for inclusion</p>
+          <a href="https://keydir.in/contact/" class="btn-secondary" style="margin-top:16px; display:inline-flex">Suggest a Vendor → </a>
+        </div>
+      </div>
+    </section>
   </div>
 
+  <!-- Global Footer -->
   <footer>
     <div class="footer-inner">
       <div>
@@ -617,16 +693,11 @@
       teal:  "border:2px solid #fff;background:var(--teal);color:#fff"
     };
 
-    // State Variables: "sel" stores active category targets; "q" maintains input text queries
     let sel = new Set(), q = "";
 
-    /**
-     * Instantiates category buttons into DOM on layout init
-     */
     function buildCats() {
       const g = document.getElementById("catGrid");
       CAT_META.forEach(cat => {
-        // Find matching global array sets from shared.js source variables
         const n = VENDORS.filter(v => v.cats.includes(cat.id)).length;
         const btn = document.createElement("button");
         btn.className = `cat-btn c-${cat.col}`;
@@ -634,7 +705,6 @@
         btn.setAttribute("aria-pressed", "false");
         btn.innerHTML = `<div class="cat-ico">${cat.icon}</div><div class="cat-lbl">${cat.label}</div><div class="cat-ct">${n} vendors</div>`;
         
-        // Setup toggle handlers across selected item operations
         btn.addEventListener("click", () => {
           sel.has(cat.id) ? sel.delete(cat.id) : sel.add(cat.id);
           syncBtns(); 
@@ -645,9 +715,6 @@
       });
     }
 
-    /**
-     * Normalizes aria states and visual visibility on category grid elements
-     */
     function syncBtns() {
       document.querySelectorAll(".cat-btn").forEach(b => {
         const on = sel.has(b.dataset.id);
@@ -656,9 +723,6 @@
       });
     }
 
-    /**
-     * Refreshes active visual indicator row breadcrumb elements
-     */
     function syncBar() {
       const bar = document.getElementById("filterBar");
       const pills = document.getElementById("activePills");
@@ -686,14 +750,10 @@
       });
     }
 
-    /**
-     * Filters, sorts, and renders vendor lists onto output display view blocks
-     */
     function render() {
       const g = document.getElementById("vendorGrid");
       const qL = q.toLowerCase().trim();
       
-      // Filter operational handling logic across intersections
       const list = VENDORS.filter(v => {
         const catOk = !sel.size || [...sel].every(c => v.cats.includes(c));
         const qOk   = !qL || v.name.toLowerCase().includes(qL) || v.cats.some(c => c.toLowerCase().includes(qL));
@@ -705,17 +765,15 @@
       document.getElementById("rCount").textContent = list.length;
       g.innerHTML = "";
 
-      // 404 Empty Fallback Display Trigger
       if (!list.length) {
         g.innerHTML = `<div class="empty"><span class="empty-n">404</span><p>NO VENDORS FOUND FOR <strong>${[...sel].join(" + ") || qL}</strong>.<br/>Try a different combination.</p></div>`;
         return;
       }
 
-      // Generate dynamic components based on matches array data lists
       list.forEach((v, i) => {
         const card = document.createElement("div");
         card.className = "vcard";
-        card.style.animationDelay = `${Math.min(i, 9) * .04}s`; // Micro staggered sequential rendering animation delay
+        card.style.animationDelay = `${Math.min(i, 9) * .04}s`;
 
         const badges = v.cats.map(c =>
           `<span class="badge ${BADGE_CLS[c] || "b-gray"}${sel.has(c) ? " hl" : ""}">${c}</span>`
@@ -735,7 +793,6 @@
       });
     }
 
-    // ── Input Elements Action Event Bindings ──
     const sIn = document.getElementById("searchInput");
     const sCl = document.getElementById("sClear");
     
@@ -763,12 +820,10 @@
       render();
     });
 
-    // ── Page Initialize Sequence ──
     document.addEventListener("DOMContentLoaded", () => { 
       buildCats(); 
       render(); 
 
-      // Header Navigation dropdown structural action operations layers
       const dropdown = document.querySelector('.nav-dropdown');
       const dropdownBtn = document.querySelector('.nav-dropdown-btn');
 
