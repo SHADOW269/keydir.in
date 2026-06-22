@@ -1,91 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>KEYDIR.in — India Mechanical Keyboard Directory</title>
 
+  <!-- Analytics and Core Component Scripts -->
   <script defer src="https://cloud.umami.is/script.js" data-website-id="35caf6d4-f14b-4b28-9f07-600b6910a4d3"></script>
   <script src="/assets/js/keydir-popup.js" defer></script>
 
-  <meta name="description"
-    content="India’s mechanical keyboard directory. Discover keyboard vendors, custom builders, switches, keycaps, accessories, and group buys across India. Fast. Raw. Community-powered.">
-
+  <!-- SEO Metadata -->
+  <meta name="description" content="India’s mechanical keyboard directory. Discover keyboard vendors, custom builders, switches, keycaps, accessories, and group buys across India. Fast. Raw. Community-powered.">
   <meta name="robots" content="index, follow, max-image-preview:large">
-
   <link rel="canonical" href="https://keydir.in/">
-
   <meta name="geo.region" content="IN">
   <meta name="geo.placename" content="India">
-
   <meta name="theme-color" content="#000000">
 
+  <!-- Favicons -->
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
   <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon-192.png">
   <link rel="icon" type="image/png" sizes="512x512" href="/assets/img/favicon-512.png">
   <link rel="apple-touch-icon" href="/assets/img/favicon-512.png">
 
+  <!-- Open Graph / Facebook -->
   <meta property="og:title" content="KEYDIR.in — India Mechanical Keyboard Directory">
-  <meta property="og:description"
-    content="Discover keyboard vendors, custom builders, switches, keycaps, accessories, and group buys across India.">
+  <meta property="og:description" content="Discover keyboard vendors, custom builders, switches, keycaps, accessories, and group buys across India.">
   <meta property="og:url" content="https://keydir.in/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="KEYDIR.in">
   <meta property="og:locale" content="en_IN">
-
   <meta property="og:image" content="https://keydir.in/assets/img/Banner.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:alt" content="KEYDIR.in — India Mechanical Keyboard Directory Banner">
 
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="KEYDIR.in — India Mechanical Keyboard Directory">
-  <meta name="twitter:description"
-    content="Find mechanical keyboard vendors, switches, keycaps, accessories, and builders across India.">
+  <meta name="twitter:description" content="Find mechanical keyboard vendors, switches, keycaps, accessories, and builders across India.">
   <meta name="twitter:image" content="https://keydir.in/assets/img/Banner.png">
 
+  <!-- Fonts & Core Stylesheets -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "Organization",
- "name": "KEYDIR.in",
- "url": "https://keydir.in",
- "logo": "https://keydir.in/assets/img/favicon-512.png",
- "sameAs": []
-}
-</script>
-
-  <script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "WebSite",
- "name": "KEYDIR.in",
- "url": "https://keydir.in",
- "potentialAction": {
-   "@type": "SearchAction",
-   "target": "https://keydir.in/vendors.html?q={search_term_string}",
-   "query-input": "required name=search_term_string"
- }
-}
-</script>
-
   <link rel="stylesheet" href="/assets/css/style.css">
   <script src="/assets/js/theme.js"></script>
+
+  <!-- Schema.org JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+   "@context": "https://schema.org",
+   "@type": "Organization",
+   "name": "KEYDIR.in",
+   "url": "https://keydir.in",
+   "logo": "https://keydir.in/assets/img/favicon-512.png",
+   "sameAs": []
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+   "@context": "https://schema.org",
+   "@type": "WebSite",
+   "name": "KEYDIR.in",
+   "url": "https://keydir.in",
+   "potentialAction": {
+     "@type": "SearchAction",
+     "target": "https://keydir.in/vendors.html?q={search_term_string}",
+     "query-input": "required name=search_term_string"
+   }
+  }
+  </script>
+
   <style>
-    /* ── ARTIFACT SCROLLBAR KILL OVERRIDES ── */
-    .navbar, .nav-links {
+    /* ═══════════════════════════════════════════
+       1. GLOBAL UTILITIES & NAVIGATION OVERRIDES
+       ═══════════════════════════════════════════ */
+    .navbar,
+    .nav-links {
       overflow: visible !important;
     }
 
-    #cursor, #prog {
+    #cursor,
+    #prog {
       pointer-events: none !important;
     }
 
-    /* ── Dropdown nav (FIXED & BLACK HOVER) ── */
+    /* ── Dropdown Container ── */
     .nav-dropdown {
       position: relative;
       display: inline-block;
@@ -108,23 +112,25 @@
       gap: 4px;
     }
 
-    /* Turn button text black and background to text color on hover/active states */
-    .nav-dropdown:hover .nav-dropdown-btn,
-    .nav-dropdown.active .nav-dropdown-btn {
-      background: var(--text);
-      color: #000000 !important;
+    /* Hover state: Invert styling using root theme variables */
+    html body .nav-dropdown:hover .nav-dropdown-btn,
+    html body .nav-dropdown.active .nav-dropdown-btn {
+      background: var(--text) !important;
+      color: var(--bg) !important;
     }
 
     .nav-dropdown-btn::after {
       content: '▾';
       font-size: .6rem;
       transition: transform 0.2s ease;
+      color: inherit;
     }
 
     .nav-dropdown.active .nav-dropdown-btn::after {
       transform: rotate(180deg);
     }
 
+    /* Dropdown Overlay Menu */
     .nav-dropdown-menu {
       display: none;
       position: absolute;
@@ -141,7 +147,7 @@
       height: auto !important;
     }
 
-    /* Hover Interface Padding Bridge */
+    /* Invisible spacer bridge to prevent accidental dropdown close on mouse move */
     .nav-dropdown-menu::before {
       content: '';
       position: absolute;
@@ -151,8 +157,8 @@
       height: 12px;
     }
 
-    .nav-dropdown:hover .nav-dropdown-menu,
-    .nav-dropdown.active .nav-dropdown-menu {
+    html body .nav-dropdown:hover .nav-dropdown-menu,
+    html body .nav-dropdown.active .nav-dropdown-menu {
       display: flex !important;
     }
 
@@ -174,9 +180,9 @@
       border-bottom: none;
     }
 
-    .nav-dropdown-menu a:hover {
-      background: var(--text);
-      color: #000000 !important;
+    html body .nav-dropdown-menu a:hover {
+      background: var(--text) !important;
+      color: var(--bg) !important;
     }
 
     .nav-dropdown-menu a.active {
@@ -184,11 +190,19 @@
       color: #111;
     }
 
-    [data-theme="dark"] .nav-dropdown-menu { background: var(--surface); border-color: var(--border); }
-    [data-theme="dark"] .nav-dropdown-menu a { border-color: var(--border-subtle); }
-    [data-theme="dark"] .nav-dropdown-btn { color: var(--text); }
+    /* Theme Adaptations */
+    [data-theme="dark"] .nav-dropdown-menu {
+      background: var(--surface);
+      border-color: var(--border);
+    }
 
-    /* ── Home-specific ── */
+    [data-theme="dark"] .nav-dropdown-menu a {
+      border-color: var(--border-subtle);
+    }
+
+    /* ═══════════════════════════════════════════
+       2. HERO SECTION
+       ═══════════════════════════════════════════ */
     .hero-wrap {
       min-height: 100vh;
       display: flex;
@@ -224,6 +238,7 @@
       animation: fade-up .6s ease both;
     }
 
+    /* Live Server Status Indicator Dot */
     .hero-eyebrow .dot {
       width: 8px;
       height: 8px;
@@ -238,7 +253,6 @@
         opacity: 0;
         transform: translateY(20px)
       }
-
       to {
         opacity: 1;
         transform: none
@@ -261,6 +275,7 @@
       color: transparent
     }
 
+    /* Brutalist highlighted block text description */
     .hero-sub {
       font-family: var(--f-m);
       font-size: 1rem;
@@ -290,7 +305,7 @@
       animation: fade-up .65s .28s ease both
     }
 
-    /* Terminal card */
+    /* ── Terminal Component (Desktop Viewports Only) ── */
     .terminal {
       background: var(--border);
       border: 3px solid var(--border);
@@ -317,45 +332,27 @@
       border: 1px solid #333
     }
 
-    .terminal .t-dot:nth-child(1) {
-      background: #FF5F57
-    }
+    .terminal .t-dot:nth-child(1) { background: #FF5F57 }
+    .terminal .t-dot:nth-child(2) { background: #FFBD2E }
+    .terminal .t-dot:nth-child(3) { background: #28C840 }
 
-    .terminal .t-dot:nth-child(2) {
-      background: #FFBD2E
-    }
+    .terminal .t-line { display: flex; gap: 8px }
+    .terminal .t-prompt { color: #444 }
+    .terminal .t-ok { color: var(--green) }
+    .terminal .t-dim { color: #333 }
+    .terminal .t-warn { color: var(--yellow) }
 
-    .terminal .t-dot:nth-child(3) {
-      background: #28C840
-    }
-
-    .terminal .t-line {
-      display: flex;
-      gap: 8px
-    }
-
-    .terminal .t-prompt {
-      color: #444
-    }
-
-    .terminal .t-ok {
-      color: var(--green)
-    }
-
-    .terminal .t-dim {
-      color: #333
-    }
-
-    .terminal .t-warn {
-      color: var(--yellow)
-    }
-
-    /* Feature grid */
+    /* ═══════════════════════════════════════════
+       3. DIRECTORY SECTIONS & CARDS
+       ═══════════════════════════════════════════ */
+    
+    /* Feature Breakdown Grid Layout */
     .feat-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 0;
-      border: 2px solid var(--border);
+      border-top: 2px solid var(--border);
+      border-left: 2px solid var(--border);
       box-shadow: var(--sh-lg);
       background: var(--surface);
     }
@@ -371,17 +368,9 @@
       display: block;
     }
 
-    .feat-item:nth-child(4n) {
-      border-right: none
-    }
-
-    .feat-item:nth-tight-child(-n+4) {
-      border-bottom: none
-    }
-
     .feat-item:hover {
       transform: translate(3px, 3px);
-      box-shadow: -3px -3px 0 #111 inset
+      box-shadow: -3px -3px 0 #111 inset;
     }
 
     .feat-icon {
@@ -411,7 +400,7 @@
       text-underline-offset: 4px
     }
 
-    /* Category preview */
+    /* Dynamic Category Dynamic Badge Previews */
     .cat-preview-grid {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
@@ -438,71 +427,23 @@
       box-shadow: 2px 2px 0 #111
     }
 
-    .cat-prev-btn.yellow:hover {
-      background: var(--yellow)
-    }
+    /* Color States for the JavaScript-populated Category buttons */
+    .cat-prev-btn.yellow:hover { background: var(--yellow) }
+    .cat-prev-btn.green:hover { background: var(--green) }
+    .cat-prev-btn.blue:hover { background: var(--blue); color: #fff }
+    .cat-prev-btn.pink:hover { background: var(--pink); color: #fff }
+    .cat-prev-btn.orange:hover { background: var(--orange); color: #fff }
+    .cat-prev-btn.cyan:hover { background: var(--cyan) }
+    .cat-prev-btn.red:hover { background: var(--red); color: #fff }
+    .cat-prev-btn.purple:hover { background: var(--purple); color: #fff }
+    .cat-prev-btn.black:hover { background: var(--border); color: #fff }
+    .cat-prev-btn.teal:hover { background: var(--teal); color: #fff }
 
-    .cat-prev-btn.green:hover {
-      background: var(--green)
-    }
+    .cpb-icon { font-size: 1.6rem }
+    .cpb-lbl { font-family: var(--f-m); font-size: .7rem; font-weight: 700; text-transform: uppercase }
+    .cpb-count { font-family: var(--f-m); font-size: .63rem; color: #777 }
 
-    .cat-prev-btn.blue:hover {
-      background: var(--blue);
-      color: #fff
-    }
-
-    .cat-prev-btn.pink:hover {
-      background: var(--pink);
-      color: #fff
-    }
-
-    .cat-prev-btn.orange:hover {
-      background: var(--orange);
-      color: #fff
-    }
-
-    .cat-prev-btn.cyan:hover {
-      background: var(--cyan)
-    }
-
-    .cat-prev-btn.red:hover {
-      background: var(--red);
-      color: #fff
-    }
-
-    .cat-prev-btn.purple:hover {
-      background: var(--purple);
-      color: #fff
-    }
-
-    .cat-prev-btn.black:hover {
-      background: var(--border);
-      color: #fff
-    }
-
-    .cat-prev-btn.teal:hover {
-      background: var(--teal);
-      color: #fff
-    }
-
-    .cpb-icon {
-      font-size: 1.6rem
-    }
-
-    .cpb-lbl {
-      font-family: var(--f-m);
-      font-size: .7rem;
-      font-weight: 700;
-      text-transform: uppercase
-    }
-
-    .cpb-count {
-      font-family: var(--f-m);
-      font-size: .63rem;
-      color: #777
-    }
-
-    /* Stats section */
+    /* Counter Statistic Block Styles */
     .stats-row {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -519,10 +460,9 @@
       color: var(--text);
     }
 
-    .stat-item:last-child {
-      border-right: none
-    }
+    .stat-item:last-child { border-right: none }
 
+    /* Alternating layout variations for grid items */
     .stat-item:nth-child(odd) {
       background: var(--dark-card-bg);
       color: var(--dark-card-text)
@@ -551,7 +491,7 @@
       display: block
     }
 
-    /* CTA section */
+    /* Footer Call to Action Matrix Section */
     .cta-wrap {
       background: var(--cta-bg);
       border: 3px solid var(--border);
@@ -576,13 +516,12 @@
       pointer-events: none;
     }
 
+    /* ═══════════════════════════════════════════
+       4. RESPONSIVE BREAKPOINTS
+       ═══════════════════════════════════════════ */
     @media(max-width:1100px) {
       .feat-grid {
-        grid-template-columns: repeat(2, 1fr)
-      }
-
-      .feat-item:nth-child(2n) {
-        border-right: none
+        grid-template-columns: repeat(2, 1fr) !important;
       }
     }
 
@@ -603,6 +542,10 @@
       .stat-item:nth-child(2) {
         border-right: none
       }
+
+      .feat-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
     }
 
     @media(max-width:600px) {
@@ -611,11 +554,7 @@
       }
 
       .feat-grid {
-        grid-template-columns: 1fr
-      }
-
-      .feat-item:nth-child(n) {
-        border-right: none
+        grid-template-columns: 1fr !important;
       }
 
       .hero-wrap {
@@ -643,41 +582,48 @@
   <div id="cursor"></div>
   <div id="prog"></div>
 
-<nav class="navbar">
-  <a href="/" class="nav-logo">⌨ KEYDIR.in</a>
-  <div class="nav-links">
+  <!-- Main Navigation Layer -->
+  <nav class="navbar">
+    <a href="/" class="nav-logo">⌨ KEYDIR.in</a>
+    <div class="nav-links">
+      <a href="/vendors/">_Vendors</a>
+      <a href="/builders/">_Builders</a>
+      <a href="/brands/">_Brands</a>
+      <a href="/surfaces/">_Surfaces</a>
+      
+      <!-- More links drop list context -->
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-btn">_More</button>
+        <div class="nav-dropdown-menu">
+          <a href="/guide/">_Guide</a>
+          <a href="/about/">_About</a>
+          <a href="/contact/">_Contact</a>
+          <a href="https://github.com/SHADOW269/Keydir.in" target="_blank">_GitHub ↗</a>
+        </div>
+      </div>
+    </div>
+    <button class="nav-ham" id="ham"><span></span><span></span><span></span></button>
+  </nav>
+
+  <!-- Mobile Dropdown Navigation Menu drawer -->
+  <div id="mob-nav">
+    <button id="mob-close">[ X ]</button>
+    <a href="/">_Home</a>
     <a href="/vendors/">_Vendors</a>
     <a href="/builders/">_Builders</a>
     <a href="/brands/">_Brands</a>
     <a href="/surfaces/">_Surfaces</a>
-    <div class="nav-dropdown">
-      <button class="nav-dropdown-btn">_More</button>
-      <div class="nav-dropdown-menu">
-        <a href="/guide/">_Guide</a>
-        <a href="/about/">_About</a>
-        <a href="/contact/">_Contact</a>
-        <a href="https://github.com/SHADOW269/Keydir.in" target="_blank">_GitHub ↗</a>
-      </div>
-    </div>
+    <a href="/guide/">_Guide</a>
+    <a href="/about/">_About</a>
+    <a href="/contact/">_Contact</a>
+    <a href="https://github.com/SHADOW269/Keydir.in" target="_blank">_GitHub ↗</a>
   </div>
-  <button class="nav-ham" id="ham"><span></span><span></span><span></span></button>
-</nav>
 
-<div id="mob-nav">
-  <button id="mob-close">[ X ]</button>
-  <a href="/">_Home</a>
-  <a href="/vendors/">_Vendors</a>
-  <a href="/builders/">_Builders</a>
-  <a href="/brands/">_Brands</a>
-  <a href="/surfaces/">_Surfaces</a>
-  <a href="/guide/">_Guide</a>
-  <a href="/about/">_About</a>
-  <a href="/contact/">_Contact</a>
-  <a href="https://github.com/SHADOW269/Keydir.in" target="_blank">_GitHub ↗</a>
-</div>
-
+  <!-- Hero Splash Container Wrapper -->
   <div class="hero-wrap">
     <div class="hero-grid">
+      
+      <!-- Content Panel Left -->
       <div class="hero-left">
         <div class="hero-eyebrow"><span class="dot"></span> SYSTEM_ONLINE // INDIA_KEYBOARD_DB_v2</div>
         <h1 class="hero-title">
@@ -688,7 +634,7 @@
         </h1>
         <p class="hero-sub">
           Find trusted keyboard vendors, switches, keycaps, accessories and more across India.<br />
-          <b><span data-stat="vendors">24</span> vendors. 15 categories. Zero BS.</b>
+          <b><span data-stat="vendors">24</span> vendors. 15 categories.</b>
         </p>
         <div class="hero-actions">
           <a href="/vendors/" class="btn-primary">Browse Vendors →</a>
@@ -699,16 +645,14 @@
           </button>
         </div>
         <div class="hero-actions hero-stats">
-          <div class="stat-box"><span class="stat-num" data-count="24">0</span><span class="stat-label">Vendors</span>
-          </div>
-          <div class="stat-box"><span class="stat-num" data-count="15">0</span><span
-              class="stat-label">Categories</span></div>
-          <div class="stat-box"><span class="stat-num" data-count="13">0</span><span class="stat-label">Brand
-              Stores</span></div>
-          <div class="stat-box"><span class="stat-num" data-count="9">0</span><span class="stat-label">DIY
-              Builders</span></div>
+          <div class="stat-box"><span class="stat-num" data-count="24">0</span><span class="stat-label">Vendors</span></div>
+          <div class="stat-box"><span class="stat-num" data-count="15">0</span><span class="stat-label">Categories</span></div>
+          <div class="stat-box"><span class="stat-num" data-count="13">0</span><span class="stat-label">Brand Stores</span></div>
+          <div class="stat-box"><span class="stat-num" data-count="9">0</span><span class="stat-label">DIY Builders</span></div>
         </div>
       </div>
+      
+      <!-- Visual Interactive Terminal Mockup Panel Right -->
       <div class="hero-right">
         <div class="terminal">
           <div class="t-bar">
@@ -718,11 +662,9 @@
             <span style="font-size:.7rem;color:var(--text-muted);margin-left:8px">keydir_status.sh</span>
           </div>
           <div class="t-line"><span class="t-prompt">$</span><span>./check_db --region=IN</span></div>
-          <div class="t-line"><span class="t-ok">✓</span><span>vendors_loaded: <span
-                data-stat="vendors">24</span></span></div>
+          <div class="t-line"><span class="t-ok">✓</span><span>vendors_loaded: <span data-stat="vendors">24</span></span></div>
           <div class="t-line"><span class="t-ok">✓</span><span>categories: 15</span></div>
           <div class="t-line"><span class="t-ok">✓</span><span>search: ACTIVE</span></div>
-          <div class="t-line"><span class="t-ok">✓</span><span>filters: MULTI-SELECT</span></div>
           <div class="t-dim">──────────────────</div>
           <div class="t-line"><span class="t-warn">▲</span><span>region: INDIA 🇮🇳</span></div>
           <div class="t-line"><span class="t-warn">▲</span><span>last_update: May-2026</span></div>
@@ -732,27 +674,22 @@
           <div class="t-line"><span class="t-ok">●</span><span>STATUS: ONLINE</span></div>
         </div>
       </div>
+
     </div>
   </div>
 
+  <!-- Continuous Scrolling Infinite Text Ribbon -->
   <div class="marquee-strip">
     <div class="marquee-track">
-      <span>PRE-BUILT</span><span class="sep">///</span><span>SWITCHES</span><span
-        class="sep">///</span><span>KEYCAPS</span><span class="sep">///</span><span>HALL EFFECT</span><span
-        class="sep">///</span><span>BAREBONES</span><span class="sep">///</span><span>DESKPADS</span><span
-        class="sep">///</span><span>PARTS &amp; TOOLS</span><span class="sep">///</span><span>MOUSE</span><span
-        class="sep">///</span><span>ACCESSORIES</span><span class="sep">///</span><span>PC PARTS</span><span
-        class="sep">///</span>
-      <span>PRE-BUILT</span><span class="sep">///</span><span>SWITCHES</span><span
-        class="sep">///</span><span>KEYCAPS</span><span class="sep">///</span><span>HALL EFFECT</span><span
-        class="sep">///</span><span>BAREBONES</span><span class="sep">///</span><span>DESKPADS</span><span
-        class="sep">///</span><span>PARTS &amp; TOOLS</span><span class="sep">///</span><span>MOUSE</span><span
-        class="sep">///</span><span>ACCESSORIES</span><span class="sep">///</span><span>PC PARTS</span><span
-        class="sep">///</span>
+      <span>PRE-BUILT</span><span class="sep">///</span><span>SWITCHES</span><span class="sep">///</span><span>KEYCAPS</span><span class="sep">///</span><span>HALL EFFECT</span><span class="sep">///</span><span>BAREBONES</span><span class="sep">///</span><span>DESKPADS</span><span class="sep">///</span><span>PARTS &amp; TOOLS</span><span class="sep">///</span><span>MOUSE</span><span class="sep">///</span><span>ACCESSORIES</span><span class="sep">///</span><span>PC PARTS</span><span class="sep">///</span>
+      <span>PRE-BUILT</span><span class="sep">///</span><span>SWITCHES</span><span class="sep">///</span><span>KEYCAPS</span><span class="sep">///</span><span>HALL EFFECT</span><span class="sep">///</span><span>BAREBONES</span><span class="sep">///</span><span>DESKPADS</span><span class="sep">///</span><span>PARTS &amp; TOOLS</span><span class="sep">///</span><span>MOUSE</span><span class="sep">///</span><span>ACCESSORIES</span><span class="sep">///</span><span>PC PARTS</span><span class="sep">///</span>
     </div>
   </div>
 
+  <!-- Content Sections Wrapper -->
   <div class="page-body">
+    
+    <!-- Section: Structural Navigation Feature Breakdown -->
     <section style="padding:80px 0 60px">
       <div class="sec-head reveal">
         <h2>WHAT'S <em style="color:var(--green)">INSIDE</em></h2>
@@ -762,41 +699,50 @@
         <a href="/vendors/" class="feat-item" style="background:var(--surface)">
           <span class="feat-icon">🏪</span>
           <div class="feat-name">Vendor Directory</div>
-          <div class="feat-desc"><span data-stat="vendors">19</span> verified vendors. Filter by category, search by
-            name. Find exactly who stocks what you need.</div>
+          <div class="feat-desc"><span data-stat="vendors">19</span> verified vendors. Filter by category, search by name. Find exactly who stocks what you need.</div>
         </a>
         <a href="/builders/" class="feat-item" style="background:var(--surface)">
           <span class="feat-icon">🔧</span>
           <div class="feat-name">DIY Builders</div>
-          <div class="feat-desc">Custom cable makers, artisan key crafters, and bespoke build services for the
-            discerning builder.</div>
+          <div class="feat-desc">Discover custom keyboard builders offering repairs, modding, artisan creations, custom cables, split keyboards, and one-of-a-kind builds.</div>
         </a>
         <a href="/brands/#All-Brands" class="feat-item" style="background:var(--surface)">
           <span class="feat-icon">🏢</span>
           <div class="feat-name">Brand Stores</div>
-          <div class="feat-desc">Direct from manufacturer. Official India stores for Keychron, Redragon, TVS, and more.
-          </div>
+          <div class="feat-desc">Explore official Indian storefronts and authorized sellers for leading keyboard and gaming brands.</div>
         </a>
-        <a href="/brands/#Marketplace" class="feat-item" style="background:var(--surface)">
-          <span class="feat-icon">📦</span>
-          <div class="feat-name">Marketplace</div>
-          <div class="feat-desc">Amazon India and Flipkart — broad searches across all keyboard and peripheral
-            categories.</div>
+        <a href="/brands/#Third-Party-Sellers" class="feat-item" style="background:var(--surface)">
+          <span class="feat-icon">🏬</span>
+          <div class="feat-name">Third-Party Sellers</div>
+          <div class="feat-desc">Authorized retailers and trusted resellers offering products from multiple keyboard, gaming, and PC brands in one place.</div>
+        </a>
+        <a href="/surfaces/" class="feat-item" style="background:var(--surface)">
+          <span class="feat-icon">🧩</span>
+          <div class="feat-name">Surfaces</div>
+          <div class="feat-desc">Browse deskpads, deskmats, and mousepads for gaming, productivity, and custom mats for your desk setups.</div>
+        </a>
+        <a href="/groupbuy/" class="feat-item" style="background:var(--surface)">
+          <span class="feat-icon">⏳</span>
+          <div class="feat-name">Group Buys</div>
+          <div class="feat-desc">Join community-driven group purchases for keyboards, keycaps and accessories available through community group buys and pre-orders.</div>
         </a>
       </div>
     </section>
 
+    <!-- Section: Category Injection Grid -->
     <section style="padding:0 0 80px" id="categories">
       <div class="sec-head reveal">
         <h2>BROWSE BY <em style="color:var(--yellow)">CATEGORY</em></h2>
         <div class="sec-tag" style="color:var(--yellow)">15 CATEGORIES</div>
       </div>
+      <!-- Elements injected automatically dynamically via Javascript initialization down below -->
       <div class="cat-preview-grid reveal" style="transition-delay:.08s" id="catPreview"></div>
       <div style="margin-top:20px;text-align:center">
         <a href="/vendors/" class="btn-primary" style="margin-top:8px">Explore Full Directory →</a>
       </div>
     </section>
 
+    <!-- Section: Pure Counter Data Display Row -->
     <section style="padding:0 0 80px">
       <div class="stats-row reveal">
         <div class="stat-item">
@@ -818,34 +764,31 @@
       </div>
     </section>
 
+    <!-- Section: Call to action marketing component -->
     <section style="padding:0 0 80px">
       <div class="cta-wrap reveal">
         <div class="section-tag-label"><span class="dot"></span> READY TO BUILD?</div>
-        <h2
-          style="font-family:var(--f-d);font-size:clamp(2.5rem,6vw,5rem);font-weight:800;text-transform:uppercase;letter-spacing:-.05em;line-height:.9;margin-bottom:1.5rem">
+        <h2 style="font-family:var(--f-d);font-size:clamp(2.5rem,6vw,5rem);font-weight:800;text-transform:uppercase;letter-spacing:-.05em;line-height:.9;margin-bottom:1.5rem">
           Find Your Next<br />Keyboard Part.
         </h2>
-        <p
-          style="font-family:var(--f-m);font-size:.95rem;max-width:460px;margin-bottom:2rem;line-height:1.75;color:var(--cta-text-muted)">
+        <p style="font-family:var(--f-m);font-size:.95rem;max-width:460px;margin-bottom:2rem;line-height:1.75;color:var(--cta-text-muted)">
           Pick a category. See every Indian vendor that carries it — instantly. No affiliate links. No ads. Pure signal.
         </p>
         <div style="display:flex;gap:12px;flex-wrap:wrap">
           <a href="/vendors/" class="btn-primary">Browse All Vendors →</a>
-          <a href="https://github.com/SHADOW269/Keydir.in" target="_blank" class="btn-secondary">Contribute on
-            GitHub</a>
+          <a href="https://github.com/SHADOW269/Keydir.in" target="_blank" class="btn-secondary">Contribute on GitHub</a>
         </div>
       </div>
     </section>
   </div>
 
+  <!-- Global Footer -->
   <footer>
     <div class="footer-inner">
-
       <div>
-        <div class="f-logo">⌨ KEYDIR.exe</div>
+        <div class="f-logo">⌨ KEYDIR.in</div>
         <div class="f-desc">
-          Community-maintained directory of Indian mechanical keyboard vendors.
-          No affiliate links. No ads. Just raw data for the keeb community.
+          Community-maintained directory of Indian mechanical keyboard vendors. No affiliate links. No ads. Just raw data for the keeb community.
         </div>
       </div>
 
@@ -857,9 +800,9 @@
           <li><a href="/builders/">_Builders</a></li>
           <li><a href="/brands/">_Brands</a></li>
           <li><a href="/guide/">_Guide</a></li>
+          <li><a href="/groupbuy/">_Group Buys</a></li>
           <li><a href="/surfaces/">_Surfaces</a></li>
           <li><a href="/about/">_About</a></li>
-          <li><a href="/contact/">_Contact</a></li>
           <li><a href="https://keydir.in/assets/sitemap.xml" target="_blank">_Sitemap</a></li>
         </ul>
       </div>
@@ -878,80 +821,71 @@
       <div class="f-col">
         <h4>Project</h4>
         <ul>
-          <li>
-            <a href="https://github.com/SHADOW269/Keydir.in" target="_blank" rel="noopener">
-              _GitHub
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/SHADOW269/Keydir.in/issues" target="_blank" rel="noopener">
-              _Report Issue
-            </a>
-          </li>
-          <li><a href="/Terms-and-Conditions/">_Terms & Conditions</a></li>
+          <li><a href="/contact/">_Contact</a></li>
+          <li><a href="https://github.com/SHADOW269/Keydir.in" target="_blank" rel="noopener"> _GitHub</a></li>
+          <li><a href="https://github.com/SHADOW269/Keydir.in/issues" target="_blank" rel="noopener"> _Report Issue</a></li>
+          <li><a href="/terms-and-conditions/">_Terms & Conditions</a></li>
         </ul>
       </div>
-
     </div>
 
     <div class="f-bottom">
       <div class="f-copy">
         © 2026 KEYDIR.in // COMMUNITY PROJECT // NOT AFFILIATED WITH ANY VENDOR // SYSTEM_END
       </div>
-
       <button class="theme-toggle" onclick="toggleTheme()">
         <span class="tt-icon">◑</span>
         <span class="tt-label">DARK MODE</span>
       </button>
     </div>
-
     <div class="f-watermark">KEYDIR</div>
   </footer>
 
   <script src="/assets/js/shared.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", () => {
+      
+      // 1. Generate and display Category button shortcuts 
       const grid = document.getElementById("catPreview");
-
       if (grid) {
+        // CAT_META and VENDORS arrays are loaded globally from external shared.js file
         CAT_META.forEach(cat => {
+          // Calculate the count of verified vendors who match the specific category id
           const n = VENDORS.filter(v => v.cats.includes(cat.id)).length;
 
           const a = document.createElement("a");
           a.href = "/vendors/";
           a.className = `cat-prev-btn ${cat.col}`;
           a.innerHTML = `
-        <span class="cpb-icon">${cat.icon}</span>
-        <span class="cpb-lbl">${cat.label}</span>
-        <span class="cpb-count">${n} vendors</span>
-      `;
-
+            <span class="cpb-icon">${cat.icon}</span>
+            <span class="cpb-lbl">${cat.label}</span>
+            <span class="cpb-count">${n} vendors</span>
+          `;
           grid.appendChild(a);
         });
       }
 
-      /* Bell button */
+      // 2. Notification Updates System Bell trigger
       document.getElementById("heroBell")?.addEventListener("click", () => {
-
-        /* Allow popup to reopen even if previously dismissed */
+        // Reset local storage flag to ensure popup re-opens immediately upon clicks
         localStorage.removeItem("kd-popup-seen");
-
-        /* Open popup */
         buildKeyDirPopup();
       });
 
-      // ── Dropdown logic handling click/touch event layers ──
+      // 3. Navigation Header Dropdown Logic Operations
       const dropdown = document.querySelector('.nav-dropdown');
       const dropdownBtn = document.querySelector('.nav-dropdown-btn');
 
       dropdownBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
+        e.stopPropagation(); // Stop click from bleeding into document layer
         dropdown.classList.toggle('active');
       });
 
+      // Close open contextual menus if user clicks off outside target
       document.addEventListener('click', () => {
         dropdown.classList.remove('active');
       });
     });
   </script>
 </body>
+</html>
