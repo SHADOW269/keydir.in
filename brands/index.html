@@ -1,401 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Basic Setup -->
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keyboard Brands in India — KEYDIR.in</title>
 
-<title>Keyboard Brands in India — KEYDIR.in</title>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="35caf6d4-f14b-4b28-9f07-600b6910a4d3"></script>
+  <script src="/assets/js/keydir-popup.js" defer></script>
 
-<!-- Umami Analytics | popup message-->
-<script defer src="https://cloud.umami.is/script.js" data-website-id="35caf6d4-f14b-4b28-9f07-600b6910a4d3"></script>
-<script src="/assets/js/keydir-popup.js" defer></script>
+  <meta name="description" content="Browse mechanical keyboard brands available in India. Discover switch makers, keycap brands, keyboard manufacturers, and accessory companies supported by Indian vendors.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://keydir.in/brands/">
 
-<!-- SEO Optimization -->
-<meta name="description"
-content="Browse mechanical keyboard brands available in India. Discover switch makers, keycap brands, keyboard manufacturers, and accessory companies supported by Indian vendors.">
+  <meta name="geo.region" content="IN">
+  <meta name="geo.placename" content="India">
+  <meta name="theme-color" content="#000000">
 
-<meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon-192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/assets/img/favicon-512.png">
+  <link rel="apple-touch-icon" href="/assets/img/favicon-512.png">
 
-<link rel="canonical" href="https://keydir.in/brands/">
+  <meta property="og:title" content="Keyboard Brands in India — KEYDIR.in">
+  <meta property="og:description" content="Explore mechanical keyboard brands available in India including switches, keycaps, keyboards, and accessories.">
+  <meta property="og:url" content="https://keydir.in/brands/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="KEYDIR.in">
+  <meta property="og:locale" content="en_IN">
+  <meta property="og:image" content="https://keydir.in/assets/img/Banner.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="KEYDIR.in Mechanical Keyboard Brand Directory Banner">
 
-<!-- Geo Targeting -->
-<meta name="geo.region" content="IN">
-<meta name="geo.placename" content="India">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Keyboard Brands in India — KEYDIR.in">
+  <meta name="twitter:description" content="Discover mechanical keyboard brands available in India including switches, keycaps, keyboards, and accessories.">
+  <meta name="twitter:image" content="https://keydir.in/assets/img/Banner.png">
 
-<!-- Theme color -->
-<meta name="theme-color" content="#000000">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script src="/assets/js/theme.js"></script>
 
-<!-- Favicons -->
-<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
-<link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon-192.png">
-<link rel="icon" type="image/png" sizes="512x512" href="/assets/img/favicon-512.png">
-<link rel="apple-touch-icon" href="/assets/img/favicon-512.png">
+  <script type="application/ld+json">
+  {
+   "@context": "https://schema.org",
+   "@type": "Organization",
+   "name": "KEYDIR.in",
+   "url": "https://keydir.in",
+   "logo": "https://keydir.in/assets/img/favicon-512.png"
+  }
+  </script>
 
-<!-- Open Graph (Discord / WhatsApp / Reddit preview) -->
-<meta property="og:title" content="Keyboard Brands in India — KEYDIR.in">
-<meta property="og:description"
-content="Explore mechanical keyboard brands available in India including switches, keycaps, keyboards, and accessories.">
-<meta property="og:url" content="https://keydir.in/brands/">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="KEYDIR.in">
-<meta property="og:locale" content="en_IN">
+  <script type="application/ld+json">
+  {
+   "@context": "https://schema.org",
+   "@type": "CollectionPage",
+   "name": "Keyboard Brands in India",
+   "url": "https://keydir.in/brands/",
+   "description": "Browse mechanical keyboard brands available in India including switches, keycaps, keyboards, and accessories."
+  }
+  </script>
 
-<meta property="og:image" content="https://keydir.in/assets/img/Banner.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="KEYDIR.in Mechanical Keyboard Brand Directory Banner">
+  <style>
+    /* ═══════════════════════════════════════════
+       1. GLOBAL UTILITIES & NAVIGATION OVERRIDES
+       ═══════════════════════════════════════════ */
+    .navbar,
+    .nav-links {
+      overflow: visible !important;
+    }
 
-<!-- Twitter preview -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Keyboard Brands in India — KEYDIR.in">
-<meta name="twitter:description"
-content="Discover mechanical keyboard brands available in India including switches, keycaps, keyboards, and accessories.">
-<meta name="twitter:image" content="https://keydir.in/assets/img/Banner.png">
+    #cursor,
+    #prog {
+      pointer-events: none !important;
+    }
 
-<!-- Organization Schema -->
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "Organization",
- "name": "KEYDIR.in",
- "url": "https://keydir.in",
- "logo": "https://keydir.in/assets/img/favicon-512.png"
-}
-</script>
+    /* ── Nav Dropdown Container ── */
+    .nav-dropdown {
+      position: relative;
+      display: inline-block;
+    }
 
-<!-- Collection Page Schema (important for directory pages like this) -->
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "CollectionPage",
- "name": "Keyboard Brands in India",
- "url": "https://keydir.in/brands/",
- "description": "Browse mechanical keyboard brands available in India including switches, keycaps, keyboards, and accessories."
-}
-</script>
+    .nav-dropdown-btn {
+      font-family: var(--f-m);
+      font-size: .75rem;
+      font-weight: 700;
+      color: var(--text);
+      background: none;
+      border: none;
+      padding: 6px 10px;
+      cursor: pointer;
+      text-transform: uppercase;
+      white-space: nowrap;
+      transition: all .1s;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
 
-<link rel="stylesheet" href="/assets/css/style.css">
-<script src="/assets/js/theme.js"></script>
-<style>
-.br-hero{padding:calc(var(--nav-h) + 100px) 24px 80px;max-width:1380px;margin:0 auto}
-.br-title{font-family:var(--f-d);font-size:clamp(3rem,8vw,6.5rem);font-weight:800;line-height:.85;letter-spacing:-.06em;text-transform:uppercase;margin-bottom:1.25rem}
-.br-title .outline{-webkit-text-stroke:3px var(--text);color:transparent}
-.br-sub{font-family:var(--f-m);font-size:.9rem;line-height:1.8;background:var(--yellow);border:2px solid var(--border);padding:14px 18px;box-shadow:var(--sh);transform:rotate(-.3deg);display:inline-block;margin-bottom:2rem;max-width:520px}
-/* Brand grid */
-.brand-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.brand-card{
-  background:var(--surface);border:2px solid var(--border);box-shadow:var(--sh);
-  overflow:hidden;transition:transform .12s,box-shadow .12s;
-  animation:card-in .35s ease both;display:flex;flex-direction:column;
-}
-@keyframes card-in{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
-.brand-card:hover{transform:translate(3px,3px);box-shadow:1px 1px 0 #111}
-.brand-card-accent{height:8px;border-bottom:2px solid var(--border)}
-.brand-card-body{padding:22px;flex:1}
-.brand-number{font-family:var(--f-m);font-size:.65rem;font-weight:700;color:var(--text-dim);letter-spacing:.08em;margin-bottom:10px}
-.brand-name-row{display:flex;align-items:center;gap:8px;margin-bottom:8px}
-.brand-name{font-family:var(--f-d);font-size:1.5rem;font-weight:800;text-transform:uppercase;letter-spacing:-.04em;line-height:.95}
-.brand-spec{font-family:var(--f-m);font-size:.8rem;color:var(--text-muted);line-height:1.6;margin-bottom:14px;min-height:36px}
-.risk-badge{
-  font-family:var(--f-m);font-size:.65rem;font-weight:700;padding:5px 10px;
-  background:var(--red);color:#fff;border:2px solid var(--border);
-  display:inline-block;margin-bottom:10px;letter-spacing:.05em;text-transform:uppercase;
-}
-.risk-message{font-family:var(--f-m);font-size:.75rem;color:var(--red);line-height:1.6;margin-bottom:12px;padding:8px 12px;background:#fff0f0;border:1px solid #ffcccc}
-.brand-card-foot{padding:14px 22px;border-top:2px solid var(--border);display:flex;align-items:center;justify-content:space-between;background:rgba(0,0,0,.025);flex-wrap:wrap;gap:8px}
-.brand-foot-label{font-family:var(--f-m);font-size:.65rem;color:var(--text-dim);text-transform:uppercase;letter-spacing:.08em}
-/* Stat strip */
-.stat-strip{display:flex;border:2px solid var(--border);box-shadow:var(--sh-lg);background:var(--surface)}
-.ss-item{flex:1;padding:24px;border-right:2px solid var(--border);text-align:center}
-.ss-item:last-child{border-right:none}
-.ss-num{font-family:var(--f-m);font-size:2rem;font-weight:800;display:block}
-.ss-lbl{font-family:var(--f-m);font-size:.65rem;color:var(--text-dim);letter-spacing:.08em;text-transform:uppercase;margin-top:4px;display:block}
-/* Disclaimer */
-.disclaimer{background:var(--border);border:2px solid var(--border);box-shadow:var(--sh-lg);padding:28px 32px;color:var(--surface);display:flex;gap:20px;align-items:flex-start;flex-wrap:wrap}
-.disc-icon{font-size:1.8rem;flex-shrink:0}
-.disc-title{font-family:var(--f-m);font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--yellow);margin-bottom:8px}
-.disc-text{font-family:var(--f-m);font-size:.82rem;color:var(--text-dim);line-height:1.9}
-.disc-text strong{color:var(--green)}
-@media(max-width:860px){.brand-grid{grid-template-columns:repeat(2,1fr)}.stat-strip{flex-wrap:wrap}.ss-item{flex:1 1 50%;border-bottom:2px solid var(--border)}}
-@media(max-width:480px){.brand-grid{grid-template-columns:1fr}.ss-item{flex:1 1 100%}}
-@media(max-width:640px){.br-hero{padding-left:16px;padding-right:16px}}
-</style>
+    html body .nav-dropdown:hover .nav-dropdown-btn,
+    html body .nav-dropdown.active .nav-dropdown-btn {
+      background: var(--text) !important;
+      color: var(--bg) !important;
+    }
+
+    .nav-dropdown-btn::after {
+      content: '▾';
+      font-size: .6rem;
+      transition: transform 0.2s ease;
+      color: inherit;
+    }
+
+    .nav-dropdown.active .nav-dropdown-btn::after {
+      transform: rotate(180deg);
+    }
+
+    /* ── Dropdown Overlay Menu ── */
+    .nav-dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      left: auto;
+      background: var(--surface);
+      border: 2px solid var(--border);
+      box-shadow: var(--sh-lg);
+      z-index: 999999 !important;
+      min-width: 160px;
+      flex-direction: column;
+      margin-top: 2px;
+      height: auto !important;
+    }
+
+    .nav-dropdown-menu::before {
+      content: '';
+      position: absolute;
+      top: -12px;
+      left: 0;
+      right: 0;
+      height: 12px;
+    }
+
+    html body .nav-dropdown:hover .nav-dropdown-menu,
+    html body .nav-dropdown.active .nav-dropdown-menu {
+      display: flex !important;
+    }
+
+    .nav-dropdown-menu a {
+      font-family: var(--f-m);
+      font-size: .75rem;
+      font-weight: 700;
+      color: var(--text);
+      text-decoration: none;
+      padding: 10px 16px;
+      text-transform: uppercase;
+      white-space: nowrap;
+      border-bottom: 1px solid var(--border-subtle);
+      transition: all .1s;
+      display: block;
+    }
+
+    .nav-dropdown-menu a:last-child {
+      border-bottom: none;
+    }
+
+    html body .nav-dropdown-menu a:hover {
+      background: var(--text) !important;
+      color: var(--bg) !important;
+    }
+
+    .nav-dropdown-menu a.active {
+      background: var(--yellow);
+      color: #111;
+    }
+
+    [data-theme="dark"] .nav-dropdown-menu {
+      background: var(--surface);
+      border-color: var(--border);
+    }
+
+    [data-theme="dark"] .nav-dropdown-menu a {
+      border-color: var(--border-subtle);
+    }
+
+    /* ═══════════════════════════════════════════
+       2. HERO AREA & PROFILE DATA DISPLAY
+       ═══════════════════════════════════════════ */
+    .br-hero {
+      padding: calc(var(--nav-h) + 60px) 24px 50px;
+      max-width: 1380px;
+      margin: 0 auto;
+    }
+
+    .br-title {
+      font-family: var(--f-d);
+      font-size: clamp(3rem, 8vw, 6.5rem);
+      font-weight: 800;
+      line-height: .85;
+      letter-spacing: -.06em;
+      text-transform: uppercase;
+      margin-bottom: 1.25rem;
+    }
+
+    .br-title .outline {
+      -webkit-text-stroke: 3px var(--text);
+      color: transparent;
+    }
+
+    .br-sub {
+      font-family: var(--f-m);
+      font-size: .9rem;
+      line-height: 1.8;
+      background: var(--yellow);
+      border: 2px solid var(--border);
+      padding: 14px 18px;
+      box-shadow: var(--sh);
+      transform: rotate(-.3deg);
+      display: inline-block;
+      margin-bottom: 2rem;
+      max-width: 520px;
+    }
+
+    /* Counter Statistic Strip Panel Layout */
+    .stat-strip {
+      display: flex;
+      border: 2px solid var(--border);
+      box-shadow: var(--sh-lg);
+      background: var(--surface);
+    }
+
+    .ss-item {
+      flex: 1;
+      padding: 24px;
+      border-right: 2px solid var(--border);
+      text-align: center;
+    }
+
+    .ss-item:last-child { border-right: none; }
+    .ss-num { font-family: var(--f-m); font-size: 2rem; font-weight: 800; display: block; }
+    .ss-lbl { font-family: var(--f-m); font-size: .65rem; color: var(--text-dim); letter-spacing: .08em; text-transform: uppercase; margin-top: 4px; display: block; }
+
+    /* ═══════════════════════════════════════════
+       3. BRUTALIST DIRECTORY CARD ENTRIES
+       ═══════════════════════════════════════════ */
+    .brand-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .brand-card {
+      background: var(--surface);
+      border: 2px solid var(--border);
+      box-shadow: var(--sh);
+      overflow: hidden;
+      transition: transform .12s, box-shadow .12s;
+      animation: card-in .35s ease both;
+      display: flex;
+      flex-direction: column;
+    }
+    @keyframes card-in { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+    .brand-card:hover { transform: translate(3px, 3px); box-shadow: 1px 1px 0 #111; }
+    
+    .brand-card-accent { height: 8px; border-bottom: 2px solid var(--border); }
+    .brand-card-body { padding: 22px; flex: 1; }
+    .brand-number { font-family: var(--f-m); font-size: .65rem; font-weight: 700; color: var(--text-dim); letter-spacing: .08em; margin-bottom: 10px; }
+    .brand-name-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+    .brand-name { font-family: var(--f-d); font-size: 1.5rem; font-weight: 800; text-transform: uppercase; letter-spacing: -.04em; line-height: .95; }
+    .brand-spec { font-family: var(--f-m); font-size: .8rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 14px; min-height: 36px; }
+    
+    /* Risk Context Elements Styling */
+    .risk-badge {
+      font-family: var(--f-m);
+      font-size: .65rem;
+      font-weight: 700;
+      padding: 5px 10px;
+      background: var(--red);
+      color: #fff;
+      border: 2px solid var(--border);
+      display: inline-block;
+      margin-bottom: 10px;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+    }
+    .risk-message { font-family: var(--f-m); font-size: .75rem; color: var(--red); line-height: 1.6; margin-bottom: 12px; padding: 8px 12px; background: #fff0f0; border: 1px solid #ffcccc; }
+    
+    .brand-card-foot { padding: 14px 22px; border-top: 2px solid var(--border); display: flex; align-items: center; justify-content: space-between; background: rgba(0,0,0,.025); flex-wrap: wrap; gap: 8px; }
+    .brand-foot-label { font-family: var(--f-m); font-size: .65rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: .08em; }
+
+    /* ═══════════════════════════════════════════
+       4. GLOBAL CONTRAST HOVER VISIBILITY FIXES
+       ═══════════════════════════════════════════ */
+    .btn-secondary:hover {
+      background: var(--green) !important;
+      color: #111 !important;
+    }
+    .btn-primary:hover {
+      background: var(--text) !important;
+      color: var(--bg) !important;
+    }
+
+    /* ── Legal Disclaimer Row ── */
+    .disclaimer {
+      background: var(--border);
+      border: 2px solid var(--border);
+      box-shadow: var(--sh-lg);
+      padding: 28px 32px;
+      color: var(--surface);
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+    .disc-icon { font-size: 1.8rem; flex-shrink: 0; }
+    .disc-title { font-family: var(--f-m); font-size: .68rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--yellow); margin-bottom: 8px; }
+    .disc-text { font-family: var(--f-m); font-size: .82rem; color: var(--text-dim); line-height: 1.9; }
+    .disc-text strong { color: var(--green); }
+
+    /* ═══════════════════════════════════════════
+       5. MEDIA QUERY BREAKPOINTS
+       ═══════════════════════════════════════════ */
+    @media(max-width:860px) {
+      .brand-grid { grid-template-columns: repeat(2, 1fr); }
+      .stat-strip { flex-wrap: wrap; }
+      .ss-item { flex: 1 1 50%; border-bottom: 2px solid var(--border); }
+    }
+    @media(max-width:640px) { .br-hero { padding-left: 16px; padding-right: 16px; } }
+    @media(max-width:480px) { .brand-grid { grid-template-columns: 1fr; } .ss-item { flex: 1 1 100%; } }
+  </style>
 </head>
 <body>
-<div id="cursor"></div><div id="prog"></div>
-<nav class="navbar">
-  <a href="../" class="nav-logo">⌨ KEYDIR.in</a>
-  <div class="nav-links">
+  <div id="cursor"></div>
+  <div id="prog"></div>
+
+  <!-- Main Navigation Layer -->
+  <nav class="navbar">
+    <a href="/" class="nav-logo">⌨ KEYDIR.in</a>
+    <div class="nav-links">
+      <a href="/">_Home</a>
+      <a href="/vendors/">_Vendors</a>
+      <a href="/builders/">_Builders</a>
+      <a href="/brands/" class="active">_Brands</a>
+      <a href="/surfaces/">_Surfaces</a>
+      
+      <!-- More links drop list context -->
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-btn">_More</button>
+        <div class="nav-dropdown-menu">
+          <a href="/groupbuy/">_Group Buy</a>
+          <a href="/guide/">_Guide</a>
+          <a href="/about/">_About</a>
+          <a href="/contact/">_Contact</a>
+          <a href="https://github.com/SHADOW269/Keydir.in" target="_blank">_GitHub ↗</a>
+        </div>
+      </div>
+    </div>
+    <button class="nav-ham" id="ham"><span></span><span></span><span></span></button>
+  </nav>
+
+  <!-- Mobile Dropdown Navigation Menu drawer -->
+  <div id="mob-nav">
+    <button id="mob-close">[ X ]</button>
     <a href="/">_Home</a>
     <a href="/vendors/">_Vendors</a>
     <a href="/builders/">_Builders</a>
-    <a href="/brands/" class="active">_Brands</a>
+    <a href="/brands/">_Brands</a>
     <a href="/surfaces/">_Surfaces</a>
+    <a href="/groupbuy/">_Group Buy</a>
     <a href="/guide/">_Guide</a>
     <a href="/about/">_About</a>
-    <a href="https://github.com/SHADOW269/Keydir.in" target="_blank" style="background:var(--text);color:var(--bg)">_GitHub</a>
-  </div>
-  <button class="nav-ham" id="ham"><span></span><span></span><span></span></button>
-</nav>
-<div id="mob-nav">
-  <button id="mob-close">[ X ]</button>
-  <a href="/">_Home</a>
-  <a href="/vendors/">_Vendors</a>
-  <a href="/builders/">_Builders</a>
-  <a href="/surfaces/">_Surfaces</a>
-  <a href="/guide/">_Guide</a>
-  <a href="/brands/">_Brands</a>
-  <a href="/about/">_About</a>
-</div>
-
-<!-- Hero -->
-<div class="br-hero">
-  <div class="section-tag-label reveal"><span class="dot"></span> OFFICIAL INDIA STOREFRONTS // <span data-stat="brands">9</span> BRANDS</div>
-  <h1 class="br-title reveal" style="transition-delay:.06s">
-    OFFICIAL<br/><span class="outline">BRAND</span><br/>STORES.
-  </h1>
-  <p class="br-sub reveal" style="transition-delay:.12s">
-    Buy direct from the manufacturer. Official India storefronts for mechanical keyboards, gaming peripherals, and tech accessories.<br/><b>Always verify authenticity before purchasing.</b>
-  </p>
-  <div class="reveal" style="transition-delay:.18s;display:flex;gap:12px;flex-wrap:wrap">
-    <a href="/vendors/" class="btn-primary">← Vendor Directory</a>
-    <a href="#All-Brands" class="btn-secondary">Marketplace ↓</a>
-  </div>
-</div>
-
-<!-- Marquee -->
-<div class="marquee-strip">
-  <div class="marquee-track">
-    <span>OFFICIAL STORES</span><span class="sep">///</span><span>DIRECT FROM BRAND</span><span class="sep">///</span><span>NO MIDDLEMAN</span><span class="sep">///</span><span>AUTHENTICITY GUARANTEED</span><span class="sep">///</span><span>INDIA AUTHORIZED</span><span class="sep">///</span><span>MANUFACTURER DIRECT</span><span class="sep">///</span>
-    <span>OFFICIAL STORES</span><span class="sep">///</span><span>DIRECT FROM BRAND</span><span class="sep">///</span><span>NO MIDDLEMAN</span><span class="sep">///</span><span>AUTHENTICITY GUARANTEED</span><span class="sep">///</span><span>INDIA AUTHORIZED</span><span class="sep">///</span><span>MANUFACTURER DIRECT</span><span class="sep">///</span>
-  </div>
-</div>
-
-<div class="page-body" style="padding-bottom:100px">
-  <!-- Stats -->
-  <div class="stat-strip reveal" style="margin:3rem 0 3rem">
-    <div class="ss-item"><span class="ss-num" id="totalBrands">0</span><span class="ss-lbl">Brand Stores</span></div>
-    <div class="ss-item" style="background:var(--text);color:var(--bg)"><span class="ss-num" id="riskBrands">0</span><span class="ss-lbl" style="color:var(--text-muted)">Risk Warnings</span></div>
-    <div class="ss-item"><span class="ss-num" id="safeBrands">0</span><span class="ss-lbl">Safe to Buy</span></div>
-    <div class="ss-item" style="background:var(--yellow)"><span class="ss-num">2026</span><span class="ss-lbl">Last Updated</span></div>
+    <a href="/contact/">_Contact</a>
+    <a href="https://github.com/SHADOW269/Keydir.in" target="_blank">_GitHub ↗</a>
   </div>
 
-  <!-- Brand grid -->
-  <div class="sec-head reveal" id="All-Brands">
-    <h2>ALL <em style="color:var(--pink)">BRANDS</em></h2>
-    <div class="sec-tag" style="color:var(--pink)"><span data-stat="brands">9</span> OFFICIAL STORES</div>
-  </div>
-  <div class="brand-grid reveal" style="transition-delay:.08s;margin-bottom:3rem" id="brandGrid"></div>
-
-  <!-- 3rd-Party Sellers -->
-  <section style="padding:0 0 3rem">
-    <div class="sec-head reveal">
-      <h2>3RD-PARTY <em style="color:var(--orange)">SELLERS</em></h2>
-      <div class="sec-tag" style="color:var(--orange)" id="tpSellerTag">0 SELLERS</div>
+  <div class="br-hero">
+    <div class="section-tag-label reveal"><span class="dot"></span> OFFICIAL INDIA STOREFRONTS // <span data-stat="brands">9</span> BRANDS</div>
+    <h1 class="br-title reveal" style="transition-delay:.06s">
+      OFFICIAL<br/><span class="outline">BRAND</span><br/>STORES.
+    </h1>
+    <p class="br-sub reveal" style="transition-delay:.12s">
+      Buy direct from the manufacturer. Official India storefronts for mechanical keyboards, gaming peripherals, and tech accessories.<br/><b>Always verify authenticity before purchasing.</b>
+    </p>
+    <div class="reveal" style="transition-delay:.18s; display:flex; gap:12px; flex-wrap:wrap">
+      <a href="/vendors/" class="btn-primary">← Vendor Directory</a>
+      <a href="#All-Brands" class="btn-secondary">Marketplace ↓</a>
     </div>
-    <p class="reveal" style="font-family:var(--f-m);font-size:.85rem;color:var(--text-muted);line-height:1.8;margin-bottom:1.5rem;transition-delay:.04s">Third-party resellers who stock multiple brands — not the manufacturer directly. May offer competitive pricing or bundles.</p>
-    <div id="thirdPartyGrid" class="brand-grid reveal" style="transition-delay:.08s"></div>
-    <div id="thirdPartyEmpty" style="display:none;font-family:var(--f-m);font-size:.85rem;color:var(--text-dim);border:2px dashed #ccc;padding:2rem;text-align:center">No 3rd-party sellers listed yet. <a href="https://github.com/SHADOW269/Keydir.in/issues/new" target="_blank" style="color:var(--text)">Suggest one →</a></div>
-  </section>
+  </div>
 
-  <!-- Marketplace -->
-  <section style="padding:0 0 3rem">
-    <div class="sec-head reveal">
-      <h2>ALSO ON <em style="color:var(--cyan)">MARKETPLACES</em></h2>
-      <div class="sec-tag" id="marketplaceTag" style="color:var(--cyan)">2 PLATFORMS</div>
+  <div class="marquee-strip">
+    <div class="marquee-track">
+      <span>OFFICIAL STORES</span><span class="sep">///</span><span>DIRECT FROM BRAND</span><span class="sep">///</span><span>NO MIDDLEMAN</span><span class="sep">///</span><span>AUTHENTICITY GUARANTEED</span><span class="sep">///</span><span>INDIA AUTHORIZED</span><span class="sep">///</span><span>MANUFACTURER DIRECT</span><span class="sep">///</span>
+      <span>OFFICIAL STORES</span><span class="sep">///</span><span>DIRECT FROM BRAND</span><span class="sep">///</span><span>NO MIDDLEMAN</span><span class="sep">///</span><span>AUTHENTICITY GUARANTEED</span><span class="sep">///</span><span>INDIA AUTHORIZED</span><span class="sep">///</span><span>MANUFACTURER DIRECT</span><span class="sep">///</span>
     </div>
-    <p class="reveal" style="font-family:var(--f-m);font-size:.85rem;color:var(--text-muted);line-height:1.8;margin-bottom:1.5rem;transition-delay:.04s">Can't find what you need from official stores? Browse keyboards, accessories, and peripherals on India's biggest platforms — wide selection, buyer protection, and easy returns.</p>
-    <div id="marketplaceGrid" style="display:grid;grid-template-columns:1fr 1fr;gap:16px" class="reveal" style="transition-delay:.08s"></div>
-    <div style="margin-top:12px;text-align:right">
-      <a href="marketplace.html" style="font-family:var(--f-m);font-size:.75rem;color:var(--text-dim);text-decoration:none">Full marketplace page →</a>
-    </div>
-  </section>
+  </div>
 
-  <!-- Disclaimer -->
-  <section style="padding:3rem 0 80px">
-    <div class="disclaimer reveal">
-      <div class="disc-icon">⚠️</div>
-      <div>
-        <div class="disc-title">// DISCLAIMER</div>
-        <div class="disc-text">
-          KeyDir India is an <strong>independent community directory</strong>. We are not affiliated with any brand or vendor listed here. Always verify the authenticity of any website before purchasing.<br/><br/>
-          Entries marked <strong>"Enter at own risk"</strong> have community-reported concerns about product quality or customer service. Exercise caution and do your own research before purchasing.
-        </div>
+  <div class="page-body" style="padding-bottom:100px">
+    
+    <div class="stat-strip reveal" style="margin:3rem 0 3rem">
+      <div class="ss-item"><span class="ss-num" id="totalBrands">0</span><span class="ss-lbl">Brand Stores</span></div>
+      <div class="ss-item" style="background:var(--text); color:var(--bg)"><span class="ss-num" id="riskBrands">0</span><span class="ss-lbl" style="color:var(--text-muted)">Risk Warnings</span></div>
+      <div class="ss-item"><span class="ss-num" id="safeBrands">0</span><span class="ss-lbl">Safe to Buy</span></div>
+      <div class="ss-item" style="background:var(--yellow)"><span class="ss-num">2026</span><span class="ss-lbl">Last Updated</span></div>
+    </div>
+
+    <div class="sec-head reveal" id="All-Brands">
+      <h2>ALL <em style="color:var(--pink)">BRANDS</em></h2>
+      <div class="sec-tag" style="color:var(--pink)"><span data-stat="brands">9</span> OFFICIAL STORES</div>
+    </div>
+    <div class="brand-grid reveal" style="transition-delay:.08s; margin-bottom:3rem" id="brandGrid"></div>
+
+    <section style="padding:0 0 3rem">
+      <div class="sec-head reveal" id="Third-Party-Sellers">
+        <h2>3RD-PARTY <em style="color:var(--orange)">SELLERS</em></h2>
+        <div class="sec-tag" style="color:var(--orange)" id="tpSellerTag">0 SELLERS</div>
       </div>
-    </div>
-  </section>
-</div>
+      <p class="reveal" style="font-family:var(--f-m); font-size:.85rem; color:var(--text-muted); line-height:1.8; margin-bottom:1.5rem; transition-delay:.04s">Third-party resellers who stock multiple brands — not the manufacturer directly. May offer competitive pricing or bundles.</p>
+      <div id="thirdPartyGrid" class="brand-grid reveal" style="transition-delay:.08s"></div>
+      <div id="thirdPartyEmpty" style="display:none; font-family:var(--f-m); font-size:.85rem; color:var(--text-dim); border:2px dashed #ccc; padding:2rem; text-align:center">No 3rd-party sellers listed yet. <a href="https://github.com/SHADOW269/Keydir.in/issues/new" target="_blank" style="color:var(--text)">Suggest one →</a></div>
+    </section>
 
-<!-- FOOTER -->
-<footer>
-  <div class="footer-inner">
-
-    <div>
-      <div class="f-logo">⌨ KEYDIR.exe</div>
-      <div class="f-desc">
-        Community-maintained directory of Indian mechanical keyboard vendors.
-        No affiliate links. No ads. Just raw data for the keeb community.
+    <section style="padding:0 0 3rem">
+      <div class="sec-head reveal" id="Marketplace">
+        <h2>ALSO ON <em style="color:var(--cyan)">MARKETPLACES</em></h2>
+        <div class="sec-tag" id="marketplaceTag" style="color:var(--cyan)">2 PLATFORMS</div>
       </div>
-    </div>
-
-    <div class="f-col">
-      <h4>Navigate</h4>
-      <ul>
-        <li><a href="../">_Home</a></li>
-        <li><a href="/vendors/">_Vendors</a></li>
-        <li><a href="/builders/">_Builders</a></li>
-        <li><a href="/brands/">_Brands</a></li>
-        <li><a href="/surfaces/">_Surfaces</a></li>
-        <li><a href="/guide/">_Guide</a></li>
-        <li><a href="/about/">_About</a></li>
-      </ul>
-    </div>
-
-    <div class="f-col">
-      <h4>Categories</h4>
-      <ul>
-        <li><a href="/vendors/">Pre-built</a></li>
-        <li><a href="/vendors/">Switches</a></li>
-        <li><a href="/vendors/">Keycaps</a></li>
-        <li><a href="/vendors/">Hall Effect</a></li>
-        <li><a href="/vendors/">Barebone</a></li>
-      </ul>
-    </div>
-
-    <div class="f-col">
-      <h4>Project</h4>
-      <ul>
-        <li>
-          <a href="https://github.com/SHADOW269/Keydir.in" target="_blank" rel="noopener">
-            _GitHub
-          </a>
-        </li>
-        <li>
-          <a href="https://github.com/SHADOW269/Keydir.in/issues" target="_blank" rel="noopener">
-            _Report Issue
-          </a>
-        </li>
-        <li><a href="/Terms-and-Conditions/">_Terms & Conditions</a></li>
-      </ul>
-    </div>
-
-  </div>
-
-  <div class="f-bottom">
-    <div class="f-copy">
-      © 2026 KEYDIR.in // COMMUNITY PROJECT // NOT AFFILIATED WITH ANY VENDOR // SYSTEM_END
-    </div>
-
-    <button class="theme-toggle" onclick="toggleTheme()">
-      <span class="tt-icon">◑</span>
-      <span class="tt-label">DARK MODE</span>
-    </button>
-  </div>
-
-  <div class="f-watermark">KEYDIR</div>
-</footer>
-
-<script src="/assets/js/shared.js"></script>
-<script>
-const BRAND_ACCENT_COLS = [
-  "var(--blue)","var(--pink)","var(--red)","var(--cyan)","var(--orange)",
-  "var(--red)","var(--green)","var(--yellow)","var(--purple)"
-];
-
-function buildBrandCard(b, i, accentCols) {
-  const accentCol = accentCols[i % accentCols.length];
-  const card = document.createElement("div");
-  card.className = "brand-card reveal";
-  card.style.transitionDelay = `${(i % 3) * 0.08}s`;
-  card.innerHTML = `
-    <div class="brand-card-accent" style="background:${accentCol}"></div>
-    <div class="brand-card-body">
-      <div class="brand-number">BRAND_${String(i + 1).padStart(3, "0")}</div>
-      <div class="brand-name-row">
-        <div class="brand-name">${b.name}</div>
+      <p class="reveal" style="font-family:var(--f-m); font-size:.85rem; color:var(--text-muted); line-height:1.8; margin-bottom:1.5rem; transition-delay:.04s">Can't find what you need from official stores? Browse keyboards, accessories, and peripherals on India's biggest platforms — wide selection, buyer protection, and easy returns.</p>
+      <div id="marketplaceGrid" style="display:grid; grid-template-columns:1fr 1fr; gap:16px" class="reveal" style="transition-delay:.08s"></div>
+      <div style="margin-top:12px; text-align:right">
+        <a href="marketplace.html" style="font-family:var(--f-m); font-size:.75rem; color:var(--text-dim); text-decoration:none">Full marketplace page →</a>
       </div>
-      <div class="brand-spec">${b.spec}</div>
-      ${b.risk ? `<div class="risk-badge">⚠ Enter at own risk</div>${b.warning_message ? `<div class="risk-message">${b.warning_message}</div>` : ""}` : ""}
-    </div>
-    <div class="brand-card-foot">
-      <div class="brand-foot-label">Official India Store</div>
-      <a href="${b.url}" target="_blank" rel="noopener" class="btn-visit">VISIT<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 11L11 1M11 1H5M11 1v6"/></svg></a>
-    </div>
-  `;
-  return card;
-}
+    </section>
 
-document.addEventListener("DOMContentLoaded", () => {
-  // All Brands
-  const g = document.getElementById("brandGrid");
-  if (g) {
-    const riskCount = BRANDS.filter(b => b.risk).length;
-    if (document.getElementById("totalBrands")) document.getElementById("totalBrands").textContent = BRANDS.length;
-    if (document.getElementById("riskBrands"))  document.getElementById("riskBrands").textContent  = riskCount;
-    if (document.getElementById("safeBrands"))  document.getElementById("safeBrands").textContent  = BRANDS.length - riskCount;
-
-    BRANDS.forEach((b, i) => {
-      const card = buildBrandCard(b, i, BRAND_ACCENT_COLS);
-      g.appendChild(card);
-      setTimeout(() => {
-        const io = new IntersectionObserver(en => {
-          en.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
-        }, { threshold: .08 });
-        io.observe(card);
-      }, 0);
-    });
-  }
-
-  // 3rd-Party Sellers
-  const tpGrid = document.getElementById("thirdPartyGrid");
-  const tpEmpty = document.getElementById("thirdPartyEmpty");
-  const tpTag = document.getElementById("tpSellerTag");
-  if (tpGrid && typeof THIRD_PARTY_SELLERS !== "undefined") {
-    if (tpTag) tpTag.textContent = THIRD_PARTY_SELLERS.length + " SELLER" + (THIRD_PARTY_SELLERS.length !== 1 ? "S" : "");
-    if (THIRD_PARTY_SELLERS.length === 0) {
-      tpGrid.style.display = "none";
-      if (tpEmpty) tpEmpty.style.display = "block";
-    } else {
-      THIRD_PARTY_SELLERS.forEach((b, i) => {
-        const card = buildBrandCard(b, i, ["var(--orange)","var(--cyan)","var(--purple)","var(--pink)"]);
-        card.querySelector(".brand-foot-label").textContent = "3rd-Party Seller";
-        tpGrid.appendChild(card);
-        setTimeout(() => {
-          const io = new IntersectionObserver(en => {
-            en.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
-          }, { threshold: .08 });
-          io.observe(card);
-        }, 0);
-      });
-    }
-  }
-
-  // Marketplace
-  const mGrid = document.getElementById("marketplaceGrid");
-  const mTag  = document.getElementById("marketplaceTag");
-  if (mGrid && typeof MARKETPLACE_LINKS !== "undefined") {
-    if (mTag) mTag.textContent = MARKETPLACE_LINKS.length + " PLATFORM" + (MARKETPLACE_LINKS.length !== 1 ? "S" : "");
-    MARKETPLACE_LINKS.forEach(m => {
-      const textCol = m.textColor || "#111";
-      const a = document.createElement("a");
-      a.href   = m.url;
-      a.target = "_blank";
-      a.rel    = "noopener";
-      a.style.cssText = `display:flex;align-items:center;gap:18px;padding:24px 28px;background:${m.color};border:2px solid var(--black);box-shadow:var(--sh-lg);text-decoration:none;color:${textCol};transition:transform .12s,box-shadow .12s`;
-      a.onmouseenter = () => { a.style.transform="translate(4px,4px)"; a.style.boxShadow="2px 2px 0 #111"; };
-      a.onmouseleave = () => { a.style.transform=""; a.style.boxShadow="var(--sh-lg)"; };
-      a.innerHTML = `
-        <div style="font-size:2rem;width:56px;height:56px;border:2px solid ${textCol === '#fff' ? 'rgba(255,255,255,.3)' : 'var(--black)'};display:flex;align-items:center;justify-content:center;background:var(--dark-card-bg);flex-shrink:0">${m.icon}</div>
+    <section style="padding:3rem 0 80px">
+      <div class="disclaimer reveal">
+        <div class="disc-icon">⚠️</div>
         <div>
-          <div style="font-family:var(--f-d);font-size:1.3rem;font-weight:800;text-transform:uppercase;letter-spacing:-.04em;line-height:.9;margin-bottom:5px">${m.label}</div>
-          <div style="font-family:var(--f-m);font-size:.75rem;color:${textCol === '#fff' ? 'rgba(255,255,255,.7)' : '#555'}">${m.desc}</div>
+          <div class="disc-title">// DISCLAIMER</div>
+          <div class="disc-text">
+            KeyDir India is an <strong>independent community directory</strong>. We are not affiliated with any brand or vendor listed here. Always verify the authenticity of any website before purchasing.<br/><br/>
+          </div>
         </div>
-        <div style="margin-left:auto;font-family:var(--f-m);font-weight:800;font-size:1.1rem">↗</div>
+      </div>
+    </section>
+  </div>
+
+    <!-- Global Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <div class="f-logo">⌨ KEYDIR.in</div>
+        <div class="f-desc">
+          Community-maintained directory of Indian mechanical keyboard vendors. No affiliate links. No ads. Just raw data for the keeb community.
+        </div>
+      </div>
+
+      <div class="f-col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="/">_Home</a></li>
+          <li><a href="/vendors/">_Vendors</a></li>
+          <li><a href="/builders/">_Builders</a></li>
+          <li><a href="/brands/">_Brands</a></li>
+          <li><a href="/guide/">_Guide</a></li>
+          <li><a href="/groupbuy/">_Group Buys</a></li>
+          <li><a href="/surfaces/">_Surfaces</a></li>
+          <li><a href="/about/">_About</a></li>
+          <li><a href="https://keydir.in/assets/sitemap.xml" target="_blank">_Sitemap</a></li>
+        </ul>
+      </div>
+
+      <div class="f-col">
+        <h4>Categories</h4>
+        <ul>
+          <li><a href="/vendors/">Pre-built</a></li>
+          <li><a href="/vendors/">Switches</a></li>
+          <li><a href="/vendors/">Keycaps</a></li>
+          <li><a href="/vendors/">Hall Effect</a></li>
+          <li><a href="/vendors/">Barebone</a></li>
+        </ul>
+      </div>
+
+      <div class="f-col">
+        <h4>Project</h4>
+        <ul>
+          <li><a href="/contact/">_Contact</a></li>
+          <li><a href="https://github.com/SHADOW269/Keydir.in" target="_blank" rel="noopener"> _GitHub</a></li>
+          <li><a href="https://github.com/SHADOW269/Keydir.in/issues" target="_blank" rel="noopener"> _Report Issue</a></li>
+          <li><a href="/terms-and-conditions/">_Terms & Conditions</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="f-bottom">
+      <div class="f-copy">
+        © 2026 KEYDIR.in // COMMUNITY PROJECT // NOT AFFILIATED WITH ANY VENDOR // SYSTEM_END
+      </div>
+      <button class="theme-toggle" onclick="toggleTheme()">
+        <span class="tt-icon">◑</span>
+        <span class="tt-label">DARK MODE</span>
+      </button>
+    </div>
+    <div class="f-watermark">KEYDIR</div>
+  </footer>
+
+  <script src="/assets/js/shared.js"></script>
+  <script>
+    /* Continuous color pattern cycle mapped across generated cards top edge styles */
+    const BRAND_ACCENT_COLS = [
+      "var(--blue)","var(--pink)","var(--red)","var(--cyan)","var(--orange)",
+      "var(--red)","var(--green)","var(--yellow)","var(--purple)"
+    ];
+
+    /**
+     * Builds individual card element strings dynamically derived from metadata models
+     */
+    function buildBrandCard(b, i, accentCols) {
+      const accentCol = accentCols[i % accentCols.length];
+      const card = document.createElement("div");
+      card.className = "brand-card reveal";
+      card.style.transitionDelay = `${(i % 3) * 0.08}s`;
+      card.innerHTML = `
+        <div class="brand-card-accent" style="background:${accentCol}"></div>
+        <div class="brand-card-body">
+          <div class="brand-number">BRAND_${String(i + 1).padStart(3, "0")}</div>
+          <div class="brand-name-row">
+            <div class="brand-name">${b.name}</div>
+          </div>
+          <div class="brand-spec">${b.spec}</div>
+          ${b.risk ? `<div class="risk-badge">⚠ Enter at own risk</div>${b.warning_message ? `<div class="risk-message">${b.warning_message}</div>` : ""}` : ""}
+        </div>
+        <div class="brand-card-foot">
+          <div class="brand-foot-label">Official India Store</div>
+          <a href="${b.url}" target="_blank" rel="noopener" class="btn-visit">VISIT<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 11L11 1M11 1H5M11 1v6"/></svg></a>
+        </div>
       `;
-      mGrid.appendChild(a);
+      return card;
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      // 1. Instantiates Primary Brands data matrices 
+      const g = document.getElementById("brandGrid");
+      if (g) {
+        const riskCount = BRANDS.filter(b => b.risk).length;
+        if (document.getElementById("totalBrands")) document.getElementById("totalBrands").textContent = BRANDS.length;
+        if (document.getElementById("riskBrands"))  document.getElementById("riskBrands").textContent  = riskCount;
+        if (document.getElementById("safeBrands"))  document.getElementById("safeBrands").textContent  = BRANDS.length - riskCount;
+
+        BRANDS.forEach((b, i) => {
+          const card = buildBrandCard(b, i, BRAND_ACCENT_COLS);
+          g.appendChild(card);
+          
+          // Intersection visibility observer attachment
+          setTimeout(() => {
+            const io = new IntersectionObserver(en => {
+              en.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
+            }, { threshold: .08 });
+            io.observe(card);
+          }, 0);
+        });
+      }
+
+      // 2. Third Party Reseller distribution generation loops
+      const tpGrid = document.getElementById("thirdPartyGrid");
+      const tpEmpty = document.getElementById("thirdPartyEmpty");
+      const tpTag = document.getElementById("tpSellerTag");
+      if (tpGrid && typeof THIRD_PARTY_SELLERS !== "undefined") {
+        if (tpTag) tpTag.textContent = THIRD_PARTY_SELLERS.length + " SELLER" + (THIRD_PARTY_SELLERS.length !== 1 ? "S" : "");
+        if (THIRD_PARTY_SELLERS.length === 0) {
+          tpGrid.style.display = "none";
+          if (tpEmpty) tpEmpty.style.display = "block";
+        } else {
+          THIRD_PARTY_SELLERS.forEach((b, i) => {
+            const card = buildBrandCard(b, i, ["var(--orange)","var(--cyan)","var(--purple)","var(--pink)"]);
+            card.querySelector(".brand-foot-label").textContent = "3rd-Party Seller";
+            tpGrid.appendChild(card);
+            setTimeout(() => {
+              const io = new IntersectionObserver(en => {
+                en.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
+              }, { threshold: .08 });
+              io.observe(card);
+            }, 0);
+          });
+        }
+      }
+
+      // 3. Main broad aggregated Marketplaces mapping layer initialization
+      const mGrid = document.getElementById("marketplaceGrid");
+      const mTag  = document.getElementById("marketplaceTag");
+      if (mGrid && typeof MARKETPLACE_LINKS !== "undefined") {
+        if (mTag) mTag.textContent = MARKETPLACE_LINKS.length + " PLATFORM" + (MARKETPLACE_LINKS.length !== 1 ? "S" : "");
+        MARKETPLACE_LINKS.forEach(m => {
+          const textCol = m.textColor || "#111";
+          const a = document.createElement("a");
+          a.href   = m.url;
+          a.target = "_blank";
+          a.rel    = "noopener";
+          a.style.cssText = `display:flex;align-items:center;gap:18px;padding:24px 28px;background:${m.color};border:2px solid var(--black);box-shadow:var(--sh-lg);text-decoration:none;color:${textCol};transition:transform .12s,box-shadow .12s`;
+          
+          a.onmouseenter = () => { a.style.transform="translate(4px,4px)"; a.style.boxShadow="2px 2px 0 #111"; };
+          a.onmouseleave = () => { a.style.transform=""; a.style.boxShadow="var(--sh-lg)"; };
+          a.innerHTML = `
+            <div style="font-size:2rem;width:56px;height:56px;border:2px solid ${textCol === '#fff' ? 'rgba(255,255,255,.3)' : 'var(--black)'};display:flex;align-items:center;justify-content:center;background:var(--dark-card-bg);flex-shrink:0">${m.icon}</div>
+            <div>
+              <div style="font-family:var(--f-d);font-size:1.3rem;font-weight:800;text-transform:uppercase;letter-spacing:-.04em;line-height:.9;margin-bottom:5px">${m.label}</div>
+              <div style="font-family:var(--f-m);font-size:.75rem;color:${textCol === '#fff' ? 'rgba(255,255,255,.7)' : '#555'}">${m.desc}</div>
+            </div>
+            <div style="margin-left:auto;font-family:var(--f-m);font-weight:800;font-size:1.1rem">↗</div>
+          `;
+          mGrid.appendChild(a);
+        });
+      }
+
+      // 4. Header Navigation dropdown operational context layers
+      const dropdown = document.querySelector('.nav-dropdown');
+      const dropdownBtn = document.querySelector('.nav-dropdown-btn');
+
+      if (dropdownBtn && dropdown) {
+        dropdownBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          dropdown.classList.toggle('active');
+        });
+
+        document.addEventListener('click', () => {
+          dropdown.classList.remove('active');
+        });
+      }
     });
-  }
-});
-</script>
+  </script>
 </body>
 </html>
