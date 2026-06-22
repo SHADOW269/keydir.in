@@ -1,493 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Basic Setup -->
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About KEYDIR.in — India Mechanical Keyboard Directory</title>
 
-<title>About KEYDIR.in — India Mechanical Keyboard Directory</title>
+  <!-- Analytics & Core Component Scripts -->
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="35caf6d4-f14b-4b28-9f07-600b6910a4d3"></script>
+  <script src="/assets/js/keydir-popup.js" defer></script>
 
-<!-- Umami Analytics | popup message-->
-<script defer src="https://cloud.umami.is/script.js" data-website-id="35caf6d4-f14b-4b28-9f07-600b6910a4d3"></script>
-<script src="/assets/js/keydir-popup.js" defer></script>
+  <!-- SEO Optimization -->
+  <meta name="description" content="Learn about KEYDIR.in — India’s mechanical keyboard directory built to help enthusiasts discover vendors, builders, switches, keycaps, accessories, and group buys across India.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://keydir.in/about/">
 
-<!-- SEO Optimization -->
-<meta name="description"
-content="Learn about KEYDIR.in — India’s mechanical keyboard directory built to help enthusiasts discover vendors, builders, switches, keycaps, accessories, and group buys across India.">
+  <!-- Geo Targeting -->
+  <meta name="geo.region" content="IN">
+  <meta name="geo.placename" content="India">
+  <meta name="theme-color" content="#000000">
 
-<meta name="robots" content="index, follow, max-image-preview:large">
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon-192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/assets/img/favicon-512.png">
+  <link rel="apple-touch-icon" href="/assets/img/favicon-512.png">
 
-<link rel="canonical" href="https://keydir.in/about/">
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="About KEYDIR.in — India Mechanical Keyboard Directory">
+  <meta property="og:description" content="Discover the mission behind KEYDIR.in and how it helps the Indian mechanical keyboard community find vendors, builders, switches, and accessories.">
+  <meta property="og:url" content="https://keydir.in/about/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="KEYDIR.in">
+  <meta property="og:locale" content="en_IN">
+  <meta property="og:image" content="https://keydir.in/assets/img/Banner.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="KEYDIR.in India Mechanical Keyboard Directory Banner">
 
-<!-- Geo Targeting -->
-<meta name="geo.region" content="IN">
-<meta name="geo.placename" content="India">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="About KEYDIR.in — India Mechanical Keyboard Directory">
+  <meta name="twitter:image" content="https://keydir.in/assets/img/Banner.png">
 
-<!-- Theme color -->
-<meta name="theme-color" content="#000000">
+  <!-- Core Theme Stylesheets -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script src="/assets/js/theme.js"></script>
 
-<!-- Favicons -->
-<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
-<link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon-192.png">
-<link rel="icon" type="image/png" sizes="512x512" href="/assets/img/favicon-512.png">
-<link rel="apple-touch-icon" href="/assets/img/favicon-512.png">
+  <!-- Schema.org Structural Metadata -->
+  <script type="application/ld+json">
+  {
+   "@context": "https://schema.org",
+   "@type": "Organization",
+   "name": "KEYDIR.in",
+   "url": "https://keydir.in",
+   "logo": "https://keydir.in/assets/img/favicon-512.png"
+  }
+  </script>
 
-<!-- Open Graph -->
-<meta property="og:title" content="About KEYDIR.in — India Mechanical Keyboard Directory">
-<meta property="og:description"
-content="Discover the mission behind KEYDIR.in and how it helps the Indian mechanical keyboard community find vendors, builders, switches, and accessories.">
-<meta property="og:url" content="https://keydir.in/about/">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="KEYDIR.in">
-<meta property="og:locale" content="en_IN">
+  <script type="application/ld+json">
+  {
+   "@context": "https://schema.org",
+   "@type": "AboutPage",
+   "name": "About KEYDIR.in",
+   "url": "https://keydir.in/about/",
+   "description": "About KEYDIR.in — India’s mechanical keyboard directory helping users discover vendors, builders, switches, keycaps, and accessories."
+  }
+  </script>
 
-<meta property="og:image" content="https://keydir.in/assets/img/Banner.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="KEYDIR.in India Mechanical Keyboard Directory Banner">
+  <style>
+    /* ═══════════════════════════════════════════
+       1. GLOBAL UTILITIES & NAVIGATION OVERRIDES
+       ═══════════════════════════════════════════ */
+    .navbar,
+    .nav-links {
+      overflow: visible !important;
+    }
 
-<!-- Twitter preview -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="About KEYDIR.in — India Mechanical Keyboard Directory">
-<meta name="twitter:description"
-content="Learn about KEYDIR.in — India’s mechanical keyboard vendor directory.">
-<meta name="twitter:image" content="https://keydir.in/assets/img/Banner.png">
+    #cursor,
+    #prog {
+      pointer-events: none !important;
+    }
 
-<!-- Organization Schema -->
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "Organization",
- "name": "KEYDIR.in",
- "url": "https://keydir.in",
- "logo": "https://keydir.in/assets/img/favicon-512.png"
-}
-</script>
+    /* ── Nav Dropdown Container ── */
+    .nav-dropdown {
+      position: relative;
+      display: inline-block;
+    }
 
-<!-- About Page Schema -->
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "AboutPage",
- "name": "About KEYDIR.in",
- "url": "https://keydir.in/about/",
- "description": "About KEYDIR.in — India’s mechanical keyboard directory helping users discover vendors, builders, switches, keycaps, and accessories."
-}
-</script>
+    .nav-dropdown-btn {
+      font-family: var(--f-m);
+      font-size: .75rem;
+      font-weight: 700;
+      color: var(--text);
+      background: none;
+      border: none;
+      padding: 6px 10px;
+      cursor: pointer;
+      text-transform: uppercase;
+      white-space: nowrap;
+      transition: all .1s;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
 
-<link rel="stylesheet" href="/assets/css/style.css">
-<script src="/assets/js/theme.js"></script>
-<style>
-/* ── About page specific ── */
-.about-hero{padding:calc(var(--nav-h) + 100px) 24px 80px;max-width:1380px;margin:0 auto}
-.about-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(3rem,8vw,6.5rem);font-weight:800;line-height:.85;letter-spacing:-.06em;text-transform:uppercase;margin-bottom:1.25rem}
-.about-title .outline{-webkit-text-stroke:3px var(--text);color:transparent}
-.about-sub{
-  font-family:'JetBrains Mono',monospace;font-size:.9rem;line-height:1.8;
-  background:#FAFF00;border:2px solid #111;padding:14px 18px;
-  box-shadow:4px 4px 0 #111;transform:rotate(.3deg);
-  display:inline-block;margin-bottom:2rem;max-width:540px;
-}
+    html body .nav-dropdown:hover .nav-dropdown-btn,
+    html body .nav-dropdown.active .nav-dropdown-btn {
+      background: var(--text) !important;
+      color: var(--bg) !important;
+    }
 
-/* Repo links */
-.repo-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-bottom:3rem}
-.repo-card{
-  background:#111;border:2px solid #111;box-shadow:6px 6px 0 #111;
-  padding:24px 28px;text-decoration:none;color:var(--surface);
-  display:flex;flex-direction:column;gap:12px;
-  transition:transform .12s,box-shadow .12s;
-}
-.repo-card:hover{transform:translate(4px,4px);box-shadow:2px 2px 0 #111}
-.repo-card-icon{font-size:1.75rem;width:52px;height:52px;border:2px solid #333;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.05)}
-.repo-card-label{font-family:'JetBrains Mono',monospace;font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted);margin-bottom:4px}
-.repo-card-name{font-family:'Space Grotesk',sans-serif;font-size:1.2rem;font-weight:800;text-transform:uppercase;letter-spacing:-.03em}
-.repo-card-desc{font-family:'JetBrains Mono',monospace;font-size:.78rem;color:var(--text-muted);line-height:1.7}
-.repo-card-link{font-family:'JetBrains Mono',monospace;font-size:.72rem;color:#00FF6A;margin-top:auto;display:flex;align-items:center;gap:6px}
-.repo-card:hover .repo-card-name{color:#FAFF00}
+    .nav-dropdown-btn::after {
+      content: '▾';
+      font-size: .6rem;
+      transition: transform 0.2s ease;
+      color: inherit;
+    }
 
-/* Contributor grid */
-.contributors-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(160px,1fr));
-  gap:14px;
-  margin-bottom:3rem;
-}
-.contributor-card{
-  background:var(--surface);border:2px solid #111;box-shadow:4px 4px 0 #111;
-  padding:20px 14px;text-align:center;text-decoration:none;color:#111;
-  transition:transform .12s,box-shadow .12s;
-  animation:kd-card-in .3s ease both;
-}
-.contributor-card:hover{transform:translate(3px,3px);box-shadow:1px 1px 0 #111;background:#FAFF00}
-.contributor-avatar{
-  width:80px;height:80px;border-radius:0;border:2px solid #111;
-  display:block;margin:0 auto 12px;object-fit:cover;
-  box-shadow:3px 3px 0 #111;
-}
-.contributor-name{font-family:'JetBrains Mono',monospace;font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;margin-bottom:4px}
-.contributor-commits{font-family:'JetBrains Mono',monospace;font-size:.62rem;color:#777}
-.contributor-card:hover .contributor-commits{color:#555}
+    .nav-dropdown.active .nav-dropdown-btn::after {
+      transform: rotate(180deg);
+    }
 
-/* Skeleton loader */
-.contrib-skeleton{
-  background:var(--surface);border:2px solid #111;box-shadow:4px 4px 0 #111;
-  padding:20px 14px;text-align:center;
-}
-.skel-avatar{width:80px;height:80px;border:2px solid #e0e0e0;background:linear-gradient(90deg,#f0f0f0 25%,#e0e0e0 50%,#f0f0f0 75%);background-size:200% 100%;animation:shimmer 1.4s infinite;margin:0 auto 12px}
-.skel-line{height:10px;background:linear-gradient(90deg,#f0f0f0 25%,#e0e0e0 50%,#f0f0f0 75%);background-size:200% 100%;animation:shimmer 1.4s infinite;border-radius:2px;margin:0 auto 6px}
-@keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
-@keyframes kd-card-in{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+    /* ── Dropdown Overlay Menu ── */
+    .nav-dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      left: auto;
+      background: var(--surface);
+      border: 2px solid var(--border);
+      box-shadow: var(--sh-lg);
+      z-index: 999999 !important;
+      min-width: 160px;
+      flex-direction: column;
+      margin-top: 2px;
+      height: auto !important;
+    }
 
-/* Project info */
-.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:3rem}
-.info-card{background:#111;border:2px solid #111;box-shadow:6px 6px 0 #111;padding:28px;color:var(--surface)}
-.info-card-title{font-family:'JetBrains Mono',monospace;font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#00FF6A;margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid #222}
-.info-card p{font-family:'JetBrains Mono',monospace;font-size:.82rem;color:var(--text-dim);line-height:1.9}
-.info-card strong{color:#00FF6A}
-.info-card a{color:#FAFF00;text-decoration:none}
-.info-card a:hover{text-decoration:underline}
-.info-list{list-style:none;padding:0;margin:0}
-.info-list li{font-family:'JetBrains Mono',monospace;font-size:.8rem;color:var(--text-dim);padding:6px 0;border-bottom:1px solid #1a1a1a;display:flex;align-items:flex-start;gap:8px;line-height:1.6}
-.info-list li:last-child{border-bottom:none}
-.info-list .ok{color:#00FF6A;flex-shrink:0}
-.info-list .dim{color:var(--text-muted);flex-shrink:0}
+    .nav-dropdown-menu::before {
+      content: '';
+      position: absolute;
+      top: -12px;
+      left: 0;
+      right: 0;
+      height: 12px;
+    }
 
-/* Error state */
-.contrib-error{
-  grid-column:1/-1;border:2px solid #FF2A2A;background:var(--surface);
-  padding:2rem;font-family:'JetBrains Mono',monospace;font-size:.85rem;color:#FF2A2A;
-  box-shadow:4px 4px 0 #FF2A2A;text-align:center;
-}
+    html body .nav-dropdown:hover .nav-dropdown-menu,
+    html body .nav-dropdown.active .nav-dropdown-menu {
+      display: flex !important;
+    }
 
-/* Sec head */
-.sec-head{display:flex;align-items:flex-end;justify-content:space-between;border-bottom:3px solid #111;padding-bottom:12px;margin-bottom:2rem;flex-wrap:wrap;gap:12px}
-.sec-head h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(2rem,5vw,4rem);font-weight:800;text-transform:uppercase;letter-spacing:-.05em;line-height:1}
-.sec-tag{font-family:'JetBrains Mono',monospace;font-size:.72rem;font-weight:700;letter-spacing:.1em;display:flex;align-items:center;gap:6px}
-.section-tag-label{display:inline-flex;align-items:center;gap:8px;background:#111;color:#FAFF00;font-family:'JetBrains Mono',monospace;font-size:.7rem;font-weight:700;padding:5px 14px;border:2px solid #111;margin-bottom:1.25rem;letter-spacing:.08em;text-transform:uppercase}
-.dot{width:7px;height:7px;background:#00FF6A;display:inline-block;border-radius:50%;animation:blink 1s step-end infinite;flex-shrink:0}
-@keyframes blink{50%{opacity:0}}
-.reveal{opacity:0;transform:translateY(28px);transition:opacity .55s,transform .55s}
-.reveal.in{opacity:1;transform:none}
+    .nav-dropdown-menu a {
+      font-family: var(--f-m);
+      font-size: .75rem;
+      font-weight: 700;
+      color: var(--text);
+      text-decoration: none;
+      padding: 10px 16px;
+      text-transform: uppercase;
+      white-space: nowrap;
+      border-bottom: 1px solid var(--border-subtle);
+      transition: all .1s;
+      display: block;
+    }
 
-@media(max-width:760px){.repo-cards{grid-template-columns:1fr}.info-grid{grid-template-columns:1fr}}
-@media(max-width:580px){.contributors-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:640px){.about-hero{padding-left:16px;padding-right:16px}}
-</style>
+    .nav-dropdown-menu a:last-child {
+      border-bottom: none;
+    }
+
+    html body .nav-dropdown-menu a:hover {
+      background: var(--text) !important;
+      color: var(--bg) !important;
+    }
+
+    [data-theme="dark"] .nav-dropdown-menu {
+      background: var(--surface);
+      border-color: var(--border);
+    }
+
+    [data-theme="dark"] .nav-dropdown-menu a {
+      border-color: var(--border-subtle);
+    }
+
+    /* ═══════════════════════════════════════════
+       2. HERO AREA & PROJECT REPO CARDS
+       ═══════════════════════════════════════════ */
+    .about-hero{padding:calc(var(--nav-h) + 60px) 24px 50px;max-width:1380px;margin:0 auto}
+    .about-title{font-family:var(--f-d);font-size:clamp(3rem,8vw,6.5rem);font-weight:800;line-height:.85;letter-spacing:-.06em;text-transform:uppercase;margin-bottom:1.25rem}
+    .about-title .outline{-webkit-text-stroke:3px var(--text);color:transparent}
+    .about-sub{
+      font-family:var(--f-m);font-size:.9rem;line-height:1.8;
+      background:var(--yellow);border:2px solid var(--border);padding:14px 18px;
+      box-shadow:var(--sh);transform:rotate(.3deg);
+      display:inline-block;margin-bottom:2rem;max-width:540px;color:#111;
+    }
+
+    .repo-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-bottom:3rem}
+    .repo-card{
+      background:var(--border);border:2px solid var(--border);box-shadow:var(--sh-lg);
+      padding:24px 28px;text-decoration:none;color:var(--surface);
+      display:flex;flex-direction:column;gap:12px;
+      transition:transform .12s,box-shadow .12s;
+    }
+    .repo-card:hover{transform:translate(4px,4px);box-shadow:2px 2px 0 #111}
+    .repo-card-icon{font-size:1.75rem;width:52px;height:52px;border:2px solid #333;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.05)}
+    .repo-card-label{font-family:var(--f-m);font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted);margin-bottom:4px}
+    .repo-card-name{font-family:var(--f-d);font-size:1.2rem;font-weight:800;text-transform:uppercase;letter-spacing:-.03em}
+    .repo-card-desc{font-family:var(--f-m);font-size:.78rem;color:var(--text-muted);line-height:1.7}
+    .repo-card-link{font-family:var(--f-m);font-size:.72rem;color:var(--green);margin-top:auto;display:flex;align-items:center;gap:6px}
+    .repo-card:hover .repo-card-name{color:var(--yellow)}
+
+    /* ═══════════════════════════════════════════
+       3. TECHNICAL INFO GRID MATRIX
+       ═══════════════════════════════════════════ */
+    .info-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:3rem}
+    .info-card{background:var(--border);border:2px solid var(--border);box-shadow:var(--sh-lg);padding:28px;color:var(--surface)}
+    .info-card-title{font-family:var(--f-m);font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--green);margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid #222}
+    .info-card p{font-family:var(--f-m);font-size:.82rem;color:var(--text-muted);line-height:1.9}
+    .info-card strong{color:var(--green)}
+    .info-card a{color:var(--yellow);text-decoration:none}
+    .info-card a:hover{text-decoration:underline}
+    .info-list{list-style:none;padding:0;margin:0}
+    .info-list li{font-family:var(--f-m);font-size:.8rem;color:var(--text-muted);padding:6px 0;border-bottom:1px solid #1a1a1a;display:flex;align-items:flex-start;gap:8px;line-height:1.6}
+    .info-list li:last-child{border-bottom:none}
+    .info-list .ok{color:var(--green);flex-shrink:0}
+    .info-list .dim{color:var(--text-muted);flex-shrink:0}
+
+    /* ═══════════════════════════════════════════
+       4. CONTRIBUTORS SECTIONS & FIXES
+       ═══════════════════════════════════════════ */
+    .contributors-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:14px;margin-bottom:3rem;}
+    .contributor-card{
+      background:var(--surface);border:2px solid var(--border);box-shadow:var(--sh);
+      padding:20px 14px;text-align:center;text-decoration:none;color:var(--text);
+      transition:transform .12s,box-shadow .12s;
+      animation:kd-card-in .3s ease both;
+    }
+    .contributor-card:hover{transform:translate(3px,3px);box-shadow:1px 1px 0 #111;background:var(--yellow);color:#111 !important;}
+    .contributor-avatar{width:80px;height:80px;border-radius:0;border:2px solid var(--border);display:block;margin:0 auto 12px;object-fit:cover;box-shadow:3px 3px 0 var(--shadow);}
+    .contributor-name{font-family:var(--f-m);font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;margin-bottom:4px}
+    .contributor-commits{font-family:var(--f-m);font-size:.62rem;color:var(--text-dim)}
+    .contributor-card:hover .contributor-commits{color:#555}
+
+    .contrib-skeleton{background:var(--surface);border:2px solid var(--border);box-shadow:var(--sh);padding:20px 14px;text-align:center;}
+    .skel-avatar{width:80px;height:80px;border:2px solid #e0e0e0;background:linear-gradient(90deg,#f0f0f0 25%,#e0e0e0 50%,#f0f0f0 75%);background-size:200% 100%;animation:shimmer 1.4s infinite;margin:0 auto 12px}
+    .skel-line{height:10px;background:linear-gradient(90deg,#f0f0f0 25%,#e0e0e0 50%,#f0f0f0 75%);background-size:200% 100%;animation:shimmer 1.4s infinite;border-radius:2px;margin:0 auto 6px}
+    @keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
+    @keyframes kd-card-in{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+
+    /* Global Hover Fixes */
+    .btn-secondary:hover { background: var(--green) !important; color: #111 !important; }
+    .btn-primary:hover { background: var(--text) !important; color: var(--bg) !important; }
+
+    /* Contribution Invite Box Dark Mode Text Adaptation */
+    .invite-box-desc { font-family:var(--f-m); font-size:.82rem; line-height:1.8; color:#111 !important; max-width:560px; }
+    [data-theme="dark"] .invite-box-desc { color: #111 !important; }
+
+    .contrib-error{grid-column:1/-1;border:2px solid var(--red);background:var(--surface);padding:2rem;font-family:var(--f-m);font-size:.85rem;color:var(--red);box-shadow:var(--sh);text-align:center;}
+    .sec-head{display:flex;align-items:flex-end;justify-content:space-between;border-bottom:3px solid var(--border);padding-bottom:12px;margin-bottom:2rem;flex-wrap:wrap;gap:12px}
+    .sec-head h2{font-family:var(--f-d);font-size:clamp(2rem,5vw,4rem);font-weight:800;text-transform:uppercase;letter-spacing:-.05em;line-height:1}
+    .sec-tag{font-family:var(--f-m);font-size:.72rem;font-weight:700;letter-spacing:.1em;display:flex;align-items:center;gap:6px}
+    .section-tag-label{display:inline-flex;align-items:center;gap:8px;background:var(--border);color:var(--yellow);font-family:var(--f-m);font-size:.7rem;font-weight:700;padding:5px 14px;border:2px solid var(--border);margin-bottom:1.25rem;letter-spacing:.08em;text-transform:uppercase}
+    
+    .dot{width:7px;height:7px;background:var(--green);display:inline-block;border-radius:50%;animation:blink 1s step-end infinite;flex-shrink:0}
+    @keyframes blink{50%{opacity:0}}
+    .reveal{opacity:0;transform:translateY(28px);transition:opacity .55s,transform .55s}
+    .reveal.in{opacity:1;transform:none}
+
+    /* ═══════════════════════════════════════════
+       5. MEDIA QUERY BREAKPOINTS
+       ═══════════════════════════════════════════ */
+    @media(max-width:760px){.repo-cards{grid-template-columns:1fr}.info-grid{grid-template-columns:1fr}}
+    @media(max-width:580px){.contributors-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:640px){.about-hero{padding-left:16px;padding-right:16px}}
+  </style>
 </head>
 <body>
-<div id="cursor"></div>
-<div id="prog"></div>
+  <div id="cursor"></div>
+  <div id="prog"></div>
 
-<nav class="navbar">
-  <a href="/" class="nav-logo">⌨ KEYDIR.in</a>
-  <div class="nav-links">
+  <!-- Main Navigation Bar -->
+  <nav class="navbar">
+    <a href="/" class="nav-logo">⌨ KEYDIR.in</a>
+    <div class="nav-links">
+      <a href="/">_Home</a>
+      <a href="/vendors/">_Vendors</a>
+      <a href="/builders/">_Builders</a>
+      <a href="/brands/">_Brands</a>
+      <a href="/surfaces/">_Surfaces</a>
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-btn">_More</button>
+        <div class="nav-dropdown-menu">
+          <a href="/groupbuy/">_Group Buy</a>
+          <a href="/guide/">_Guide</a>
+          <a href="/about/" class="active">_About</a>
+          <a href="/contact/">_Contact</a>
+          <a href="https://github.com/SHADOW269/Keydir.in" target="_blank">_GitHub ↗</a>
+        </div>
+      </div>
+    </div>
+    <button class="nav-ham" id="ham"><span></span><span></span><span></span></button>
+  </nav>
+
+  <!-- Mobile Context Drawer Overlay drawer -->
+  <div id="mob-nav">
+    <button id="mob-close">[ X ]</button>
     <a href="/">_Home</a>
     <a href="/vendors/">_Vendors</a>
     <a href="/builders/">_Builders</a>
     <a href="/brands/">_Brands</a>
     <a href="/surfaces/">_Surfaces</a>
+    <a href="/groupbuy/">_Group Buy</a>
     <a href="/guide/">_Guide</a>
-    <a href="/about/" class="active">_About</a>
-    <a href="https://github.com/SHADOW269/Keydir.in" target="_blank" style="background:var(--dark-card-bg);color:#FFFCF0">_GitHub</a>
+    <a href="/about/">_About</a>
+    <a href="/contact/">_Contact</a>
   </div>
-  <button class="nav-ham" id="ham"><span></span><span></span><span></span></button>
-</nav>
-<div id="mob-nav">
-  <button id="mob-close">[ X ]</button>
-  <a href="/">_Home</a>
-  <a href="/vendors/">_Vendors</a>
-  <a href="/builders/">_Builders</a>
-  <a href="/brands/">_Brands</a>
-  <a href="/surfaces/">_Surfaces</a>
-  <a href="/guide/">_Guide</a>
-  <a href="/about/">_About</a>
-</div>
 
-<!-- Hero -->
-<div class="about-hero">
-  <div class="section-tag-label reveal"><span class="dot"></span> OPEN SOURCE PROJECT // COMMUNITY MAINTAINED</div>
-  <h1 class="about-title reveal" style="transition-delay:.06s">
-    ABOUT<br/><span class="outline">KEYDIR</span><br/>INDIA.
-  </h1>
-  <p class="about-sub reveal" style="transition-delay:.12s">
-    A community-maintained directory of Indian mechanical keyboard vendors, builders, and brand stores.<br/>
-    <b>No ads. No affiliate links. Just raw data for the keeb community.</b>
-  </p>
-</div>
-
-<!-- Marquee -->
-<div class="marquee-strip">
-  <div class="marquee-track">
-    <span>OPEN SOURCE</span><span class="sep">///</span><span>COMMUNITY DRIVEN</span><span class="sep">///</span><span>NO ADS</span><span class="sep">///</span><span>NO AFFILIATES</span><span class="sep">///</span><span>INDIA KEEB COMMUNITY</span><span class="sep">///</span><span>JSON POWERED</span><span class="sep">///</span><span>GITHUB PAGES</span><span class="sep">///</span>
-    <span>OPEN SOURCE</span><span class="sep">///</span><span>COMMUNITY DRIVEN</span><span class="sep">///</span><span>NO ADS</span><span class="sep">///</span><span>NO AFFILIATES</span><span class="sep">///</span><span>INDIA KEEB COMMUNITY</span><span class="sep">///</span><span>JSON POWERED</span><span class="sep">///</span><span>GITHUB PAGES</span><span class="sep">///</span>
+  <!-- Hero Splash -->
+  <div class="about-hero">
+    <div class="section-tag-label reveal"><span class="dot"></span> OPEN SOURCE PROJECT // COMMUNITY MAINTAINED</div>
+    <h1 class="about-title reveal" style="transition-delay:.06s">
+      ABOUT<br/><span class="outline">KEYDIR</span><br/>INDIA.
+    </h1>
+    <p class="about-sub reveal" style="transition-delay:.12s">
+      A community-maintained directory of Indian mechanical keyboard vendors, builders, and brand stores.<br/>
+      <b>No ads. No affiliate links. Just raw data for the keeb community.</b>
+    </p>
   </div>
-</div>
 
-<div class="page-body" style="padding-bottom:100px">
-
-  <!-- Repo links -->
-  <section style="padding:3rem 0 0">
-    <div class="sec-head reveal">
-      <h2>THE <em style="color:#00FF6A">REPOSITORY</em></h2>
-      <div class="sec-tag" style="color:#00FF6A">GITHUB</div>
+  <!-- Continuous Scrolling Infinite Text Ribbon -->
+  <div class="marquee-strip">
+    <div class="marquee-track">
+      <span>OPEN SOURCE</span><span class="sep">///</span><span>COMMUNITY DRIVEN</span><span class="sep">///</span><span>NO ADS</span><span class="sep">///</span><span>NO AFFILIATES</span><span class="sep">///</span><span>INDIA KEEB COMMUNITY</span><span class="sep">///</span><span>JSON POWERED</span><span class="sep">///</span><span>GITHUB PAGES</span><span class="sep">///</span>
+      <span>OPEN SOURCE</span><span class="sep">///</span><span>COMMUNITY DRIVEN</span><span class="sep">///</span><span>NO ADS</span><span class="sep">///</span><span>NO AFFILIATES</span><span class="sep">///</span><span>INDIA KEEB COMMUNITY</span><span class="sep">///</span><span>JSON POWERED</span><span class="sep">///</span><span>GITHUB PAGES</span><span class="sep">///</span>
     </div>
-    <div class="repo-cards reveal" style="transition-delay:.08s">
-      <a href="https://github.com/SHADOW269/Keydir.in" target="_blank" rel="noopener" class="repo-card">
-        <div class="repo-card-icon">📦</div>
-        <div>
-          <div class="repo-card-label">Main Repository</div>
-          <div class="repo-card-name">Keydir.in</div>
+  </div>
+
+  <!-- Workspace Container Layout Main Area -->
+  <div class="page-body" style="padding-bottom:100px">
+
+    <!-- Active Repository Context Card row -->
+    <section style="padding:3rem 0 0">
+      <div class="sec-head reveal">
+        <h2>THE <em style="color:var(--green)">REPOSITORY</em></h2>
+        <div class="sec-tag" style="color:var(--green)">GITHUB</div>
+      </div>
+      <div class="repo-cards reveal" style="transition-delay:.08s">
+        <a href="https://github.com/SHADOW269/Keydir.in" target="_blank" rel="noopener" class="repo-card">
+          <div class="repo-card-icon">📦</div>
+          <div>
+            <div class="repo-card-label">Main Repository</div>
+            <div class="repo-card-name">Keydir.in</div>
+          </div>
+          <div class="repo-card-desc">The full source code for KeyDir India. Contains all vendor data, the frontend site, and contribution guidelines.</div>
+          <div class="repo-card-link">github.com/SHADOW269/Keydir.in ↗</div>
+        </a>
+        <a href="https://github.com/SHADOW269/Keydir.in/issues" target="_blank" rel="noopener" class="repo-card">
+          <div class="repo-card-icon">🐛</div>
+          <div>
+            <div class="repo-card-label">Issues &amp; Requests</div>
+            <div class="repo-card-name">Issues Page</div>
+          </div>
+          <div class="repo-card-desc">Report incorrect vendor info, suggest new stores to add, flag warnings, or request new features for the directory.</div>
+          <div class="repo-card-link">github.com/SHADOW269/Keydir.in/issues ↗</div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Technical Architecture Data Info Grid -->
+    <section style="padding:0 0 3rem">
+      <div class="sec-head reveal">
+        <h2>PROJECT <em style="color:var(--yellow)">INFO</em></h2>
+      </div>
+      <div class="info-grid reveal" style="transition-delay:.08s">
+        <div class="info-card">
+          <div class="info-card-title">// HOW TO CONTRIBUTE</div>
+          <ul class="info-list">
+            <li><span class="ok">1.</span> Fork the repository on GitHub</li>
+            <li><span class="ok">2.</span> Edit <strong>vendors.json</strong>, <strong>builders.json</strong>, or <strong>brands.json</strong></li>
+            <li><span class="ok">3.</span> Follow the existing JSON structure exactly</li>
+            <li><span class="ok">4.</span> Submit a Pull Request with a clear description</li>
+            <li><span class="ok">5.</span> A maintainer will review and merge</li>
+          </ul>
         </div>
-        <div class="repo-card-desc">The full source code for KeyDir India. Contains all vendor data, the frontend site, and contribution guidelines.</div>
-        <div class="repo-card-link">github.com/SHADOW269/Keydir.in ↗</div>
-      </a>
-      <a href="https://github.com/SHADOW269/Keydir.in/issues" target="_blank" rel="noopener" class="repo-card">
-        <div class="repo-card-icon">🐛</div>
-        <div>
-          <div class="repo-card-label">Issues &amp; Requests</div>
-          <div class="repo-card-name">Issues Page</div>
+        <div class="info-card">
+          <div class="info-card-title">// DATA STRUCTURE</div>
+          <ul class="info-list">
+            <li><span class="ok">→</span> <strong>vendors.json</strong> — all <span data-stat="vendors">19</span>+ vendor entries</li>
+            <li><span class="ok">→</span> <strong>builders.json</strong> — DIY builder listings</li>
+            <li><span class="ok">→</span> <strong>brands.json</strong> — official brand stores</li>
+            <li><span class="ok">→</span> Each entry supports a <strong>warning</strong> flag + message</li>
+            <li><span class="ok">→</span> Update shared.js to reflect JSON changes</li>
+          </ul>
         </div>
-        <div class="repo-card-desc">Report incorrect vendor info, suggest new stores to add, flag warnings, or request new features for the directory.</div>
-        <div class="repo-card-link">github.com/SHADOW269/Keydir.in/issues ↗</div>
-      </a>
-    </div>
-  </section>
+        <div class="info-card">
+          <div class="info-card-title">// TECH STACK</div>
+          <ul class="info-list">
+            <li><span class="ok">●</span> HTML / CSS / Vanilla JavaScript — no frameworks</li>
+            <li><span class="ok">●</span> Data stored in <strong>shared.js</strong> (mirrors JSON files)</li>
+            <li><span class="ok">●</span> Hosted on GitHub Pages (free, static)</li>
+            <li><span class="ok">●</span> NeoBrutalist design system</li>
+            <li><span class="dim">○</span> Zero dependencies, zero build steps</li>
+          </ul>
+        </div>
+        <div class="info-card">
+          <div class="info-card-title">// GUIDELINES</div>
+          <ul class="info-list">
+            <li><span class="ok">✓</span> Only list vendors actually operating in India</li>
+            <li><span class="ok">✓</span> Use <strong>warning: true</strong> for community-reported issues</li>
+            <li><span class="ok">✓</span> Keep descriptions factual and neutral</li>
+            <li><span class="ok">✓</span> Verify URLs are live before submitting</li>
+            <li><span class="dim">✗</span> No affiliate or paid placements</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-  <!-- Project info -->
-  <section style="padding:0 0 3rem">
-    <div class="sec-head reveal">
-      <h2>PROJECT <em style="color:#FAFF00">INFO</em></h2>
-    </div>
-    <div class="info-grid reveal" style="transition-delay:.08s">
-      <div class="info-card">
-        <div class="info-card-title">// HOW TO CONTRIBUTE</div>
-        <ul class="info-list">
-          <li><span class="ok">1.</span> Fork the repository on GitHub</li>
-          <li><span class="ok">2.</span> Edit <strong>vendors.json</strong>, <strong>builders.json</strong>, or <strong>brands.json</strong></li>
-          <li><span class="ok">3.</span> Follow the existing JSON structure exactly</li>
-          <li><span class="ok">4.</span> Submit a Pull Request with a clear description</li>
-          <li><span class="ok">5.</span> A maintainer will review and merge</li>
-        </ul>
+    <!-- Dynamically Injected GitHub Contributors Node Grid Wrapper -->
+    <section style="padding:0 0 80px">
+      <div class="sec-head reveal">
+        <h2>CONTRIBUTORS <em style="color:var(--pink)">❤</em></h2>
+        <div class="sec-tag" id="contribTag" style="color:var(--pink)">LOADING...</div>
       </div>
-      <div class="info-card">
-        <div class="info-card-title">// DATA STRUCTURE</div>
-        <ul class="info-list">
-          <li><span class="ok">→</span> <strong>vendors.json</strong> — all <span data-stat="vendors">19</span>+ vendor entries</li>
-          <li><span class="ok">→</span> <strong>builders.json</strong> — DIY builder listings</li>
-          <li><span class="ok">→</span> <strong>brands.json</strong> — official brand stores</li>
-          <li><span class="ok">→</span> Each entry supports a <strong>warning</strong> flag + message</li>
-          <li><span class="ok">→</span> Update shared.js to reflect JSON changes</li>
-        </ul>
+      <div class="contributors-grid" id="contributorsGrid">
+        <div class="contrib-skeleton"><div class="skel-avatar"></div><div class="skel-line" style="width:70%"></div><div class="skel-line" style="width:45%"></div></div>
+        <div class="contrib-skeleton"><div class="skel-avatar"></div><div class="skel-line" style="width:60%"></div><div class="skel-line" style="width:40%"></div></div>
+        <div class="contrib-skeleton"><div class="skel-avatar"></div><div class="skel-line" style="width:75%"></div><div class="skel-line" style="width:50%"></div></div>
       </div>
-      <div class="info-card">
-        <div class="info-card-title">// TECH STACK</div>
-        <ul class="info-list">
-          <li><span class="ok">●</span> HTML / CSS / Vanilla JavaScript — no frameworks</li>
-          <li><span class="ok">●</span> Data stored in <strong>shared.js</strong> (mirrors JSON files)</li>
-          <li><span class="ok">●</span> Hosted on GitHub Pages (free, static)</li>
-          <li><span class="ok">●</span> NeoBrutalist design system</li>
-          <li><span class="dim">○</span> Zero dependencies, zero build steps</li>
-        </ul>
-      </div>
-      <div class="info-card">
-        <div class="info-card-title">// GUIDELINES</div>
-        <ul class="info-list">
-          <li><span class="ok">✓</span> Only list vendors actually operating in India</li>
-          <li><span class="ok">✓</span> Use <strong>warning: true</strong> for community-reported issues</li>
-          <li><span class="ok">✓</span> Keep descriptions factual and neutral</li>
-          <li><span class="ok">✓</span> Verify URLs are live before submitting</li>
-          <li><span class="dim">✗</span> No affiliate or paid placements</li>
-        </ul>
-      </div>
-    </div>
-  </section>
 
-  <!-- Contributors -->
-  <section style="padding:0 0 80px">
-    <div class="sec-head reveal">
-      <h2>CONTRIBUTORS <em style="color:#FF3FA4">❤</em></h2>
-      <div class="sec-tag" id="contribTag" style="color:#FF3FA4">LOADING...</div>
-    </div>
-    <div class="contributors-grid" id="contributorsGrid">
-      <div class="contrib-skeleton"><div class="skel-avatar"></div><div class="skel-line" style="width:70%"></div><div class="skel-line" style="width:45%"></div></div>
-      <div class="contrib-skeleton"><div class="skel-avatar"></div><div class="skel-line" style="width:60%"></div><div class="skel-line" style="width:40%"></div></div>
-      <div class="contrib-skeleton"><div class="skel-avatar"></div><div class="skel-line" style="width:75%"></div><div class="skel-line" style="width:50%"></div></div>
-    </div>
+      <!-- Call to Action block targeting new contributors -->
+      <div style="margin-top:2rem; border:2px solid var(--border); background:var(--yellow); padding:24px 28px; box-shadow:6px 6px 0 var(--shadow); display:flex; align-items:flex-start; gap:16px; flex-wrap:wrap" class="reveal">
+        <div style="font-size:1.75rem; flex-shrink:0">🙌</div>
+        <div>
+          <div style="font-family:var(--f-d); font-size:1.05rem; font-weight:800; text-transform:uppercase; letter-spacing:-.03em; margin-bottom:6px; color:#111;">Want to see your name here?</div>
+          <div class="invite-box-desc">
+            Anyone who submits a PR to add or update vendor data becomes a contributor. Edit a JSON file, open a pull request, and your GitHub avatar appears here automatically.
+          </div>
+          <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap">
+            <a href="https://github.com/SHADOW269/Keydir.in/fork" target="_blank" rel="noopener"
+               style="display:inline-flex; align-items:center; gap:6px; padding:10px 22px; border:2px solid var(--border); background:var(--border); color:var(--surface); font-family:var(--f-m); font-size:.8rem; font-weight:700; text-decoration:none; text-transform:uppercase; box-shadow:4px 4px 0 var(--shadow); transition:all .12s"
+               onmouseenter="this.style.background='#111'; this.style.color='var(--yellow)';"
+               onmouseleave="this.style.background='var(--border)'; this.style.color='var(--surface)';">
+              Fork the Repo →
+            </a>
+            <a href="https://github.com/SHADOW269/Keydir.in/issues/new" target="_blank" rel="noopener"
+               style="display:inline-flex; align-items:center; gap:6px; padding:10px 22px; border:2px solid var(--border); background:transparent; color:#111; font-family:var(--f-m); font-size:.8rem; font-weight:700; text-decoration:none; text-transform:uppercase; box-shadow:4px 4px 0 var(--shadow); transition:all .12s"
+               onmouseenter="this.style.transform='translate(2px,2px)'; this.style.boxShadow='2px 2px 0 #111'"
+               onmouseleave="this.style.transform=''; this.style.boxShadow='4px 4px 0 #111'">
+              Open an Issue
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <!-- CTA to become a contributor -->
-    <div style="margin-top:2rem;border:2px solid var(--border);background:#FAFF00;padding:24px 28px;box-shadow:6px 6px 0 var(--shadow);display:flex;align-items:flex-start;gap:16px;flex-wrap:wrap" class="reveal">
-      <div style="font-size:1.75rem;flex-shrink:0">🙌</div>
+  </div>
+
+  <!-- Global Footer -->
+  <footer>
+    <div class="footer-inner">
       <div>
-        <div style="font-family:'Space Grotesk',sans-serif;font-size:1.05rem;font-weight:800;text-transform:uppercase;letter-spacing:-.03em;margin-bottom:6px">Want to see your name here?</div>
-        <div style="font-family:'JetBrains Mono',monospace;font-size:.82rem;line-height:1.8;color:var(--text-muted);max-width:560px">
-          Anyone who submits a PR to add or update vendor data becomes a contributor. Edit a JSON file, open a pull request, and your GitHub avatar appears here automatically.
-        </div>
-        <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
-          <a href="https://github.com/SHADOW269/Keydir.in/fork" target="_blank" rel="noopener"
-             style="display:inline-flex;align-items:center;gap:6px;padding:10px 22px;border:2px solid var(--border);background:var(--dark-card-bg);color:#FFFCF0;font-family:'JetBrains Mono',monospace;font-size:.8rem;font-weight:700;text-decoration:none;text-transform:uppercase;box-shadow:4px 4px 0 var(--shadow);transition:all .12s"
-             onmouseenter="this.style.background='#111';this.style.color='#FAFF00'"
-             onmouseleave="this.style.background='#111';this.style.color='#FFFCF0'">
-            Fork the Repo →
-          </a>
-          <a href="https://github.com/SHADOW269/Keydir.in/issues/new" target="_blank" rel="noopener"
-             style="display:inline-flex;align-items:center;gap:6px;padding:10px 22px;border:2px solid var(--border);background:transparent;color:#111;font-family:'JetBrains Mono',monospace;font-size:.8rem;font-weight:700;text-decoration:none;text-transform:uppercase;box-shadow:4px 4px 0 var(--shadow);transition:all .12s"
-             onmouseenter="this.style.transform='translate(2px,2px)';this.style.boxShadow='2px 2px 0 #111'"
-             onmouseleave="this.style.transform='';this.style.boxShadow='4px 4px 0 #111'">
-            Open an Issue
-          </a>
+        <div class="f-logo">⌨ KEYDIR.exe</div>
+        <div class="f-desc">
+          Community-maintained directory of Indian mechanical keyboard vendors. No affiliate links. No ads. Just raw data for the keeb community.
         </div>
       </div>
-    </div>
-  </section>
 
-</div>
+      <div class="f-col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="../">_Home</a></li>
+          <li><a href="/vendors/">_Vendors</a></li>
+          <li><a href="/builders/">_Builders</a></li>
+          <li><a href="/brands/">_Brands</a></li>
+          <li><a href="/surfaces/">_Surfaces</a></li>
+          <li><a href="/contact/">_Contact</a></li>
+          <li><a href="/guide/">_Guide</a></li>
+          <li><a href="/about/">_About</a></li>
+        </ul>
+      </div>
 
-<!-- FOOTER -->
-<footer>
-  <div class="footer-inner">
+      <div class="f-col">
+        <h4>Surfaces</h4>
+        <ul>
+          <li><a href="/surfaces/#vendor-grid">Mousepads</a></li>
+          <li><a href="/surfaces/#vendor-grid">Deskpads</a></li>
+          <li><a href="/surfaces/#vendor-grid">Glasspads</a></li>
+          <li><a href="/surfaces/#size-guide">Size Guide</a></li>
+        </ul>
+      </div>
 
-    <div>
-      <div class="f-logo">⌨ KEYDIR.exe</div>
-      <div class="f-desc">
-        Community-maintained directory of Indian mechanical keyboard vendors.
-        No affiliate links. No ads. Just raw data for the keeb community.
+      <div class="f-col">
+        <h4>Project</h4>
+        <ul>
+          <li><a href="/contact/">_Contact</a></li>
+          <li><a href="https://github.com/SHADOW269/Keydir.in" target="_blank" rel="noopener">_GitHub</a></li>
+          <li><a href="https://github.com/SHADOW269/Keydir.in/issues" target="_blank" rel="noopener">_Report Issue</a></li>
+          <li><a href="/Terms-and-Conditions/">_Terms & Conditions</a></li>
+        </ul>
       </div>
     </div>
 
-    <div class="f-col">
-      <h4>Navigate</h4>
-      <ul>
-        <li><a href="../">_Home</a></li>
-        <li><a href="/vendors/">_Vendors</a></li>
-        <li><a href="/builders/">_Builders</a></li>
-        <li><a href="/brands/">_Brands</a></li>
-        <li><a href="/surfaces/">_Surfaces</a></li>
-        <li><a href="/guide/">_Guide</a></li>
-        <li><a href="/about/">_About</a></li>
-      </ul>
+    <div class="f-bottom">
+      <div class="f-copy">
+        © 2026 KEYDIR.in // COMMUNITY PROJECT // NOT AFFILIATED WITH ANY VENDOR // SYSTEM_END
+      </div>
+      <button class="theme-toggle" onclick="toggleTheme()">
+        <span class="tt-icon">◑</span>
+        <span class="tt-label">DARK MODE</span>
+      </button>
     </div>
+    <div class="f-watermark">KEYDIR</div>
+  </footer>
 
-    <div class="f-col">
-      <h4>Categories</h4>
-      <ul>
-        <li><a href="/vendors/">Pre-built</a></li>
-        <li><a href="/vendors/">Switches</a></li>
-        <li><a href="/vendors/">Keycaps</a></li>
-        <li><a href="/vendors/">Hall Effect</a></li>
-        <li><a href="/vendors/">Barebone</a></li>
-      </ul>
-    </div>
+  <script src="/assets/js/shared.js"></script>
+  <script>
+    /* ── GitHub Contributors Loader ── */
+    (async function loadContributors() {
+      const grid = document.getElementById('contributorsGrid');
+      const tag  = document.getElementById('contribTag');
+      const API  = 'https://api.github.com/repos/SHADOW269/Keydir.in/contributors';
 
-    <div class="f-col">
-      <h4>Project</h4>
-      <ul>
-        <li>
-          <a href="https://github.com/SHADOW269/Keydir.in" target="_blank" rel="noopener">
-            _GitHub
-          </a>
-        </li>
-        <li>
-          <a href="https://github.com/SHADOW269/Keydir.in/issues" target="_blank" rel="noopener">
-            _Report Issue
-          </a>
-        </li>
-        <li><a href="/Terms-and-Conditions/">_Terms & Conditions</a></li>
-      </ul>
-    </div>
+      try {
+        const res = await fetch(API, {
+          headers: { 'Accept': 'application/vnd.github.v3+json' }
+        });
 
-  </div>
+        if (!res.ok) throw new Error(`GitHub API ${res.status}`);
+        const contributors = await res.json();
 
-  <div class="f-bottom">
-    <div class="f-copy">
-      © 2026 KEYDIR.in // COMMUNITY PROJECT // NOT AFFILIATED WITH ANY VENDOR // SYSTEM_END
-    </div>
+        grid.innerHTML = '';
+        if (tag) tag.textContent = contributors.length + ' CONTRIBUTOR' + (contributors.length !== 1 ? 'S' : '');
 
-    <button class="theme-toggle" onclick="toggleTheme()">
-      <span class="tt-icon">◑</span>
-      <span class="tt-label">DARK MODE</span>
-    </button>
-  </div>
+        if (contributors.length === 0) {
+          grid.innerHTML = `
+            <div class="contributor-card" style="text-align:center; padding:24px 14px; border:2px solid var(--border); background:var(--surface); box-shadow:4px 4px 0 var(--shadow)">
+              <img src="https://github.com/SHADOW269.png?size=160" alt="SHADOW269" class="contributor-avatar" style="width:80px; height:80px; border:2px solid var(--border); display:block; margin:0 auto 12px; object-fit:cover; box-shadow:3px 3px 0 var(--shadow)"/>
+              <div class="contributor-name">SHADOW269</div>
+              <div class="contributor-commits">Project founder</div>
+            </div>
+          `;
+          if (tag) tag.textContent = '1 CONTRIBUTOR';
+          return;
+        }
 
-  <div class="f-watermark">KEYDIR</div>
-</footer>
+        contributors.forEach((c, i) => {
+          const card = document.createElement('a');
+          card.href   = c.html_url;
+          card.target = '_blank';
+          card.rel    = 'noopener noreferrer';
+          card.className = 'contributor-card reveal';
+          card.style.transitionDelay = `${i * 0.05}s`;
+          card.setAttribute('aria-label', `${c.login} — ${c.contributions} contribution${c.contributions !== 1 ? 's' : ''}`);
 
-<script src="/assets/js/shared.js"></script>
-<script>
-/* ── GitHub Contributors Loader ── */
-(async function loadContributors() {
-  const grid = document.getElementById('contributorsGrid');
-  const tag  = document.getElementById('contribTag');
-  const API  = 'https://api.github.com/repos/SHADOW269/Keydir.in/contributors';
+          const avatar = document.createElement('img');
+          avatar.src     = c.avatar_url + '&s=160';
+          avatar.alt     = c.login;
+          avatar.className = 'contributor-avatar';
+          avatar.loading = 'lazy';
 
-  try {
-    const res = await fetch(API, {
-      headers: { 'Accept': 'application/vnd.github.v3+json' }
+          const name = document.createElement('div');
+          name.className = 'contributor-name';
+          name.textContent = c.login;
+
+          const commits = document.createElement('div');
+          commits.className = 'contributor-commits';
+          commits.textContent = c.contributions + ' commit' + (c.contributions !== 1 ? 's' : '');
+
+          card.appendChild(avatar);
+          card.appendChild(name);
+          card.appendChild(commits);
+          grid.appendChild(card);
+
+          setTimeout(() => {
+            const io = new IntersectionObserver(entries => {
+              entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+            }, { threshold: 0.1 });
+            io.observe(card);
+          }, 0);
+        });
+
+      } catch (err) {
+        console.warn('[KeyDir About] Could not load contributors:', err.message);
+        grid.innerHTML = `
+          <div class="contrib-error">
+            ⚠ Could not load contributors from GitHub API.<br/>
+            <span style="font-size:.75rem; color:var(--text-dim)">Rate limit or network error. <a href="https://github.com/SHADOW269/Keydir.in/graphs/contributors" target="_blank" style="color:var(--red)">View on GitHub →</a></span>
+          </div>
+        `;
+        if (tag) tag.textContent = 'SEE GITHUB';
+      }
+    })();
+
+    // ── Dropdown Initialization Handler ──
+    document.addEventListener("DOMContentLoaded", () => {
+      const dropdown = document.querySelector('.nav-dropdown');
+      const dropdownBtn = document.querySelector('.nav-dropdown-btn');
+
+      if (dropdownBtn && dropdown) {
+        dropdownBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          dropdown.classList.toggle('active');
+        });
+
+        document.addEventListener('click', () => {
+          dropdown.classList.remove('active');
+        });
+      }
     });
-
-    if (!res.ok) throw new Error(`GitHub API ${res.status}`);
-    const contributors = await res.json();
-
-    grid.innerHTML = '';
-    if (tag) tag.textContent = contributors.length + ' CONTRIBUTOR' + (contributors.length !== 1 ? 'S' : '');
-
-    if (contributors.length === 0) {
-      grid.innerHTML = `
-        <div class="contributor-card" style="text-align:center;padding:24px 14px;border:2px solid var(--border);background:#FFFCF0;box-shadow:4px 4px 0 var(--shadow)">
-          <img src="https://github.com/SHADOW269.png?size=160" alt="SHADOW269" class="contributor-avatar" style="width:80px;height:80px;border:2px solid var(--border);display:block;margin:0 auto 12px;object-fit:cover;box-shadow:3px 3px 0 var(--shadow)"/>
-          <div class="contributor-name">SHADOW269</div>
-          <div class="contributor-commits">Project founder</div>
-        </div>
-      `;
-      if (tag) tag.textContent = '1 CONTRIBUTOR';
-      return;
-    }
-
-    contributors.forEach((c, i) => {
-      const card = document.createElement('a');
-      card.href   = c.html_url;
-      card.target = '_blank';
-      card.rel    = 'noopener noreferrer';
-      card.className = 'contributor-card reveal';
-      card.style.transitionDelay = `${i * 0.05}s`;
-      card.setAttribute('aria-label', `${c.login} — ${c.contributions} contribution${c.contributions !== 1 ? 's' : ''}`);
-
-      const avatar = document.createElement('img');
-      avatar.src     = c.avatar_url + '&s=160';
-      avatar.alt     = c.login;
-      avatar.className = 'contributor-avatar';
-      avatar.loading = 'lazy';
-
-      const name = document.createElement('div');
-      name.className = 'contributor-name';
-      name.textContent = c.login;
-
-      const commits = document.createElement('div');
-      commits.className = 'contributor-commits';
-      commits.textContent = c.contributions + ' commit' + (c.contributions !== 1 ? 's' : '');
-
-      card.appendChild(avatar);
-      card.appendChild(name);
-      card.appendChild(commits);
-      grid.appendChild(card);
-
-      setTimeout(() => {
-        const io = new IntersectionObserver(entries => {
-          entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-        }, { threshold: 0.1 });
-        io.observe(card);
-      }, 0);
-    });
-
-  } catch (err) {
-    console.warn('[KeyDir About] Could not load contributors:', err.message);
-    grid.innerHTML = `
-      <div class="contrib-error">
-        ⚠ Could not load contributors from GitHub API.<br/>
-        <span style="font-size:.75rem;color:var(--text-dim)">Rate limit or network error. <a href="https://github.com/SHADOW269/Keydir.in/graphs/contributors" target="_blank" style="color:#FF2A2A">View on GitHub →</a></span>
-      </div>
-    `;
-    if (tag) tag.textContent = 'SEE GITHUB';
-  }
-})();
-</script>
+  </script>
 </body>
 </html>

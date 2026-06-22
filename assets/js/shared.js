@@ -239,57 +239,16 @@ const BRANDS = [
   /*{name:"Ant Esports",     url:"https://antesports.com/",               spec:"Budget PC Hardware",      col:"var(--green)",  risk:false, warning_message:""},*/
 ];
 
+/* ══════════════════════════════════════════════════════════════
+   PAD_ONLY_VENDORS
+   Shown on: surfaces.html (Specialist section)
+   ══════════════════════════════════════════════════════════════ */
 const PAD_ONLY_VENDORS = [
-  {
-    name: "Claw Gears",
-    url: "https://clawgears.in/",
-    types: ["Glass Pad"],
-    specialty: "",
-    risk: false,
-    warning_message: ""
-  },
-  {
-    name: "FernTech",
-    url: "https://ferntechworld.com/",
-    types: ["Mousepad","Deskpad","Glass Pad"],
-    specialty: "",
-    risk: false,
-    warning_message: ""
-  },
-  {
-    name: "Mopadz",
-    url: "https://mopadz.com/",
-    types: ["Deskpad"],
-    specialty: "",
-    risk: false,
-    warning_message: ""
-  },
-  {
-    name: "Senpaiarts",
-    url: "https://senpaiarts.com/",
-    types: ["Mousepad","Deskpad"],
-    specialty: "",
-    risk: false,
-    warning_message: ""
-  },
-  {
-    name: "Veroforza",
-    url: "https://veroforza.com/",
-    types: ["Mousepad","Deskpad"],
-    specialty: "",
-    risk: false,
-    warning_message: ""
-  },
-  
-  // Add more dedicated pad stores below:
-  // {
-  //   name: "PadStoreName",
-  //   url: "https://example.in/",
-  //   types: ["Mousepad", "Deskpad"],
-  //   specialty: "Description of what makes this store special",
-  //   risk: false,
-  //   warning_message: ""
-  // },
+  { name: "Claw Gears",       url: "https://clawgears.in/",               types: ["Glass-pad"],                               specialty: "Specialized glass track surfaces",          risk: false, warning_message: "" },
+  { name: "FernTech",         url: "https://ferntechworld.com/",          types: ["Mousepad","Deskpad","Glass-pad"],          specialty: "Premium performance setup mats",            risk: false, warning_message: "" },
+  { name: "Mopadz",           url: "https://mopadz.com/",                 types: ["Deskpad"],                                 specialty: "Bespoke large format layout deskmats",      risk: false, warning_message: "" },
+  { name: "Senpaiarts",       url: "https://senpaiarts.com/",             types: ["Mousepad","Deskpad"],                      specialty: "Artistic aesthetic setup surfaces",         risk: false, warning_message: "" },
+  { name: "Veroforza",        url: "https://veroforza.com/",              types: ["Mousepad","Deskpad"],                      specialty: "Minimalist corporate & gaming layout mats", risk: false, warning_message: "" },
 ];
 
 /* ════════════════════════════════════════════════════════════════
@@ -342,7 +301,7 @@ const CAT_ACTIVE_STYLE = {
 
 
 /* ════════════════════════════════════════════════════════════════
-   INTERNAL SITE FUNCTIONS — do not edit below this line
+   INTERNAL SITE FUNCTIONS — Execution Engines
    ════════════════════════════════════════════════════════════════ */
 
 function initCursor() {
@@ -352,7 +311,6 @@ function initCursor() {
     cur.style.left = e.clientX + "px";
     cur.style.top  = e.clientY + "px";
   });
-  // Hide cursor when mouse leaves the page
   document.addEventListener("mouseleave", () => cur.classList.add("off"));
   document.addEventListener("mouseenter", () => cur.classList.remove("off"));
   document.querySelectorAll("a,button,input,textarea,.cat-btn").forEach(el => {
@@ -402,6 +360,7 @@ function animCount(el) {
     if (t < 1) requestAnimationFrame(up);
   })(start);
 }
+
 function initCounters() {
   const io = new IntersectionObserver(entries => {
     entries.forEach(e => { if (e.isIntersecting) { animCount(e.target); io.unobserve(e.target); } });
