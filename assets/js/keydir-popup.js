@@ -18,6 +18,12 @@ const POPUP_DATA = {
   /* ── NEW VENDORS ── */
   new_vendors: [
     {
+      name: "[GB] Kraze65 By Neomacro",
+      url: "https://neomacro.in/search?q=Kraze",
+      cats: ["Active"],
+      added: "June 2026"
+    },
+    {
       name: "FernTech",
       url: "https://ferntechworld.com/products/aula-f75-gasket-wireless-mechanical-keyboard",
       cats: ["Pre-built", "Mousepad", "Glass-pad"],
