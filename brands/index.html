@@ -4,24 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Brands</title>
+  <title>Keyboard Brands in India — KEYDIR.in</title>
 
+  <!-- Analytics & Core Component Scripts -->
   <script defer src="https://cloud.umami.is/script.js" data-website-id="35caf6d4-f14b-4b28-9f07-600b6910a4d3"></script>
   <script src="/assets/js/keydir-popup.js" defer></script>
 
+  <!-- SEO Optimization -->
   <meta name="description" content="Browse mechanical keyboard brands available in India. Discover switch makers, keycap brands, keyboard manufacturers, and accessory companies supported by Indian vendors.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://keydir.in/brands/">
 
+  <!-- Geo Targeting -->
   <meta name="geo.region" content="IN">
   <meta name="geo.placename" content="India">
   <meta name="theme-color" content="#000000">
 
+  <!-- Favicons -->
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
   <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon-192.png">
   <link rel="icon" type="image/png" sizes="512x512" href="/assets/img/favicon-512.png">
   <link rel="apple-touch-icon" href="/assets/img/favicon-512.png">
 
+  <!-- Open Graph / Facebook -->
   <meta property="og:title" content="Keyboard Brands in India — KEYDIR.in">
   <meta property="og:description" content="Explore mechanical keyboard brands available in India including switches, keycaps, keyboards, and accessories.">
   <meta property="og:url" content="https://keydir.in/brands/">
@@ -33,14 +38,17 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="KEYDIR.in Mechanical Keyboard Brand Directory Banner">
 
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Keyboard Brands in India — KEYDIR.in">
   <meta name="twitter:description" content="Discover mechanical keyboard brands available in India including switches, keycaps, keyboards, and accessories.">
   <meta name="twitter:image" content="https://keydir.in/assets/img/Banner.png">
 
+  <!-- Core Theme Stylesheets -->
   <link rel="stylesheet" href="/assets/css/style.css">
   <script src="/assets/js/theme.js"></script>
 
+  <!-- Schema.org Structural Metadata -->
   <script type="application/ld+json">
   {
    "@context": "https://schema.org",
@@ -221,7 +229,6 @@
       max-width: 520px;
     }
 
-    /* Counter Statistic Strip Panel Layout */
     .stat-strip {
       display: flex;
       border: 2px solid var(--border);
@@ -269,7 +276,6 @@
     .brand-name { font-family: var(--f-d); font-size: 1.5rem; font-weight: 800; text-transform: uppercase; letter-spacing: -.04em; line-height: .95; }
     .brand-spec { font-family: var(--f-m); font-size: .8rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 14px; min-height: 36px; }
     
-    /* Risk Context Elements Styling */
     .risk-badge {
       font-family: var(--f-m);
       font-size: .65rem;
@@ -300,7 +306,6 @@
       color: var(--bg) !important;
     }
 
-    /* ── Legal Disclaimer Row ── */
     .disclaimer {
       background: var(--border);
       border: 2px solid var(--border);
@@ -324,6 +329,11 @@
       .brand-grid { grid-template-columns: repeat(2, 1fr); }
       .stat-strip { flex-wrap: wrap; }
       .ss-item { flex: 1 1 50%; border-bottom: 2px solid var(--border); }
+    }
+    @media(max-width:760px) {
+      #marketplaceGrid {
+        grid-template-columns: 1fr !important;
+      }
     }
     @media(max-width:640px) { .br-hero { padding-left: 16px; padding-right: 16px; } }
     @media(max-width:480px) { .brand-grid { grid-template-columns: 1fr; } .ss-item { flex: 1 1 100%; } }
@@ -443,7 +453,7 @@
     </section>
   </div>
 
-    <!-- Global Footer -->
+  <!-- Global Footer -->
   <footer>
     <div class="footer-inner">
       <div>
@@ -504,15 +514,11 @@
 
   <script src="/assets/js/shared.js"></script>
   <script>
-    /* Continuous color pattern cycle mapped across generated cards top edge styles */
     const BRAND_ACCENT_COLS = [
       "var(--blue)","var(--pink)","var(--red)","var(--cyan)","var(--orange)",
       "var(--red)","var(--green)","var(--yellow)","var(--purple)"
     ];
 
-    /**
-     * Builds individual card element strings dynamically derived from metadata models
-     */
     function buildBrandCard(b, i, accentCols) {
       const accentCol = accentCols[i % accentCols.length];
       const card = document.createElement("div");
@@ -537,7 +543,6 @@
     }
 
     document.addEventListener("DOMContentLoaded", () => {
-      // 1. Instantiates Primary Brands data matrices 
       const g = document.getElementById("brandGrid");
       if (g) {
         const riskCount = BRANDS.filter(b => b.risk).length;
@@ -549,7 +554,6 @@
           const card = buildBrandCard(b, i, BRAND_ACCENT_COLS);
           g.appendChild(card);
           
-          // Intersection visibility observer attachment
           setTimeout(() => {
             const io = new IntersectionObserver(en => {
               en.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
@@ -559,7 +563,6 @@
         });
       }
 
-      // 2. Third Party Reseller distribution generation loops
       const tpGrid = document.getElementById("thirdPartyGrid");
       const tpEmpty = document.getElementById("thirdPartyEmpty");
       const tpTag = document.getElementById("tpSellerTag");
@@ -583,7 +586,6 @@
         }
       }
 
-      // 3. Main broad aggregated Marketplaces mapping layer initialization
       const mGrid = document.getElementById("marketplaceGrid");
       const mTag  = document.getElementById("marketplaceTag");
       if (mGrid && typeof MARKETPLACE_LINKS !== "undefined") {
@@ -610,7 +612,6 @@
         });
       }
 
-      // 4. Header Navigation dropdown operational context layers
       const dropdown = document.querySelector('.nav-dropdown');
       const dropdownBtn = document.querySelector('.nav-dropdown-btn');
 
