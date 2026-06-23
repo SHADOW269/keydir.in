@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +12,8 @@
   <script src="/assets/js/keydir-popup.js" defer></script>
 
   <!-- SEO Optimization -->
-  <meta name="description" content="Find mousepads, deskpads, and glasspads from verified Indian vendors. Cloth pads, extended desk mats, and glass gaming surfaces — all available in India.">
+  <meta name="description"
+    content="Find mousepads, deskpads, and glasspads from verified Indian vendors. Cloth pads, extended desk mats, and glass gaming surfaces — all available in India.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://keydir.in/surfaces/">
 
@@ -193,6 +195,7 @@
       align-items: start;
       gap: 48px;
     }
+
     .surf-title {
       font-family: var(--f-d);
       font-size: clamp(3rem, 9vw, 6.5rem);
@@ -202,7 +205,12 @@
       text-transform: uppercase;
       margin-bottom: 1.25rem;
     }
-    .surf-title .outline { -webkit-text-stroke: 3px var(--text); color: transparent; }
+
+    .surf-title .outline {
+      -webkit-text-stroke: 3px var(--text);
+      color: transparent;
+    }
+
     .surf-sub {
       font-family: var(--f-m);
       font-size: .9rem;
@@ -217,7 +225,12 @@
       margin-bottom: 2rem;
       color: #111;
     }
-    .surf-sidebar { position: sticky; top: calc(var(--nav-h) + 20px); }
+
+    .surf-sidebar {
+      position: sticky;
+      top: calc(var(--nav-h) + 20px);
+    }
+
     .surf-sidebar-card {
       background: var(--dark-card-bg);
       border: 2px solid var(--border);
@@ -229,6 +242,7 @@
       color: var(--green);
       margin-bottom: 14px;
     }
+
     .surf-sidebar-card .s-title {
       color: var(--text-muted);
       font-size: .65rem;
@@ -238,10 +252,24 @@
       padding-bottom: 8px;
       border-bottom: 1px solid #222;
     }
-    .surf-sidebar-card .s-line { display: flex; align-items: center; gap: 8px; }
-    .surf-sidebar-card .ok { color: var(--green); }
-    .surf-sidebar-card .warn { color: var(--cyan); }
-    .surf-sidebar-card .dim { color: #222; }
+
+    .surf-sidebar-card .s-line {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .surf-sidebar-card .ok {
+      color: var(--green);
+    }
+
+    .surf-sidebar-card .warn {
+      color: var(--cyan);
+    }
+
+    .surf-sidebar-card .dim {
+      color: #222;
+    }
 
     /* ═══════════════════════════════════════════
        3. TYPE SELECTION TABS & INTEGRATED VIEWGRID
@@ -254,6 +282,7 @@
       margin-bottom: 2rem;
       flex-wrap: wrap;
     }
+
     .type-tab {
       flex: 1;
       min-width: 120px;
@@ -270,20 +299,78 @@
       font-family: var(--f-m);
       text-align: center;
     }
-    .type-tab:last-child { border-right: none; }
-    .type-tab:hover { background: var(--bg-alt); transform: translateY(-2px); }
-    .type-tab.active.t-mouse { background: var(--blue); color: #fff; }
-    .type-tab.active.t-desk  { background: var(--cyan); color: #111; }
-    .type-tab.active.t-glass { background: var(--teal); color: #fff; }
-    .type-tab.active.t-all   { background: var(--text); color: var(--bg); }
-    .type-tab-icon { font-size: 1.6rem; }
-    .type-tab-label { font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; line-height: 1.3; }
-    .type-tab-count { font-size: .62rem; opacity: .7; }
 
-    .results-bar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.25rem; flex-wrap: wrap; gap: 8px; }
-    .result-count { font-family: var(--f-m); font-size: .8rem; color: #666; }
-    .result-count strong { color: var(--border); font-weight: 800; }
-    .result-hint { font-family: var(--f-m); font-size: .7rem; color: var(--text-dim); }
+    .type-tab:last-child {
+      border-right: none;
+    }
+
+    .type-tab:hover {
+      background: var(--bg-alt);
+      transform: translateY(-2px);
+    }
+
+    .type-tab.active.t-mouse {
+      background: var(--blue);
+      color: #fff;
+    }
+
+    .type-tab.active.t-desk {
+      background: var(--cyan);
+      color: #111;
+    }
+
+    .type-tab.active.t-glass {
+      background: var(--teal);
+      color: #fff;
+    }
+
+    .type-tab.active.t-all {
+      background: var(--text);
+      color: var(--bg);
+    }
+
+    .type-tab-icon {
+      font-size: 1.6rem;
+    }
+
+    .type-tab-label {
+      font-size: .72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      line-height: 1.3;
+    }
+
+    .type-tab-count {
+      font-size: .62rem;
+      opacity: .7;
+    }
+
+    .results-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.25rem;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .result-count {
+      font-family: var(--f-m);
+      font-size: .8rem;
+      color: #666;
+    }
+
+    .result-count strong {
+      color: var(--border);
+      font-weight: 800;
+    }
+
+    .result-hint {
+      font-family: var(--f-m);
+      font-size: .7rem;
+      color: var(--text-dim);
+    }
 
     /* Unified Layout Grid */
     .surf-vgrid {
@@ -303,29 +390,158 @@
       display: flex;
       flex-direction: column;
     }
-    @keyframes card-in { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
-    .surf-card:hover { transform: translate(3px, 3px); box-shadow: 1px 1px 0 var(--shadow); }
-    .surf-card-accent { height: 6px; border-bottom: 2px solid var(--border); }
-    .surf-card-body { padding: 20px 22px; flex: 1; }
-    
-    .surf-card-num { font-family: var(--f-m); font-size: .62rem; font-weight: 700; color: #666; letter-spacing: .1em; margin-bottom: 6px; }
-    .surf-card-name { font-family: var(--f-d); font-size: 1.25rem; font-weight: 800; text-transform: uppercase; letter-spacing: -.04em; margin-bottom: 10px; line-height: 1; }
-    .surf-card-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 4px; }
-    .surf-card-specialty { font-family: var(--f-m); font-size: .8rem; color: var(--text-muted); line-height: 1.7; margin-top: 8px; }
-    
-    .pad-badge { display: inline-flex; align-items: center; gap: 4px; font-family: var(--f-m); font-size: .62rem; font-weight: 700; padding: 3px 9px; border: 2px solid var(--border); text-transform: uppercase; letter-spacing: .04em; }
-    .pad-badge.mouse { background: var(--blue); color: #fff; }
-    .pad-badge.desk  { background: var(--cyan); color: #111; }
-    .pad-badge.glass { background: var(--teal); color: #fff; }
-    .pad-badge.specialist { background: var(--purple); color: #fff; border-color: var(--purple); }
 
-    .surf-card-foot { padding: 14px 22px; border-top: 2px solid var(--border); background: rgba(0,0,0,.025); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
-    .surf-card-foot-label { font-family: var(--f-m); font-size: .65rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: .06em; }
-    
-    .surf-warning { display: flex; align-items: flex-start; gap: 8px; margin-top: 10px; padding: 8px 12px; background: #2a0000; border: 2px solid var(--red); font-family: var(--f-m); font-size: .74rem; color: var(--red); line-height: 1.5; }
-    .surf-empty { grid-column: 1/-1; border: 2px solid var(--border); background: var(--surface); padding: 4rem 2rem; text-align: center; box-shadow: var(--sh); }
-    .surf-empty-n { font-family: var(--f-m); font-size: 4rem; font-weight: 800; color: #ddd; display: block; margin-bottom: .5rem; }
-    .surf-empty p { font-family: var(--f-m); font-size: .9rem; color: #777; }
+    @keyframes card-in {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    .surf-card:hover {
+      transform: translate(3px, 3px);
+      box-shadow: 1px 1px 0 var(--shadow);
+    }
+
+    .surf-card-accent {
+      height: 6px;
+      border-bottom: 2px solid var(--border);
+    }
+
+    .surf-card-body {
+      padding: 20px 22px;
+      flex: 1;
+    }
+
+    .surf-card-num {
+      font-family: var(--f-m);
+      font-size: .62rem;
+      font-weight: 700;
+      color: #666;
+      letter-spacing: .1em;
+      margin-bottom: 6px;
+    }
+
+    .surf-card-name {
+      font-family: var(--f-d);
+      font-size: 1.25rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: -.04em;
+      margin-bottom: 10px;
+      line-height: 1;
+    }
+
+    .surf-card-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-bottom: 4px;
+    }
+
+    .surf-card-specialty {
+      font-family: var(--f-m);
+      font-size: .8rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-top: 8px;
+    }
+
+    .pad-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-family: var(--f-m);
+      font-size: .62rem;
+      font-weight: 700;
+      padding: 3px 9px;
+      border: 2px solid var(--border);
+      text-transform: uppercase;
+      letter-spacing: .04em;
+    }
+
+    .pad-badge.mouse {
+      background: var(--blue);
+      color: #fff;
+    }
+
+    .pad-badge.desk {
+      background: var(--cyan);
+      color: #111;
+    }
+
+    .pad-badge.glass {
+      background: var(--teal);
+      color: #fff;
+    }
+
+    .pad-badge.specialist {
+      background: var(--purple);
+      color: #fff;
+      border-color: var(--purple);
+    }
+
+    .surf-card-foot {
+      padding: 14px 22px;
+      border-top: 2px solid var(--border);
+      background: rgba(0, 0, 0, .025);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .surf-card-foot-label {
+      font-family: var(--f-m);
+      font-size: .65rem;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: .06em;
+    }
+
+    .surf-warning {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      margin-top: 10px;
+      padding: 8px 12px;
+      background: #2a0000;
+      border: 2px solid var(--red);
+      font-family: var(--f-m);
+      font-size: .74rem;
+      color: var(--red);
+      line-height: 1.5;
+    }
+
+    .surf-empty {
+      grid-column: 1/-1;
+      border: 2px solid var(--border);
+      background: var(--surface);
+      padding: 4rem 2rem;
+      text-align: center;
+      box-shadow: var(--sh);
+    }
+
+    .surf-empty-n {
+      font-family: var(--f-m);
+      font-size: 4rem;
+      font-weight: 800;
+      color: #ddd;
+      display: block;
+      margin-bottom: .5rem;
+    }
+
+    .surf-empty p {
+      font-family: var(--f-m);
+      font-size: .9rem;
+      color: #777;
+    }
 
     /* ═══════════════════════════════════════════
        4. GLOBAL CONTRAST HOVER VISIBILITY FIXES
@@ -334,75 +550,325 @@
       background: var(--green) !important;
       color: #111 !important;
     }
+
     .btn-primary:hover {
       background: var(--text) !important;
       color: var(--bg) !important;
     }
 
     /* ── Explainer Cards Matrix ── */
-    .explainer-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border: 2px solid var(--border); box-shadow: var(--sh-lg); margin-bottom: 2.5rem; background: var(--surface); }
-    .explainer-item { padding: 26px 22px; border-right: 2px solid var(--border); }
-    .explainer-item:last-child { border-right: none; }
-    .explainer-accent { height: 5px; margin-bottom: 14px; }
-    .explainer-icon { font-size: 1.8rem; margin-bottom: 10px; display: block; }
-    .explainer-name { font-family: var(--f-d); font-size: 1rem; font-weight: 800; text-transform: uppercase; letter-spacing: -.03em; margin-bottom: 6px; }
-    .explainer-size { font-family: var(--f-m); font-size: .68rem; font-weight: 700; padding: 3px 9px; border: 2px solid var(--border); display: inline-block; margin-bottom: 8px; text-transform: uppercase; letter-spacing: .05em; }
-    .explainer-desc { font-family: var(--f-m); font-size: .78rem; color: var(--text-muted); line-height: 1.7; }
+    .explainer-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      border: 2px solid var(--border);
+      box-shadow: var(--sh-lg);
+      margin-bottom: 2.5rem;
+      background: var(--surface);
+    }
+
+    .explainer-item {
+      padding: 26px 22px;
+      border-right: 2px solid var(--border);
+    }
+
+    .explainer-item:last-child {
+      border-right: none;
+    }
+
+    .explainer-accent {
+      height: 5px;
+      margin-bottom: 14px;
+    }
+
+    .explainer-icon {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .explainer-name {
+      font-family: var(--f-d);
+      font-size: 1rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: -.03em;
+      margin-bottom: 6px;
+    }
+
+    .explainer-size {
+      font-family: var(--f-m);
+      font-size: .68rem;
+      font-weight: 700;
+      padding: 3px 9px;
+      border: 2px solid var(--border);
+      display: inline-block;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+    }
+
+    .explainer-desc {
+      font-family: var(--f-m);
+      font-size: .78rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
 
     /* ── Size Guide Matrix ── */
-    .size-guide { border: 2px solid var(--border); box-shadow: var(--sh-xl); overflow: hidden; margin-bottom: 3rem; }
-    .size-guide-head { background: var(--text); color: var(--bg); padding: 18px 28px; border-bottom: 2px solid var(--border); display: flex; align-items: center; justify-content: space-between; }
-    .size-guide-title { font-family: var(--f-d); font-size: 1.1rem; font-weight: 800; text-transform: uppercase; letter-spacing: -.04em; }
-    .size-guide-body { background: var(--surface); }
-    .size-row { display: grid; grid-template-columns: 80px 1fr 2fr; align-items: center; gap: 0; border-bottom: 2px solid var(--border); padding: 14px 24px; gap: 20px; }
-    .size-row:last-child { border-bottom: none; }
-    .size-row:nth-child(even) { background: var(--bg-alt); }
-    .size-tag { font-family: var(--f-m); font-size: .65rem; font-weight: 700; padding: 4px 10px; text-transform: uppercase; border: 2px solid var(--border); text-align: center; white-space: nowrap; }
-    .size-dim { font-family: var(--f-m); font-size: .82rem; font-weight: 700; color: var(--text); }
-    .size-desc { font-family: var(--f-m); font-size: .78rem; color: var(--text-muted); line-height: 1.6; }
+    .size-guide {
+      border: 2px solid var(--border);
+      box-shadow: var(--sh-xl);
+      overflow: hidden;
+      margin-bottom: 3rem;
+    }
+
+    .size-guide-head {
+      background: var(--text);
+      color: var(--bg);
+      padding: 18px 28px;
+      border-bottom: 2px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .size-guide-title {
+      font-family: var(--f-d);
+      font-size: 1.1rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: -.04em;
+    }
+
+    .size-guide-body {
+      background: var(--surface);
+    }
+
+    .size-row {
+      display: grid;
+      grid-template-columns: 80px 1fr 2fr;
+      align-items: center;
+      gap: 0;
+      border-bottom: 2px solid var(--border);
+      padding: 14px 24px;
+      gap: 20px;
+    }
+
+    .size-row:last-child {
+      border-bottom: none;
+    }
+
+    .size-row:nth-child(even) {
+      background: var(--bg-alt);
+    }
+
+    .size-tag {
+      font-family: var(--f-m);
+      font-size: .65rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      text-transform: uppercase;
+      border: 2px solid var(--border);
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .size-dim {
+      font-family: var(--f-m);
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .size-desc {
+      font-family: var(--f-m);
+      font-size: .78rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
 
     /* ── CTA Container ── */
-    .surf-cta { background: var(--cyan); border: 3px solid var(--border); box-shadow: var(--sh-xl); padding: 50px; position: relative; overflow: hidden; margin-bottom: 3rem; }
-    .surf-cta::before { content: 'FLAT'; position: absolute; right: -1rem; top: 50%; transform: translateY(-50%); font-family: var(--f-d); font-size: 18vw; font-weight: 800; color: rgba(0,0,0,.06); line-height: 1; pointer-events: none; }
-    .surf-cta-title { font-family: var(--f-d); font-size: clamp(2rem, 5vw, 4rem); font-weight: 800; text-transform: uppercase; letter-spacing: -.05em; line-height: .9; margin-bottom: 1rem; color: #111; }
-    .surf-cta-desc { font-family: var(--f-m); font-size: .9rem; line-height: 1.8; color: #333; max-width: 460px; margin-bottom: 1.5rem; }
+    .surf-cta {
+      background: var(--cyan);
+      border: 3px solid var(--border);
+      box-shadow: var(--sh-xl);
+      padding: 50px;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 3rem;
+    }
+
+    .surf-cta::before {
+      content: 'FLAT';
+      position: absolute;
+      right: -1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      font-family: var(--f-d);
+      font-size: 18vw;
+      font-weight: 800;
+      color: rgba(0, 0, 0, .06);
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .surf-cta-title {
+      font-family: var(--f-d);
+      font-size: clamp(2rem, 5vw, 4rem);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: -.05em;
+      line-height: .9;
+      margin-bottom: 1rem;
+      color: #111;
+    }
+
+    .surf-cta-desc {
+      font-family: var(--f-m);
+      font-size: .9rem;
+      line-height: 1.8;
+      color: #333;
+      max-width: 460px;
+      margin-bottom: 1.5rem;
+    }
 
     /* ── Dark Mode Adaptations ── */
-    [data-theme="dark"] .surf-sub { color: #111 !important; }
-    [data-theme="dark"] .explainer-row { background: var(--surface); border-color: var(--border); }
-    [data-theme="dark"] .explainer-item { border-color: var(--border); }
-    [data-theme="dark"] .explainer-desc { color: var(--text-muted); }
-    [data-theme="dark"] .surf-card { background: var(--surface); border-color: var(--border); }
-    [data-theme="dark"] .surf-card-foot { background: rgba(255,255,255,.03); border-color: var(--border); }
-    [data-theme="dark"] .size-guide { border-color: var(--border); }
-    [data-theme="dark"] .size-guide-body { background: var(--surface); }
-    [data-theme="dark"] .size-row:nth-child(even) { background: var(--bg-alt); }
-    [data-theme="dark"] .size-dim { color: var(--text); }
-    [data-theme="dark"] .size-desc { color: var(--text-muted); }
-    [data-theme="dark"] .type-tab { background: var(--surface); color: var(--text); border-color: var(--border); }
-    [data-theme="dark"] .type-tab:hover { background: var(--surface-raised); }
-    [data-theme="dark"] .surf-cta { color: #111; }
-    [data-theme="dark"] .surf-sidebar-card { background: #0D0D0D; border-color: #333; }
-    [data-theme="dark"] .surf-sidebar-card .dim { color: #1a1a1a; }
+    [data-theme="dark"] .surf-sub {
+      color: #111 !important;
+    }
+
+    [data-theme="dark"] .explainer-row {
+      background: var(--surface);
+      border-color: var(--border);
+    }
+
+    [data-theme="dark"] .explainer-item {
+      border-color: var(--border);
+    }
+
+    [data-theme="dark"] .explainer-desc {
+      color: var(--text-muted);
+    }
+
+    [data-theme="dark"] .surf-card {
+      background: var(--surface);
+      border-color: var(--border);
+    }
+
+    [data-theme="dark"] .surf-card-foot {
+      background: rgba(255, 255, 255, .03);
+      border-color: var(--border);
+    }
+
+    [data-theme="dark"] .size-guide {
+      border-color: var(--border);
+    }
+
+    [data-theme="dark"] .size-guide-body {
+      background: var(--surface);
+    }
+
+    [data-theme="dark"] .size-row:nth-child(even) {
+      background: var(--bg-alt);
+    }
+
+    [data-theme="dark"] .size-dim {
+      color: var(--text);
+    }
+
+    [data-theme="dark"] .size-desc {
+      color: var(--text-muted);
+    }
+
+    [data-theme="dark"] .type-tab {
+      background: var(--surface);
+      color: var(--text);
+      border-color: var(--border);
+    }
+
+    [data-theme="dark"] .type-tab:hover {
+      background: var(--surface-raised);
+    }
+
+    [data-theme="dark"] .surf-cta {
+      color: #111;
+    }
+
+    [data-theme="dark"] .surf-sidebar-card {
+      background: #0D0D0D;
+      border-color: #333;
+    }
+
+    [data-theme="dark"] .surf-sidebar-card .dim {
+      color: #1a1a1a;
+    }
 
     /* ═══════════════════════════════════════════
        5. MEDIA QUERY VIEWPORT ADJUSTMENTS
        ═══════════════════════════════════════════ */
-    @media (max-width: 1000px) { .surf-hero { grid-template-columns: 1fr; } .surf-sidebar { display: none; } }
-    @media (max-width: 760px) {
-      .explainer-row { grid-template-columns: 1fr; }
-      .explainer-item { border-right: none; border-bottom: 2px solid var(--border); }
-      .explainer-item:last-child { border-bottom: none; }
-      .size-row { grid-template-columns: 70px 1fr; }
-      .size-desc { display: none; }
+    @media (max-width: 1000px) {
+      .surf-hero {
+        grid-template-columns: 1fr;
+      }
+
+      .surf-sidebar {
+        display: none;
+      }
     }
+
+    @media (max-width: 760px) {
+      .explainer-row {
+        grid-template-columns: 1fr;
+      }
+
+      .explainer-item {
+        border-right: none;
+        border-bottom: 2px solid var(--border);
+      }
+
+      .explainer-item:last-child {
+        border-bottom: none;
+      }
+
+      .size-row {
+        grid-template-columns: 70px 1fr;
+      }
+
+      .size-desc {
+        display: none;
+      }
+    }
+
     @media (max-width: 580px) {
-      .surf-hero { padding-left: 16px; padding-right: 16px; }
-      .type-tabs { flex-direction: column; }
-      .type-tab { border-right: none; border-bottom: 2px solid var(--border); flex-direction: row; justify-content: flex-start; gap: 12px; }
-      .type-tab:last-child { border-bottom: none; }
-      .surf-cta { padding: 28px 20px; }
-      .surf-vgrid { grid-template-columns: 1fr; }
+      .surf-hero {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+
+      .type-tabs {
+        flex-direction: column;
+      }
+
+      .type-tab {
+        border-right: none;
+        border-bottom: 2px solid var(--border);
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 12px;
+      }
+
+      .type-tab:last-child {
+        border-bottom: none;
+      }
+
+      .surf-cta {
+        padding: 28px 20px;
+      }
+
+      .surf-vgrid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -451,14 +917,15 @@
   <!-- HERO -->
   <div class="surf-hero">
     <div>
-      <div class="section-tag-label reveal"><span class="dot"></span> SURFACE_DB // INDIA // MOUSEPADS · DESKPADS · GLASSPADS</div>
+      <div class="section-tag-label reveal"><span class="dot"></span> SURFACE_DB // INDIA // MOUSEPADS · DESKPADS ·
+        GLASSPADS</div>
       <h1 class="surf-title reveal" style="transition-delay:.06s">
-        DESK<br/>
-        <span class="outline">SURFACE</span><br/>
+        DESK<br />
+        <span class="outline">SURFACE</span><br />
         GUIDE.
       </h1>
       <p class="surf-sub reveal" style="transition-delay:.12s">
-        Mousepads. Deskpads. Glasspads.<br/>
+        Mousepads. Deskpads. Glasspads.<br />
         <b>Every Indian vendor — filtered by surface type. Zero fluff.</b>
       </p>
       <div style="display:flex; gap:12px; flex-wrap:wrap" class="reveal" style="transition-delay:.18s">
@@ -466,7 +933,7 @@
         <a href="#size-guide" class="btn-secondary">Size Guide ↓</a>
       </div>
     </div>
-    
+
     <div class="surf-sidebar reveal" style="transition-delay:.16s">
       <div class="surf-sidebar-card">
         <div class="s-title">// SURFACE_STATUS</div>
@@ -485,8 +952,16 @@
   <!-- MARQUEE RIBBON -->
   <div class="marquee-strip">
     <div class="marquee-track">
-      <span>MOUSEPAD</span><span class="sep">///</span><span>DESKPAD</span><span class="sep">///</span><span>GLASS PAD</span><span class="sep">///</span><span>CLOTH SURFACE</span><span class="sep">///</span><span>SPEED PAD</span><span class="sep">///</span><span>CONTROL PAD</span><span class="sep">///</span><span>EXTENDED MAT</span><span class="sep">///</span><span>STITCHED EDGES</span><span class="sep">///</span><span>RGB BASE</span><span class="sep">///</span>
-      <span>MOUSEPAD</span><span class="sep">///</span><span>DESKPAD</span><span class="sep">///</span><span>GLASS PAD</span><span class="sep">///</span><span>CLOTH SURFACE</span><span class="sep">///</span><span>SPEED PAD</span><span class="sep">///</span><span>CONTROL PAD</span><span class="sep">///</span><span>EXTENDED MAT</span><span class="sep">///</span><span>STITCHED EDGES</span><span class="sep">///</span><span>RGB BASE</span><span class="sep">///</span>
+      <span>MOUSEPAD</span><span class="sep">///</span><span>DESKPAD</span><span class="sep">///</span><span>GLASS
+        PAD</span><span class="sep">///</span><span>CLOTH SURFACE</span><span class="sep">///</span><span>SPEED
+        PAD</span><span class="sep">///</span><span>CONTROL PAD</span><span class="sep">///</span><span>EXTENDED
+        MAT</span><span class="sep">///</span><span>STITCHED EDGES</span><span class="sep">///</span><span>RGB
+        BASE</span><span class="sep">///</span>
+      <span>MOUSEPAD</span><span class="sep">///</span><span>DESKPAD</span><span class="sep">///</span><span>GLASS
+        PAD</span><span class="sep">///</span><span>CLOTH SURFACE</span><span class="sep">///</span><span>SPEED
+        PAD</span><span class="sep">///</span><span>CONTROL PAD</span><span class="sep">///</span><span>EXTENDED
+        MAT</span><span class="sep">///</span><span>STITCHED EDGES</span><span class="sep">///</span><span>RGB
+        BASE</span><span class="sep">///</span>
     </div>
   </div>
 
@@ -509,17 +984,17 @@
         </button>
         <button class="type-tab t-mouse" data-filter="Mousepad">
           <span class="type-tab-icon">🔲</span>
-          <span class="type-tab-label">Mousepad<br/>Only</span>
+          <span class="type-tab-label">Mousepad<br />Only</span>
           <span class="type-tab-count" id="mouseTabCount">—</span>
         </button>
         <button class="type-tab t-desk" data-filter="Deskpad">
           <span class="type-tab-icon">📋</span>
-          <span class="type-tab-label">Deskpad<br/>Only</span>
+          <span class="type-tab-label">Deskpad<br />Only</span>
           <span class="type-tab-count" id="deskTabCount">—</span>
         </button>
         <button class="type-tab t-glass" data-filter="Glass-pad">
           <span class="type-tab-icon">◻️</span>
-          <span class="type-tab-label">Glasspad<br/>Only</span>
+          <span class="type-tab-label">Glasspad<br />Only</span>
           <span class="type-tab-count" id="glassTabCount">—</span>
         </button>
       </div>
@@ -537,17 +1012,25 @@
     <!-- General Marketplace Redirection Hub Matrix -->
     <section style="padding:0 0 3rem">
       <div class="sec-head reveal">
-        <h3 style="font-family:var(--f-d); font-size:clamp(1.2rem,3vw,2rem); font-weight:800; text-transform:uppercase; letter-spacing:-.05em">ALSO ON <em style="color:var(--yellow)">MARKETPLACES</em></h3>
-        <div class="section-tag-label reveal" id="marketplaceTag" style="color:var(--yellow); border: 2px solid var(--border); padding: 4px 10px; display: inline-block; font-size: .65rem; font-family: var(--f-m); font-weight: 700;">3 PLATFORMS</div>
+        <h3
+          style="font-family:var(--f-d); font-size:clamp(1.2rem,3vw,2rem); font-weight:800; text-transform:uppercase; letter-spacing:-.05em">
+          ALSO ON <em style="color:var(--yellow)">MARKETPLACES</em></h3>
+        <div class="section-tag-label reveal" id="marketplaceTag"
+          style="color:var(--yellow); border: 2px solid var(--border); padding: 4px 10px; display: inline-block; font-size: .65rem; font-family: var(--f-m); font-weight: 700;">
+          3 PLATFORMS</div>
       </div>
       <div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:12px" class="reveal">
         <a href="https://www.amazon.in/s?k=deskpad+mousepad" target="_blank" rel="noopener"
           style="display:flex; align-items:center; gap:18px; padding:20px 22px; background:#FF9900; border:2px solid var(--border); box-shadow:var(--sh-lg); text-decoration:none; color:#111; transition:transform .12s,box-shadow .12s"
           onmouseenter="this.style.transform='translate(3px,3px)';this.style.boxShadow='2px 2px 0 #111'"
           onmouseleave="this.style.transform='';this.style.boxShadow='var(--sh-lg)'">
-          <div style="font-size:1.8rem; width:50px; height:50px; background:#111; border:2px solid #111; display:flex; align-items:center; justify-content:center; flex-shrink:0">📦</div>
+          <div
+            style="font-size:1.8rem; width:50px; height:50px; background:#111; border:2px solid #111; display:flex; align-items:center; justify-content:center; flex-shrink:0">
+            📦</div>
           <div style="flex:1">
-            <div style="font-family:var(--f-d); font-size:1.1rem; font-weight:800; text-transform:uppercase; letter-spacing:-.04em; line-height:.9; margin-bottom:4px">Amazon India</div>
+            <div
+              style="font-family:var(--f-d); font-size:1.1rem; font-weight:800; text-transform:uppercase; letter-spacing:-.04em; line-height:.9; margin-bottom:4px">
+              Amazon India</div>
             <div style="font-family:var(--f-m); font-size:.7rem; color:#333">Mousepads · Deskpads · Fast delivery</div>
           </div>
           <div style="font-family:var(--f-m); font-weight:800; font-size:1.1rem">↗</div>
@@ -556,10 +1039,15 @@
           style="display:flex; align-items:center; gap:18px; padding:20px 22px; background:#2874F0; border:2px solid var(--border); box-shadow:var(--sh-lg); text-decoration:none; color:#fff; transition:transform .12s,box-shadow .12s"
           onmouseenter="this.style.transform='translate(3px,3px)';this.style.boxShadow='2px 2px 0 #111'"
           onmouseleave="this.style.transform='';this.style.boxShadow='var(--sh-lg)'">
-          <div style="font-size:1.8rem; width:50px; height:50px; background:#111; border:2px solid #111; display:flex; align-items:center; justify-content:center; flex-shrink:0">🛒</div>
+          <div
+            style="font-size:1.8rem; width:50px; height:50px; background:#111; border:2px solid #111; display:flex; align-items:center; justify-content:center; flex-shrink:0">
+            🛒</div>
           <div style="flex:1">
-            <div style="font-family:var(--f-d); font-size:1.1rem; font-weight:800; text-transform:uppercase; letter-spacing:-.04em; line-height:.9; margin-bottom:4px">Flipkart</div>
-            <div style="font-family:var(--f-m); font-size:.7rem; color:rgba(255,255,255,.75)">Wide selection · Buyer protection</div>
+            <div
+              style="font-family:var(--f-d); font-size:1.1rem; font-weight:800; text-transform:uppercase; letter-spacing:-.04em; line-height:.9; margin-bottom:4px">
+              Flipkart</div>
+            <div style="font-family:var(--f-m); font-size:.7rem; color:rgba(255,255,255,.75)">Wide selection · Buyer
+              protection</div>
           </div>
           <div style="font-family:var(--f-m); font-weight:800; font-size:1.1rem">↗</div>
         </a>
@@ -567,10 +1055,15 @@
           style="display:flex; align-items:center; gap:18px; padding:20px 22px; background:#F43397; border:2px solid var(--border); box-shadow:var(--sh-lg); text-decoration:none; color:#fff; transition:transform .12s,box-shadow .12s"
           onmouseenter="this.style.transform='translate(3px,3px)';this.style.boxShadow='2px 2px 0 #111'"
           onmouseleave="this.style.transform='';this.style.boxShadow='var(--sh-lg)'">
-          <div style="font-size:1.8rem; width:50px; height:50px; background:#111; border:2px solid #111; display:flex; align-items:center; justify-content:center; flex-shrink:0">🛍</div>
+          <div
+            style="font-size:1.8rem; width:50px; height:50px; background:#111; border:2px solid #111; display:flex; align-items:center; justify-content:center; flex-shrink:0">
+            🛍</div>
           <div style="flex:1">
-            <div style="font-family:var(--f-d); font-size:1.1rem; font-weight:800; text-transform:uppercase; letter-spacing:-.04em; line-height:.9; margin-bottom:4px">Meesho</div>
-            <div style="font-family:var(--f-m); font-size:.7rem; color:rgba(255,255,255,.85)">Budget finds · Huge variety</div>
+            <div
+              style="font-family:var(--f-d); font-size:1.1rem; font-weight:800; text-transform:uppercase; letter-spacing:-.04em; line-height:.9; margin-bottom:4px">
+              Meesho</div>
+            <div style="font-family:var(--f-m); font-size:.7rem; color:rgba(255,255,255,.85)">Budget finds · Huge
+              variety</div>
           </div>
           <div style="font-family:var(--f-m); font-weight:800; font-size:1.1rem">↗</div>
         </a>
@@ -588,22 +1081,29 @@
           <div class="explainer-accent" style="background:var(--blue)"></div>
           <span class="explainer-icon">🔲</span>
           <div class="explainer-name">Mousepad</div>
-          <div class="explainer-size" style="background:var(--blue); color:#fff; border-color:var(--blue)">200mm – 450mm wide</div>
-          <div class="explainer-desc">Single-mouse-zone pads. Compact, portable, and focused. Cloth top with rubber base. Available in speed (smooth) and control (textured) variants. The everyday essential.</div>
+          <div class="explainer-size" style="background:var(--blue); color:#fff; border-color:var(--blue)">200mm – 450mm
+            wide</div>
+          <div class="explainer-desc">Single-mouse-zone pads. Compact, portable, and focused. Cloth top with rubber
+            base. Available in speed (smooth) and control (textured) variants. The everyday essential.</div>
         </div>
         <div class="explainer-item">
           <div class="explainer-accent" style="background:var(--cyan)"></div>
           <span class="explainer-icon">📋</span>
           <div class="explainer-name">Deskpad</div>
-          <div class="explainer-size" style="background:var(--cyan); color:#111; border-color:var(--cyan)">800mm – 1200mm wide</div>
-          <div class="explainer-desc">Extended desk mats that cover both keyboard and mouse. Protects desk surface, reduces noise, unifies your setup aesthetic. Popular with keyboard enthusiasts for the clean, cohesive look.</div>
+          <div class="explainer-size" style="background:var(--cyan); color:#111; border-color:var(--cyan)">800mm –
+            1200mm wide</div>
+          <div class="explainer-desc">Extended desk mats that cover both keyboard and mouse. Protects desk surface,
+            reduces noise, unifies your setup aesthetic. Popular with keyboard enthusiasts for the clean, cohesive look.
+          </div>
         </div>
         <div class="explainer-item">
           <div class="explainer-accent" style="background:var(--teal)"></div>
           <span class="explainer-icon">◻️</span>
           <div class="explainer-name">Glasspad</div>
-          <div class="explainer-size" style="background:var(--teal); color:#fff; border-color:var(--teal)">Specialized surface</div>
-          <div class="explainer-desc">Tempered glass gaming surface. Ultra-low friction for laser/optical sensors. Immune to wear, easily cleaned, never loses glide. Harsh on some sensor types — check compatibility.</div>
+          <div class="explainer-size" style="background:var(--teal); color:#fff; border-color:var(--teal)">Specialized
+            surface</div>
+          <div class="explainer-desc">Tempered glass gaming surface. Ultra-low friction for laser/optical sensors.
+            Immune to wear, easily cleaned, never loses glide. Harsh on some sensor types — check compatibility.</div>
         </div>
       </div>
     </section>
@@ -623,7 +1123,8 @@
           <div class="size-row">
             <div class="size-tag" style="background:var(--blue); color:#fff; border-color:var(--blue)">Mouse · S</div>
             <div class="size-dim">200 × 200 mm</div>
-            <div class="size-desc">Tiny. Fits on the tightest desks. For claw-grip players and low-sensitivity setups.</div>
+            <div class="size-desc">Tiny. Fits on the tightest desks. For claw-grip players and low-sensitivity setups.
+            </div>
           </div>
           <div class="size-row">
             <div class="size-tag" style="background:var(--blue); color:#fff; border-color:var(--blue)">Mouse · M</div>
@@ -633,7 +1134,8 @@
           <div class="size-row">
             <div class="size-tag" style="background:var(--blue); color:#fff; border-color:var(--blue)">Mouse · XL</div>
             <div class="size-dim">450 × 400 mm</div>
-            <div class="size-desc">Popular size — covers full mouse zone with room. Good for low-sensitivity gamers.</div>
+            <div class="size-desc">Popular size — covers full mouse zone with room. Good for low-sensitivity gamers.
+            </div>
           </div>
           <div class="size-row">
             <div class="size-tag" style="background:var(--cyan); color:#111; border-color:var(--cyan)">Desk · S</div>
@@ -648,7 +1150,8 @@
           <div class="size-row">
             <div class="size-tag" style="background:var(--cyan); color:#111; border-color:var(--cyan)">Desk · XL</div>
             <div class="size-dim">1200 × 600 mm</div>
-            <div class="size-desc">Full desk coverage. For large desks or those who want maximum protection + aesthetics.</div>
+            <div class="size-desc">Full desk coverage. For large desks or those who want maximum protection +
+              aesthetics.</div>
           </div>
           <div class="size-row">
             <div class="size-tag" style="background:var(--teal); color:#fff; border-color:var(--teal)">Glass</div>
@@ -663,24 +1166,31 @@
     <section style="padding:0 0 80px">
       <div class="surf-cta reveal">
         <div class="section-tag-label" style="margin-bottom:1rem"><span class="dot"></span> FOUND YOUR PAD?</div>
-        <h2 class="surf-cta-title">Browse the<br/>Full Directory.</h2>
-        <p class="surf-cta-desc">Need switches, keycaps, or a whole new board? The full vendor directory has 15 categories and every Indian keyboard store in one place.</p>
+        <h2 class="surf-cta-title">Browse the<br />Full Directory.</h2>
+        <p class="surf-cta-desc">Need switches, keycaps, or a whole new board? The full vendor directory has 15
+          categories and every Indian keyboard store in one place.</p>
         <div style="display:flex; gap:12px; flex-wrap:wrap">
-          <a href="/vendors/" class="btn-primary" style="border-color:#111; background:#111; color:var(--cyan)">Full Vendor Directory →</a>
-          <a href="https://github.com/SHADOW269/Keydir.in/issues/new" target="_blank" rel="noopener" class="btn-secondary">Suggest a Vendor</a>
+          <a href="/vendors/" class="btn-primary" style="border-color:#111; background:#111; color:var(--cyan)">Full
+            Vendor Directory →</a>
+          <a href="https://github.com/SHADOW269/Keydir.in/issues/new" target="_blank" rel="noopener"
+            class="btn-secondary">Suggest a Vendor</a>
         </div>
       </div>
     </section>
 
   </div>
 
-  <!-- Global Footer Layout -->
+  <!-- Global Footer -->
   <footer>
     <div class="footer-inner">
       <div>
         <div class="f-logo">⌨ KEYDIR.in</div>
-        <div class="f-desc">Community-maintained directory of Indian mechanical keyboard vendors. No affiliate links. No ads. Just raw data for the keeb community.</div>
+        <div class="f-desc">
+          Community-maintained directory of Indian mechanical keyboard vendors. No affiliate links. No ads. Just raw
+          data for the keeb community.
+        </div>
       </div>
+
       <div class="f-col">
         <h4>Navigate</h4>
         <ul>
@@ -689,30 +1199,40 @@
           <li><a href="/builders/">_Builders</a></li>
           <li><a href="/brands/">_Brands</a></li>
           <li><a href="/guide/">_Guide</a></li>
+          <li><a href="/groupbuy/">_Group Buys</a></li>
           <li><a href="/surfaces/">_Surfaces</a></li>
           <li><a href="/about/">_About</a></li>
         </ul>
       </div>
+
       <div class="f-col">
-        <h4>Surface Types</h4>
+        <h4>Categories</h4>
         <ul>
-          <li><a href="#vendor-grid">Mousepads</a></li>
-          <li><a href="#vendor-grid">Deskpads</a></li>
-          <li><a href="#vendor-grid">Glasspads</a></li>
-          <li><a href="#size-guide">Size Guide</a></li>
+          <li><a href="/vendors/">Pre-built</a></li>
+          <li><a href="/vendors/">Switches</a></li>
+          <li><a href="/vendors/">Keycaps</a></li>
+          <li><a href="/vendors/">Hall Effect</a></li>
+          <li><a href="/vendors/">Barebone</a></li>
         </ul>
       </div>
+
       <div class="f-col">
         <h4>Project</h4>
         <ul>
-          <li><a href="https://github.com/SHADOW269/Keydir.in" target="_blank" rel="noopener">_GitHub</a></li>
-          <li><a href="https://github.com/SHADOW269/Keydir.in/issues" target="_blank" rel="noopener">_Report Issue</a></li>
-          <li><a href="/Terms-and-Conditions/">_Terms & Conditions</a></li>
+          <li><a href="/contact/">_Contact</a></li>
+          <li><a href="https://github.com/SHADOW269/Keydir.in" target="_blank" rel="noopener"> _GitHub</a></li>
+          <li><a href="https://github.com/SHADOW269/Keydir.in/issues" target="_blank" rel="noopener"> _Report Issue</a>
+          </li>
+          <li><a href="/terms-and-conditions/">_Terms & Conditions</a></li>
+          <li><a href="/assets/sitemap.xml" target="_blank">_Sitemap</a></li>
         </ul>
       </div>
     </div>
+
     <div class="f-bottom">
-      <div class="f-copy">© 2026 KEYDIR.in // COMMUNITY PROJECT // NOT AFFILIATED WITH ANY VENDOR // SYSTEM_END</div>
+      <div class="f-copy">
+        © 2026 KEYDIR.in // COMMUNITY PROJECT // NOT AFFILIATED WITH ANY VENDOR // SYSTEM_END
+      </div>
       <button class="theme-toggle" onclick="toggleTheme()">
         <span class="tt-icon">◑</span>
         <span class="tt-label">DARK MODE</span>
@@ -756,7 +1276,7 @@
       if (typeof PAD_ONLY_VENDORS !== "undefined") {
         PAD_ONLY_VENDORS.forEach(p => {
           const normName = p.name.toLowerCase().trim();
-          
+
           if (!processedNames.has(normName)) {
             processedNames.add(normName);
             const normalizedTypes = p.types.map(t => t === "Glass Pad" ? "Glass-pad" : t);
@@ -785,23 +1305,23 @@
      */
     function initCounts() {
       const mouseTotal = AGGREGATED_SURFACES.filter(s => s.types.includes("Mousepad")).length;
-      const deskTotal  = AGGREGATED_SURFACES.filter(s => s.types.includes("Deskpad")).length;
+      const deskTotal = AGGREGATED_SURFACES.filter(s => s.types.includes("Deskpad")).length;
       const glassTotal = AGGREGATED_SURFACES.filter(s => s.types.includes("Glass-pad")).length;
 
       document.getElementById("mouseCount").textContent = mouseTotal;
-      document.getElementById("deskCount").textContent  = deskTotal;
+      document.getElementById("deskCount").textContent = deskTotal;
       document.getElementById("glassCount").textContent = glassTotal;
       document.getElementById("aggregatedTotalCount").textContent = AGGREGATED_SURFACES.length;
 
-      document.getElementById("allTabCount").textContent   = AGGREGATED_SURFACES.length + " options";
+      document.getElementById("allTabCount").textContent = AGGREGATED_SURFACES.length + " options";
       document.getElementById("mouseTabCount").textContent = mouseTotal + " options";
-      document.getElementById("deskTabCount").textContent  = deskTotal + " options";
+      document.getElementById("deskTabCount").textContent = deskTotal + " options";
       document.getElementById("glassTabCount").textContent = glassTotal + " options";
     }
 
     function getAccentColor(item) {
-      if (item.types.includes("Deskpad"))   return "var(--cyan)";
-      if (item.types.includes("Mousepad"))  return "var(--blue)";
+      if (item.types.includes("Deskpad")) return "var(--cyan)";
+      if (item.types.includes("Mousepad")) return "var(--blue)";
       if (item.types.includes("Glass-pad")) return "var(--teal)";
       return "var(--text)";
     }
@@ -830,8 +1350,8 @@
 
         const accentCol = getAccentColor(v);
         const badgeClasses = { "Mousepad": "mouse", "Deskpad": "desk", "Glass-pad": "glass" };
-        const badgeLabels  = { "Mousepad": "🔲 Mousepad", "Deskpad": "📋 Deskpad", "Glass-pad": "◻️ Glasspad" };
-        
+        const badgeLabels = { "Mousepad": "🔲 Mousepad", "Deskpad": "📋 Deskpad", "Glass-pad": "◻️ Glasspad" };
+
         let badges = v.types.map(t =>
           `<span class="pad-badge ${badgeClasses[t]}">${badgeLabels[t]}</span>`
         ).join("");
@@ -891,4 +1411,5 @@
     });
   </script>
 </body>
+
 </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +12,8 @@
   <script src="/assets/js/keydir-popup.js" defer></script>
 
   <!-- SEO Optimization -->
-  <meta name="description" content="Browse mechanical keyboard vendors in India. Discover stores selling keyboards, switches, keycaps, accessories, DIY kits, and custom keyboard parts across India.">
+  <meta name="description"
+    content="Browse mechanical keyboard vendors in India. Discover stores selling keyboards, switches, keycaps, accessories, DIY kits, and custom keyboard parts across India.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://keydir.in/vendors/">
 
@@ -28,7 +30,8 @@
 
   <!-- Open Graph / Facebook -->
   <meta property="og:title" content="Mechanical Keyboard Vendors in India — KEYDIR.in">
-  <meta property="og:description" content="Find mechanical keyboard stores across India selling keyboards, switches, keycaps, accessories, and DIY keyboard parts.">
+  <meta property="og:description"
+    content="Find mechanical keyboard stores across India selling keyboards, switches, keycaps, accessories, and DIY keyboard parts.">
   <meta property="og:url" content="https://keydir.in/vendors/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="KEYDIR.in">
@@ -41,7 +44,8 @@
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Mechanical Keyboard Vendors in India — KEYDIR.in">
-  <meta name="twitter:description" content="Browse mechanical keyboard vendors across India selling keyboards, switches, keycaps, and accessories.">
+  <meta name="twitter:description"
+    content="Browse mechanical keyboard vendors across India selling keyboards, switches, keycaps, and accessories.">
   <meta name="twitter:image" content="https://keydir.in/assets/img/Banner.png">
 
   <!-- Core Styles & Theme Configurations -->
@@ -199,7 +203,7 @@
     .v-hero {
       padding: calc(var(--nav-h) + 60px) 24px 50px;
       max-width: 1380px;
-      margin:  0 auto;
+      margin: 0 auto;
       display: grid;
       grid-template-columns: 1fr 300px;
       align-items: start;
@@ -263,10 +267,23 @@
       border-bottom: 1px solid #222;
     }
 
-    .sidebar-card .s-line { display: flex; align-items: center; gap: 8px; }
-    .sidebar-card .ok { color: var(--green); }
-    .sidebar-card .dim { color: #222; }
-    .sidebar-card .warn { color: var(--yellow); }
+    .sidebar-card .s-line {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .sidebar-card .ok {
+      color: var(--green);
+    }
+
+    .sidebar-card .dim {
+      color: #222;
+    }
+
+    .sidebar-card .warn {
+      color: var(--yellow);
+    }
 
     /* ═══════════════════════════════════════════
        3. SEARCH FILTERS & CATEGORIES COMPONENT
@@ -290,11 +307,27 @@
       transition: all .15s;
     }
 
-    .search-wrap input::placeholder { color: var(--text-dim); font-weight: 400; }
-    .search-wrap input:focus { background: var(--yellow); box-shadow: var(--sh-lg); transform: translate(-2px, -2px); }
-    
-    .s-icon { position: absolute; left: 15px; top: 50%; transform: translateY(-50%); font-size: 17px; pointer-events: none; color: #666; }
-    
+    .search-wrap input::placeholder {
+      color: var(--text-dim);
+      font-weight: 400;
+    }
+
+    .search-wrap input:focus {
+      background: var(--yellow);
+      box-shadow: var(--sh-lg);
+      transform: translate(-2px, -2px);
+    }
+
+    .s-icon {
+      position: absolute;
+      left: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 17px;
+      pointer-events: none;
+      color: #666;
+    }
+
     .s-clear {
       position: absolute;
       right: 13px;
@@ -311,14 +344,37 @@
       font-family: var(--f-m);
       font-weight: 800;
     }
-    .s-clear.show { opacity: 1; pointer-events: auto; }
-    .s-clear:hover { color: var(--border); }
+
+    .s-clear.show {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .s-clear:hover {
+      color: var(--border);
+    }
 
     /* Category Grid Matrix */
-    .cat-area { margin-bottom: 3rem; }
-    .cat-area-lbl { font-family: var(--f-m); font-size: .68rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; }
-    .cat-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; }
-    
+    .cat-area {
+      margin-bottom: 3rem;
+    }
+
+    .cat-area-lbl {
+      font-family: var(--f-m);
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+
+    .cat-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+    }
+
     .cat-btn {
       position: relative;
       border: 2px solid var(--border);
@@ -333,25 +389,100 @@
       gap: 8px;
       text-align: center;
     }
-    .cat-btn:hover { transform: translate(2px, 2px); box-shadow: 2px 2px 0 #111; }
-    .cat-btn.active { transform: translate(4px, 4px); box-shadow: none; }
-    
-    .cat-ico { font-size: 1.5rem; line-height: 1; width: 44px; height: 44px; border: 2px solid var(--border); display: flex; align-items: center; justify-content: center; transition: all .12s; background: rgba(0,0,0,.03); }
-    .cat-lbl { font-family: var(--f-m); font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; line-height: 1.3; transition: color .12s; }
-    .cat-ct { font-family: var(--f-m); font-size: .63rem; color: #777; }
+
+    .cat-btn:hover {
+      transform: translate(2px, 2px);
+      box-shadow: 2px 2px 0 #111;
+    }
+
+    .cat-btn.active {
+      transform: translate(4px, 4px);
+      box-shadow: none;
+    }
+
+    .cat-ico {
+      font-size: 1.5rem;
+      line-height: 1;
+      width: 44px;
+      height: 44px;
+      border: 2px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all .12s;
+      background: rgba(0, 0, 0, .03);
+    }
+
+    .cat-lbl {
+      font-family: var(--f-m);
+      font-size: .7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      line-height: 1.3;
+      transition: color .12s;
+    }
+
+    .cat-ct {
+      font-family: var(--f-m);
+      font-size: .63rem;
+      color: #777;
+    }
 
     /* Dynamic Button State Colors on Active State toggles */
-    .cat-btn.c-yellow.active { background: var(--yellow); color: #111; }
-    .cat-btn.c-green.active { background: var(--green); color: #111; }
-    .cat-btn.c-blue.active { background: var(--blue); color: #fff; }
-    .cat-btn.c-pink.active { background: var(--pink); color: #fff; }
-    .cat-btn.c-orange.active { background: var(--orange); color: #fff; }
-    .cat-btn.c-cyan.active { background: var(--cyan); color: #111; }
-    .cat-btn.c-red.active { background: var(--red); color: #fff; }
-    .cat-btn.c-purple.active { background: var(--purple); color: #fff; }
-    .cat-btn.c-black.active { background: var(--border); color: #fff; }
-    .cat-btn.c-teal.active { background: var(--teal); color: #fff; }
-    .cat-btn.active .cat-ico { border-color: currentColor; }
+    .cat-btn.c-yellow.active {
+      background: var(--yellow);
+      color: #111;
+    }
+
+    .cat-btn.c-green.active {
+      background: var(--green);
+      color: #111;
+    }
+
+    .cat-btn.c-blue.active {
+      background: var(--blue);
+      color: #fff;
+    }
+
+    .cat-btn.c-pink.active {
+      background: var(--pink);
+      color: #fff;
+    }
+
+    .cat-btn.c-orange.active {
+      background: var(--orange);
+      color: #fff;
+    }
+
+    .cat-btn.c-cyan.active {
+      background: var(--cyan);
+      color: #111;
+    }
+
+    .cat-btn.c-red.active {
+      background: var(--red);
+      color: #fff;
+    }
+
+    .cat-btn.c-purple.active {
+      background: var(--purple);
+      color: #fff;
+    }
+
+    .cat-btn.c-black.active {
+      background: var(--border);
+      color: #fff;
+    }
+
+    .cat-btn.c-teal.active {
+      background: var(--teal);
+      color: #fff;
+    }
+
+    .cat-btn.active .cat-ico {
+      border-color: currentColor;
+    }
 
     /* ── Dynamic Active Filters Pill Bar ── */
     .filter-bar {
@@ -370,11 +501,27 @@
       pointer-events: none;
       transition: opacity .25s, max-height .3s, padding .3s;
     }
-    .filter-bar.on { opacity: 1; max-height: 120px; pointer-events: auto; }
-    
-    .fb-lbl { font-family: var(--f-m); font-size: .72rem; font-weight: 700; color: var(--yellow); white-space: nowrap; }
-    .pills { display: flex; flex-wrap: wrap; gap: 6px; }
-    
+
+    .filter-bar.on {
+      opacity: 1;
+      max-height: 120px;
+      pointer-events: auto;
+    }
+
+    .fb-lbl {
+      font-family: var(--f-m);
+      font-size: .72rem;
+      font-weight: 700;
+      color: var(--yellow);
+      white-space: nowrap;
+    }
+
+    .pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
     .pill {
       display: inline-flex;
       align-items: center;
@@ -387,8 +534,11 @@
       cursor: pointer;
       text-transform: uppercase;
     }
-    .pill:hover { opacity: .7; }
-    
+
+    .pill:hover {
+      opacity: .7;
+    }
+
     .reset-btn {
       margin-left: auto;
       border: 2px solid #333;
@@ -402,17 +552,42 @@
       text-transform: uppercase;
       transition: all .15s;
     }
-    .reset-btn:hover { border-color: var(--yellow); color: var(--yellow); }
+
+    .reset-btn:hover {
+      border-color: var(--yellow);
+      color: var(--yellow);
+    }
 
     /* ═══════════════════════════════════════════
        4. RESULTS DISPLAY MATRIX & SUGGESTIONS CTA
        ═══════════════════════════════════════════ */
-    .result-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 8px; }
-    .result-count { font-family: var(--f-m); font-size: .8rem; color: #666; }
-    .result-count strong { color: var(--border); font-weight: 800; }
+    .result-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
 
-    .vgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(296px, 1fr)); gap: 12px; margin-bottom: 4rem; }
-    
+    .result-count {
+      font-family: var(--f-m);
+      font-size: .8rem;
+      color: #666;
+    }
+
+    .result-count strong {
+      color: var(--border);
+      font-weight: 800;
+    }
+
+    .vgrid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(296px, 1fr));
+      gap: 12px;
+      margin-bottom: 4rem;
+    }
+
     /* Individual Vendor Card Units */
     .vcard {
       background: var(--surface);
@@ -425,14 +600,59 @@
       transition: transform .12s, box-shadow .12s;
       animation: card-in .3s ease both;
     }
-    @keyframes card-in { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
-    .vcard:hover { transform: translate(3px, 3px); box-shadow: 1px 1px 0 #111; }
-    
-    .vcard-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; }
-    .vcard-name { font-family: var(--f-d); font-size: 1.05rem; font-weight: 800; text-transform: uppercase; letter-spacing: -.03em; line-height: 1.1; }
-    .vcard-badges { display: flex; flex-wrap: wrap; gap: 5px; }
-    .badge.hl { animation: pop .2s ease; }
-    @keyframes pop { 0% { transform: scale(.8); } 100% { transform: scale(1); } }
+
+    @keyframes card-in {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    .vcard:hover {
+      transform: translate(3px, 3px);
+      box-shadow: 1px 1px 0 #111;
+    }
+
+    .vcard-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .vcard-name {
+      font-family: var(--f-d);
+      font-size: 1.05rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: -.03em;
+      line-height: 1.1;
+    }
+
+    .vcard-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+
+    .badge.hl {
+      animation: pop .2s ease;
+    }
+
+    @keyframes pop {
+      0% {
+        transform: scale(.8);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
 
     /* Suggest a Vendor Brutalist Box Layout */
     .info-box {
@@ -445,11 +665,13 @@
       box-shadow: var(--sh-lg);
       padding: 32px;
     }
+
     .info-box-icon {
       font-size: 2rem;
       flex-shrink: 0;
       line-height: 1;
     }
+
     .info-box-title {
       font-family: var(--f-m);
       font-size: .75rem;
@@ -458,6 +680,7 @@
       color: var(--text-muted);
       margin-bottom: 0.5rem;
     }
+
     .info-box p {
       font-family: var(--f-m);
       font-size: .88rem;
@@ -466,6 +689,7 @@
       max-width: 720px;
       margin: 0;
     }
+
     .info-box p a {
       color: var(--text);
       font-weight: 700;
@@ -487,18 +711,65 @@
       text-align: center;
       box-shadow: var(--sh);
     }
-    .empty-n { font-family: var(--f-m); font-size: 4rem; font-weight: 800; color: #ddd; display: block; margin-bottom: .5rem; }
-    .empty p { font-family: var(--f-m); font-size: .9rem; color: #777; }
+
+    .empty-n {
+      font-family: var(--f-m);
+      font-size: 4rem;
+      font-weight: 800;
+      color: #ddd;
+      display: block;
+      margin-bottom: .5rem;
+    }
+
+    .empty p {
+      font-family: var(--f-m);
+      font-size: .9rem;
+      color: #777;
+    }
 
     /* ═══════════════════════════════════════════
        5. MEDIA QUERY VIEWPORT ADJUSTMENTS
        ═══════════════════════════════════════════ */
-    @media(max-width:1000px) { .v-hero { grid-template-columns: 1fr; } .v-sidebar { display: none; } }
-    @media(max-width:860px) { .cat-grid { grid-template-columns: repeat(3, 1fr); } }
-    @media(max-width:640px) { .v-hero { padding-left: 16px; padding-right: 16px; } }
-    @media(max-width:480px) { .cat-grid { grid-template-columns: repeat(2, 1fr); } .vgrid { grid-template-columns: 1fr; } .info-box { padding: 24px; gap: 16px; } }
+    @media(max-width:1000px) {
+      .v-hero {
+        grid-template-columns: 1fr;
+      }
+
+      .v-sidebar {
+        display: none;
+      }
+    }
+
+    @media(max-width:860px) {
+      .cat-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media(max-width:640px) {
+      .v-hero {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+    }
+
+    @media(max-width:480px) {
+      .cat-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .vgrid {
+        grid-template-columns: 1fr;
+      }
+
+      .info-box {
+        padding: 24px;
+        gap: 16px;
+      }
+    }
   </style>
 </head>
+
 <body>
   <div id="cursor"></div>
   <div id="prog"></div>
@@ -543,15 +814,17 @@
   <!-- Hero Information Wrapper Section -->
   <div class="v-hero">
     <div>
-      <div class="section-tag-label reveal"><span class="dot"></span> INDIA_VENDOR_DB // <span data-stat="vendors">19</span> STORES</div>
+      <div class="section-tag-label reveal"><span class="dot"></span> INDIA_VENDOR_DB // <span
+          data-stat="vendors">19</span> STORES</div>
       <h1 class="v-hero-title reveal" style="transition-delay:.06s">
-        WHAT ARE<br/>YOU <span class="outline">LOOKING</span><br/>FOR TODAY?
+        WHAT ARE<br />YOU <span class="outline">LOOKING</span><br />FOR TODAY?
       </h1>
       <p class="v-hero-sub reveal" style="transition-delay:.12s">
-        Pick a category — see every Indian vendor that stocks it.<br/><b>Multi-select supported. Search inside results.</b>
+        Pick a category — see every Indian vendor that stocks it.<br /><b>Multi-select supported. Search inside
+          results.</b>
       </p>
     </div>
-    
+
     <!-- Sidebar Monitor Block Display -->
     <div class="v-sidebar reveal" style="transition-delay:.18s">
       <div class="sidebar-card">
@@ -570,8 +843,18 @@
   <!-- Continuous Scrolling Infinite Text Strip Ribbon -->
   <div class="marquee-strip">
     <div class="marquee-track">
-      <span>PRE-BUILT</span><span class="sep">///</span><span>SWITCHES</span><span class="sep">///</span><span>KEYCAPS</span><span class="sep">///</span><span>HALL EFFECT</span><span class="sep">///</span><span>BAREBONE</span><span class="sep">///</span><span>DESKPADS</span><span class="sep">///</span><span>PARTS &amp; TOOLS</span><span class="sep">///</span><span>MOUSE</span><span class="sep">///</span><span>ACCESSORIES</span><span class="sep">///</span><span>PC PARTS</span><span class="sep">///</span>
-      <span>PRE-BUILT</span><span class="sep">///</span><span>SWITCHES</span><span class="sep">///</span><span>KEYCAPS</span><span class="sep">///</span><span>HALL EFFECT</span><span class="sep">///</span><span>BAREBONE</span><span class="sep">///</span><span>DESKPADS</span><span class="sep">///</span><span>PARTS &amp; TOOLS</span><span class="sep">///</span><span>MOUSE</span><span class="sep">///</span><span>ACCESSORIES</span><span class="sep">///</span><span>PC PARTS</span><span class="sep">///</span>
+      <span>PRE-BUILT</span><span class="sep">///</span><span>SWITCHES</span><span
+        class="sep">///</span><span>KEYCAPS</span><span class="sep">///</span><span>HALL EFFECT</span><span
+        class="sep">///</span><span>BAREBONE</span><span class="sep">///</span><span>DESKPADS</span><span
+        class="sep">///</span><span>PARTS &amp; TOOLS</span><span class="sep">///</span><span>MOUSE</span><span
+        class="sep">///</span><span>ACCESSORIES</span><span class="sep">///</span><span>PC PARTS</span><span
+        class="sep">///</span>
+      <span>PRE-BUILT</span><span class="sep">///</span><span>SWITCHES</span><span
+        class="sep">///</span><span>KEYCAPS</span><span class="sep">///</span><span>HALL EFFECT</span><span
+        class="sep">///</span><span>BAREBONE</span><span class="sep">///</span><span>DESKPADS</span><span
+        class="sep">///</span><span>PARTS &amp; TOOLS</span><span class="sep">///</span><span>MOUSE</span><span
+        class="sep">///</span><span>ACCESSORIES</span><span class="sep">///</span><span>PC PARTS</span><span
+        class="sep">///</span>
     </div>
   </div>
 
@@ -580,7 +863,7 @@
     <!-- Input Element Block -->
     <div class="search-wrap reveal" style="margin-top:3rem; transition-delay:.05s">
       <span class="s-icon">⌕</span>
-      <input type="text" id="searchInput" placeholder="SEARCH VENDORS..." autocomplete="off"/>
+      <input type="text" id="searchInput" placeholder="SEARCH VENDORS..." autocomplete="off" />
       <button class="s-clear" id="sClear">×</button>
     </div>
 
@@ -600,7 +883,8 @@
     <!-- Live Counter Header Block -->
     <div class="result-row">
       <div class="result-count"><strong id="rCount">19</strong> vendors found</div>
-      <div style="font-family:var(--f-m); font-size:.7rem; color:var(--text-dim)">MULTI-SELECT: CLICK 2+ CATEGORIES TO INTERSECT</div>
+      <div style="font-family:var(--f-m); font-size:.7rem; color:var(--text-dim)">MULTI-SELECT: CLICK 2+ CATEGORIES TO
+        INTERSECT</div>
     </div>
 
     <!-- Output Generated Matrix Cards Row -->
@@ -612,8 +896,11 @@
         <div class="info-box-icon">💡</div>
         <div>
           <div class="info-box-title">// SUGGEST A VENDOR</div>
-          <p>This directory is community-maintained. Know a keyboard vendor, builder, service provider, or store in India that isn't listed yet? Send us the details through our contact form and we'll review it for inclusion</p>
-          <a href="https://keydir.in/contact/" class="btn-secondary" style="margin-top:16px; display:inline-flex">Suggest a Vendor → </a>
+          <p>This directory is community-maintained. Know a keyboard vendor, builder, service provider, or store in
+            India that isn't listed yet? Send us the details through our contact form and we'll review it for inclusion
+          </p>
+          <a href="https://keydir.in/contact/" class="btn-secondary"
+            style="margin-top:16px; display:inline-flex">Suggest a Vendor → </a>
         </div>
       </div>
     </section>
@@ -625,7 +912,8 @@
       <div>
         <div class="f-logo">⌨ KEYDIR.in</div>
         <div class="f-desc">
-          Community-maintained directory of Indian mechanical keyboard vendors. No affiliate links. No ads. Just raw data for the keeb community.
+          Community-maintained directory of Indian mechanical keyboard vendors. No affiliate links. No ads. Just raw
+          data for the keeb community.
         </div>
       </div>
 
@@ -640,7 +928,6 @@
           <li><a href="/groupbuy/">_Group Buys</a></li>
           <li><a href="/surfaces/">_Surfaces</a></li>
           <li><a href="/about/">_About</a></li>
-          <li><a href="https://keydir.in/assets/sitemap.xml" target="_blank">_Sitemap</a></li>
         </ul>
       </div>
 
@@ -660,8 +947,10 @@
         <ul>
           <li><a href="/contact/">_Contact</a></li>
           <li><a href="https://github.com/SHADOW269/Keydir.in" target="_blank" rel="noopener"> _GitHub</a></li>
-          <li><a href="https://github.com/SHADOW269/Keydir.in/issues" target="_blank" rel="noopener"> _Report Issue</a></li>
+          <li><a href="https://github.com/SHADOW269/Keydir.in/issues" target="_blank" rel="noopener"> _Report Issue</a>
+          </li>
           <li><a href="/terms-and-conditions/">_Terms & Conditions</a></li>
+          <li><a href="/assets/sitemap.xml" target="_blank">_Sitemap</a></li>
         </ul>
       </div>
     </div>
@@ -682,16 +971,16 @@
   <script>
     /* Styling map associated with individual dynamic button/pill objects */
     const PILL_STYLE = {
-      yellow:"border:2px solid #111;background:var(--yellow);color:#111",
+      yellow: "border:2px solid #111;background:var(--yellow);color:#111",
       green: "border:2px solid #111;background:var(--green);color:#111",
-      blue:  "border:2px solid #fff;background:var(--blue);color:#fff",
-      pink:  "border:2px solid #fff;background:var(--pink);color:#fff",
-      orange:"border:2px solid #fff;background:var(--orange);color:#fff",
-      cyan:  "border:2px solid #111;background:var(--cyan);color:#111",
-      red:   "border:2px solid #fff;background:var(--red);color:#fff",
-      purple:"border:2px solid #fff;background:var(--purple);color:#fff",
+      blue: "border:2px solid #fff;background:var(--blue);color:#fff",
+      pink: "border:2px solid #fff;background:var(--pink);color:#fff",
+      orange: "border:2px solid #fff;background:var(--orange);color:#fff",
+      cyan: "border:2px solid #111;background:var(--cyan);color:#111",
+      red: "border:2px solid #fff;background:var(--red);color:#fff",
+      purple: "border:2px solid #fff;background:var(--purple);color:#fff",
       black: "border:2px solid #aaa;background:#111;color:#fff",
-      teal:  "border:2px solid #fff;background:var(--teal);color:#fff"
+      teal: "border:2px solid #fff;background:var(--teal);color:#fff"
     };
 
     let sel = new Set(), q = "";
@@ -705,11 +994,11 @@
         btn.dataset.id = cat.id;
         btn.setAttribute("aria-pressed", "false");
         btn.innerHTML = `<div class="cat-ico">${cat.icon}</div><div class="cat-lbl">${cat.label}</div><div class="cat-ct">${n} vendors</div>`;
-        
+
         btn.addEventListener("click", () => {
           sel.has(cat.id) ? sel.delete(cat.id) : sel.add(cat.id);
-          syncBtns(); 
-          syncBar(); 
+          syncBtns();
+          syncBar();
           render();
         });
         g.appendChild(btn);
@@ -728,12 +1017,12 @@
       const bar = document.getElementById("filterBar");
       const pills = document.getElementById("activePills");
       pills.innerHTML = "";
-      
-      if (!sel.size) { 
-        bar.classList.remove("on"); 
-        return; 
+
+      if (!sel.size) {
+        bar.classList.remove("on");
+        return;
       }
-      
+
       bar.classList.add("on");
       sel.forEach(id => {
         const cat = CAT_META.find(c => c.id === id);
@@ -741,11 +1030,11 @@
         p.className = "pill";
         p.style.cssText = PILL_STYLE[cat.col] || "";
         p.innerHTML = `${cat.icon} ${cat.label} <span style="opacity:.6">×</span>`;
-        p.addEventListener("click", () => { 
-          sel.delete(id); 
-          syncBtns(); 
-          syncBar(); 
-          render(); 
+        p.addEventListener("click", () => {
+          sel.delete(id);
+          syncBtns();
+          syncBar();
+          render();
         });
         pills.appendChild(p);
       });
@@ -754,10 +1043,10 @@
     function render() {
       const g = document.getElementById("vendorGrid");
       const qL = q.toLowerCase().trim();
-      
+
       const list = VENDORS.filter(v => {
         const catOk = !sel.size || [...sel].every(c => v.cats.includes(c));
-        const qOk   = !qL || v.name.toLowerCase().includes(qL) || v.cats.some(c => c.toLowerCase().includes(qL));
+        const qOk = !qL || v.name.toLowerCase().includes(qL) || v.cats.some(c => c.toLowerCase().includes(qL));
         return catOk && qOk;
       }).sort((a, b) => !sel.size ? 0 :
         [...sel].filter(c => b.cats.includes(c)).length - [...sel].filter(c => a.cats.includes(c)).length
@@ -796,34 +1085,34 @@
 
     const sIn = document.getElementById("searchInput");
     const sCl = document.getElementById("sClear");
-    
-    sIn.addEventListener("input", () => { 
-      q = sIn.value; 
-      sCl.classList.toggle("show", q.length > 0); 
-      render(); 
-    });
-    
-    sCl.addEventListener("click", () => { 
-      q = ""; 
-      sIn.value = ""; 
-      sCl.classList.remove("show"); 
-      sIn.focus(); 
-      render(); 
-    });
-    
-    document.getElementById("resetAll").addEventListener("click", () => {
-      sel.clear(); 
-      q = ""; 
-      sIn.value = ""; 
-      sCl.classList.remove("show");
-      syncBtns(); 
-      syncBar(); 
+
+    sIn.addEventListener("input", () => {
+      q = sIn.value;
+      sCl.classList.toggle("show", q.length > 0);
       render();
     });
 
-    document.addEventListener("DOMContentLoaded", () => { 
-      buildCats(); 
-      render(); 
+    sCl.addEventListener("click", () => {
+      q = "";
+      sIn.value = "";
+      sCl.classList.remove("show");
+      sIn.focus();
+      render();
+    });
+
+    document.getElementById("resetAll").addEventListener("click", () => {
+      sel.clear();
+      q = "";
+      sIn.value = "";
+      sCl.classList.remove("show");
+      syncBtns();
+      syncBar();
+      render();
+    });
+
+    document.addEventListener("DOMContentLoaded", () => {
+      buildCats();
+      render();
 
       const dropdown = document.querySelector('.nav-dropdown');
       const dropdownBtn = document.querySelector('.nav-dropdown-btn');
@@ -841,4 +1130,5 @@
     });
   </script>
 </body>
+
 </html>
