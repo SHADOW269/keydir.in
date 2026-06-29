@@ -231,6 +231,7 @@ const BRANDS = [
   {name:"Cybeart",         url:"https://cybeart.in/",                   spec:"Mid+ range Gaming Accessories", col:"var(--green)",  risk:false, warning_message:""},
   {name:"Dawg",            url:"https://dawgflex.com/",                 spec:"Mid+ range Gaming Accessories", col:"var(--green)",  risk:false, warning_message:""},
   {name:"EvoFox",          url:"https://www.amkette.com/pages/evofox",  spec:"Gaming Accessories",            col:"var(--orange)", risk:false, warning_message:""},
+  {name:"Fingers",         url:"https://www.fingers.co.in/",            spec:"Budget tech Accessories",       col:"var(--orange)", risk:false, warning_message:""},
   {name:"Kreo Tech",       url:"https://kreo-tech.com/",                spec:"Budget Peripherals",            col:"var(--red)",    risk:false, warning_message:""},
   {name:"Redragon",        url:"https://www.redragon.in/",              spec:"Budget Performance",            col:"var(--red)",    risk:false, warning_message:""},
   {name:"TVS Electronics", url:"https://www.tvselectronics.in/",        spec:"Classic Mechanicals",           col:"var(--yellow)", risk:false, warning_message:""},
