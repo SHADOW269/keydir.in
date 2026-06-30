@@ -13,10 +13,16 @@
 const POPUP_DATA = {
 
   /* Version string — increment this to re-show popup to returning visitors */
-  version: "2026-06-023",
+  version: "2026-06-30",
 
   /* ── NEW VENDORS ── */
   new_vendors: [
+    {
+      name: "[IC] Mochi40 By Keebforge",
+      url: "https://docs.google.com/forms/d/e/1FAIpQLSddSWL0SI44ZFKoCSp17JBUTHfpAuB5ttDP2difW1jHNGdQhg/viewform",
+      cats: ["Upcoming", "Keyboard", "PCB", "Build"],
+      added: "June 2026"
+    },
     {
       name: "[GB] Kraze65 By Neomacro",
       url: "https://neomacro.in/search?q=Kraze",
@@ -34,18 +40,6 @@ const POPUP_DATA = {
       url: "https://www.keebforge.in/",
       cats: ["Build-Services"],
       added: "June 2026"
-    },
-    {
-      name: "erikaSKOOL",
-      url: "https://docs.google.com/document/d/1xcAW0eiM7f9JBxXdp6SL5fg15mM-IWZvxRduPwHza0M/edit?tab=t.0",
-      cats: ["Build-Services"],
-      added: "May 2026"
-    },
-    {
-      name: "Ajazz Official LAUNCHING 20TH MAY 2026",
-      url: "https://www.ajazz.in/",
-      cats: ["Pre-built", "Hall Effect", "Mouse"],
-      added: "May 2026"
     },
   ],
 

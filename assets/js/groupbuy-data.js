@@ -60,6 +60,27 @@ const GROUP_BUYS = [
     warning_message: "",
     outcome: ""
   },
+  /* ── UPCOMING GROUP BUYS ── */
+  {
+    id: "ic-Mochi40",
+    name: "[IC] Mochi40",
+    organizer: "Keebforge.in",
+    organizer_url: "https://keebforge.in/",
+    icon: "⌨",
+    category: "Keyboard",
+    status: "upcoming",
+    desc: "[IC] Mochi40 Compact 40% hotswap keyboard PCB with optional OLED, knob, and wireless support.",
+    price: "₹4500",
+    moq: "MOQ: NOT SET",
+    start_date: "",
+    end_date: "10 Jul 2026",
+    est_delivery: "",
+    join_url: "https://docs.google.com/forms/d/e/1FAIpQLSddSWL0SI44ZFKoCSp17JBUTHfpAuB5ttDP2difW1jHNGdQhg/viewform",
+    discord: "https://discord.com/users/843113968734437376",
+    warning: false,
+    warning_message: "",
+    outcome: ""
+  },
 
   /* ── CLOSED GROUP BUYS ── */
   {
