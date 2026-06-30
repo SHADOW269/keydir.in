@@ -233,11 +233,12 @@ const BRANDS = [
   {name:"EvoFox",          url:"https://www.amkette.com/pages/evofox",  spec:"Gaming Accessories",            col:"var(--orange)", risk:false, warning_message:""},
   {name:"Fingers",         url:"https://www.fingers.co.in/",            spec:"Budget tech Accessories",       col:"var(--orange)", risk:false, warning_message:""},
   {name:"Kreo Tech",       url:"https://kreo-tech.com/",                spec:"Budget Peripherals",            col:"var(--red)",    risk:false, warning_message:""},
+  {name:"Portronics",      url:"https://www.portronics.com/",           spec:"Portable Tech",                 col:"var(--red)",    risk:false, warning_message:""},
   {name:"Redragon",        url:"https://www.redragon.in/",              spec:"Budget Performance",            col:"var(--red)",    risk:false, warning_message:""},
   {name:"TVS Electronics", url:"https://www.tvselectronics.in/",        spec:"Classic Mechanicals",           col:"var(--yellow)", risk:false, warning_message:""},
   {name:"UnCtrl",          url:"https://www.gameunctrl.com/",           spec:"Gaming Accessories",            col:"var(--red)",    risk:false, warning_message:""},
+  {name:"Varmilo",         url:"https://varmiloindia.com/",             spec:"Premium Mechanical Keyboards",  col:"var(--purple)", risk:false, warning_message:""},
   {name:"Xtro",            url:"https://xtro.gg/",                      spec:"Indian Brand That Cares",       col:"var(--purple)", risk:false, warning_message:""},
-  {name:"Portronics",      url:"https://www.portronics.com/",           spec:"Portable Tech",                 col:"var(--red)",    risk:false, warning_message:""},
   /*{name:"Ant Esports",     url:"https://antesports.com/",               spec:"Budget PC Hardware",      col:"var(--green)",  risk:false, warning_message:""},*/
 ];
 

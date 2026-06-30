@@ -18,6 +18,12 @@ const POPUP_DATA = {
   /* ── NEW VENDORS ── */
   new_vendors: [
     {
+      name: "Varmiloindia",
+      url: "https://varmiloindia.com/",
+      cats: ["Keyboard", "Deskmat"],
+      added: "June 2026"
+    },
+    {
       name: "[IC] Mochi40 By Keebforge",
       url: "https://docs.google.com/forms/d/e/1FAIpQLSddSWL0SI44ZFKoCSp17JBUTHfpAuB5ttDP2difW1jHNGdQhg/viewform",
       cats: ["Upcoming", "Keyboard", "PCB", "Build"],
