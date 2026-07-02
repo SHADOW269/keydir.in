@@ -200,7 +200,8 @@ const DIY_BUILDERS = [
   { name:"Parix",         url:"https://parix.in/",                       icon:"⚗",  col:"var(--purple)",  desc:"Hand-assembled split keyboards for developers. Built to order with open source firmware. ",    tag:"Split-Keybs", warning:false, warning_message:"", phone:"", whatsapp:"", discord:"" },
   { name:"MOOn",          url:"https://docs.google.com/document/d/e/2PACX-1vTgzL4WWdAgfIhWp30W5CC2cd7HodrE8Pbhl9rsO7SG3YdN6rYHc-2U0nX4amCVsrrW7sGc3XoDJWWP/pub",   icon:"🛠",  col:"var(--green)",   desc:"Hand-assembled split keyboards and build, repair, soldering, and 3D printing services! ", tag:"Build & Repair", warning:false, warning_message:"", phone:"", whatsapp:"9409513496", discord:"https://discord.com/users/294624472336564226" },
   { name:"MrSnek",        url:"https://mrsnek.com/",                     icon:"🌀",  col:"var(--green)",   desc:"Design, prototype, and craft our products in-house, with full creative control and attention to detail. From bold spacebars to expressive keycap sets.", tag:"KEYCAPS", warning:false, warning_message:"", phone:"", whatsapp:"", discord:"" },
-  // No-website example:
+  { name:"ThockFactory",  url:"=https://thockfactory.com/in",            icon:"🌀",  col:"var(--green)",   desc:"Custom keycaps, designed by you and your own custom keycaps using our intuitive online configurator.", tag:"KEYCAPS", warning:false, warning_message:"", phone:"", whatsapp:"", discord:"" },
+   // No-website example:
   // { name:"CablesByRaj", url:"", icon:"🌀", col:"var(--green)", desc:"Handcrafted coiled cables.", tag:"CABLES", warning:false, warning_message:"", phone:"", whatsapp:"919876543210", discord:"" },
 ];
 
