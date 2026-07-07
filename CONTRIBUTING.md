@@ -1,16 +1,23 @@
 ## Contributing
 
-Community contributions keep KEYDIR accurate and useful.
+KEYDIR is a community-driven project, and contributions help keep the directory accurate, up to date, and useful for everyone.
 
-### 1. Fork the repo
+### 1. Fork the repository
 
-```
+```text
 https://github.com/SHADOW269/keydir.in/fork
 ```
 
-### 2. Edit vendor data in `/assets/js/shared.js`
+### 2. Add or update vendor data
 
-**Standard entry:**
+Edit the vendor list in:
+
+```text
+/assets/js/shared.js
+```
+
+**Standard vendor entry**
+
 ```js
 {
   name: "VendorName",
@@ -19,7 +26,8 @@ https://github.com/SHADOW269/keydir.in/fork
 }
 ```
 
-**Entry with a community warning flag:**
+**Vendor entry with a community warning**
+
 ```js
 {
   name: "VendorName",
@@ -30,21 +38,23 @@ https://github.com/SHADOW269/keydir.in/fork
 }
 ```
 
-### 3. Follow the contribution rules
+### 3. Contribution guidelines
 
-✅ Vendor operates in India  
-✅ URL is live and working  
-✅ Categories match `CAT_META` in `shared.js`  
-✅ Descriptions are neutral and factual  
-❌ No affiliate links  
-❌ No sponsored placements  
+Before submitting your changes, make sure that:
 
-### 4. Open a pull request
+* ✅ The vendor operates in India.
+* ✅ The website is live and accessible.
+* ✅ Categories match the values defined in `CAT_META` in `shared.js`.
+* ✅ All descriptions are neutral, factual, and unbiased.
+* ❌ Do not add affiliate or referral links.
+* ❌ Do not submit sponsored or promotional listings.
 
-Use descriptive titles:
+### 4. Open a Pull Request
 
-```
-feat: add XYZ vendor (Switches, Keycaps)
-fix: update ABC vendor URL
-warn: flag DEF vendor — community support concerns
+Use a clear, descriptive title. For example:
+
+```text
+feat: add XYZ Vendor (Switches, Keycaps)
+fix: update ABC Vendor URL
+warn: flag DEF Vendor for community-reported support concerns
 ```
