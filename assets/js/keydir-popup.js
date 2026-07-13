@@ -527,7 +527,7 @@ function buildKeyDirPopup(force = false) {
               <span>KEYDIR.in and its maintainers are not responsible for purchase decisions, vendor reliability, or any financial loss.</span>
             </div>
 
-            <a href="/Terms-and-Conditions/" class="kd-terms-full-btn">
+            <a href="/terms-and-conditions/" class="kd-terms-full-btn">
               <span>Read Full Terms &amp; Conditions</span>
               <span>→</span>
             </a>
