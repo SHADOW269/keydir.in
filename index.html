@@ -868,9 +868,8 @@
 
       // 2. Notification Updates System Bell trigger
       document.getElementById("heroBell")?.addEventListener("click", () => {
-        // Reset local storage flag to ensure popup re-opens immediately upon clicks
-        localStorage.removeItem("kd-popup-seen");
-        buildKeyDirPopup();
+        // Force re-open popup regardless of cooldown
+        buildKeyDirPopup(true);
       });
 
       // 3. Navigation Header Dropdown Logic Operations

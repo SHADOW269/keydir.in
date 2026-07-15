@@ -12,7 +12,7 @@
    ══════════════════════════════════════════════════════════════ */
 const POPUP_DATA = {
 
-  /* Version string — increment this to re-show popup to returning visitors */
+  /* Version string — increment this to force re-show to ALL visitors */
   version: "15-07-2026",
 
   /* ── NEW VENDORS ── */
@@ -53,6 +53,39 @@ const POPUP_DATA = {
   ],
 
 };
+
+/* ══════════════════════════════════════════════════════════════
+   SINGLE STORAGE KEY — replaces the old two-key system
+   Stores: { version: string, timestamp: number }
+   ══════════════════════════════════════════════════════════════ */
+const KD_POPUP_KEY = "kd-popup-state";
+const RE_SHOW_DAYS = 30;
+const RE_SHOW_MS = RE_SHOW_DAYS * 24 * 60 * 60 * 1000;
+
+function getPopupState() {
+  try { return JSON.parse(localStorage.getItem(KD_POPUP_KEY)); }
+  catch { return null; }
+}
+
+function shouldShowPopup() {
+  const state = getPopupState();
+  if (!state) return true;                              // new visitor — never seen
+  if (state.version !== POPUP_DATA.version) return true; // content updated
+  return (Date.now() - state.timestamp) > RE_SHOW_MS;   // 30 days elapsed
+}
+
+function markPopupSeen() {
+  localStorage.setItem(KD_POPUP_KEY, JSON.stringify({
+    version: POPUP_DATA.version,
+    timestamp: Date.now()
+  }));
+}
+
+/* Migration: remove old keys left by previous versions */
+try {
+  localStorage.removeItem("kd-popup-seen");
+  localStorage.removeItem("keydir_popup_last_seen");
+} catch {}
 
 /* ══════════════════════════════════════════════════════════════
    POPUP STYLES
@@ -414,11 +447,15 @@ const POPUP_DATA = {
 function buildKeyDirPopup(force = false) {
   const { new_vendors, updates, version } = POPUP_DATA;
 
-  /* ── Already dismissed this version? Skip. ── */
-  const seen = localStorage.getItem("kd-popup-seen");
-  if (!force && seen === version) {
-    return;
+  /* ── Skip if already dismissed for this version (unless forced) ── */
+  if (!force) {
+    const state = getPopupState();
+    if (state && state.version === version) return;
   }
+
+  /* ── Prevent duplicate overlays ── */
+  const existing = document.getElementById("kd-overlay");
+  if (existing) return;
 
   /* ── Build HTML ── */
   const overlay = document.createElement("div");
@@ -560,7 +597,7 @@ function buildKeyDirPopup(force = false) {
   function closePopup() {
     overlay.style.animation = "kd-fade-in .18s ease reverse";
     setTimeout(() => overlay.remove(), 180);
-    localStorage.setItem("kd-popup-seen", version);
+    markPopupSeen();
   }
 
   overlay.querySelector("#kd-close").addEventListener("click", closePopup);
@@ -575,23 +612,11 @@ function buildKeyDirPopup(force = false) {
   });
 }
 
-/* ── Show popup only once every 7 days ── */
-const POPUP_KEY = "keydir_popup_last_seen";
-const WEEK_IN_MS = 7 * 24 * 60 * 60 * 1000;
-
+/* ══════════════════════════════════════════════════════════════
+   AUTO-SHOW on DOMContentLoaded
+   ══════════════════════════════════════════════════════════════ */
 document.addEventListener("DOMContentLoaded", () => {
-
-  function shouldShowPopup() {
-    const lastSeen = localStorage.getItem(POPUP_KEY);
-    if (!lastSeen) return true;
-    return (Date.now() - parseInt(lastSeen, 10)) > WEEK_IN_MS;
-  }
-
   if (shouldShowPopup()) {
-    setTimeout(() => {
-      buildKeyDirPopup();
-      localStorage.setItem(POPUP_KEY, Date.now());
-    }, 600);
+    setTimeout(() => buildKeyDirPopup(), 600);
   }
-
 });
