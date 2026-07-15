@@ -13,10 +13,16 @@
 const POPUP_DATA = {
 
   /* Version string — increment this to re-show popup to returning visitors */
-  version: "2026-06-30",
+  version: "15-07-2026",
 
   /* ── NEW VENDORS ── */
   new_vendors: [
+    {
+      name: "Arcadex",
+      url: "https://www.arcadex.in/",
+      cats: ["Hall Effect", "Mouse", "Mousepad"],
+      added: "July 2026"
+    },
     {
       name: "Varmiloindia",
       url: "https://varmiloindia.com/",
@@ -24,21 +30,9 @@ const POPUP_DATA = {
       added: "June 2026"
     },
     {
-      name: "[IC] Mochi40 By Keebforge",
-      url: "https://docs.google.com/forms/d/e/1FAIpQLSddSWL0SI44ZFKoCSp17JBUTHfpAuB5ttDP2difW1jHNGdQhg/viewform",
-      cats: ["Upcoming", "Keyboard", "PCB", "Build"],
-      added: "June 2026"
-    },
-    {
       name: "[GB] Kraze65 By Neomacro",
       url: "https://neomacro.in/search?q=Kraze",
       cats: ["Active"],
-      added: "June 2026"
-    },
-    {
-      name: "FernTech",
-      url: "https://ferntechworld.com/products/aula-f75-gasket-wireless-mechanical-keyboard",
-      cats: ["Pre-built", "Mousepad", "Glass-pad"],
       added: "June 2026"
     },
     {

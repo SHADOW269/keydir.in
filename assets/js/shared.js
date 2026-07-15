@@ -135,12 +135,12 @@ const THIRD_PARTY_SELLERS = [
 const VENDORS = [
   {name:"AceKBD",         url:"https://acekbd.com/",                           cats:["Barebone","Accessories","Deskpad"]},
   {name:"AltF4Gear",      url:"https://altf4gear.com/",                        cats:["Pre-built","Hall Effect","Mouse"]},
+  {name:"Arcadex",        url:"https://www.arcadex.in/",                       cats:["Hall Effect", "Mouse", "Mousepad"]},
   {name:"Conceptkart",    url:"https://conceptkart.com/pages/keyboard-mouse",  cats:["Pre-built","Hall Effect","Mouse","Accessories"]},
   {name:"Credkeys",       url:"https://credkeys.com/",                         cats:["Pre-built","Switches","Keycaps","Parts/Tools","Accessories"]},
   {name:"CtrlShiftStore", url:"https://ctrlshiftstore.com/",                   cats:["Pre-built","Low-Profile","Barebone","Alice","Hall Effect", "Keycaps","Switches","Accessories","Mouse","Mousepad","Glass-pad"]},
   {name:"Curiosity Caps", url:"https://curiositycaps.in/",                     cats:["Keycaps","Accessories","Mousepad","Deskpad","Glass-pad","PC Parts"]},
   {name:"Cybeart",        url:"https://cybeart.in/",                           cats:["Pre-built","Mouse","Mousepad"]},
-  {name:"FernTech",       url:"https://ferntechworld.com/products/aula-f75-gasket-wireless-mechanical-keyboard",    cats:["Pre-built","Mouse","Mousepad","Glass-pad"]},
   {name:"GenesisPC",      url:"https://www.genesispc.in/",                     cats:["Pre-built","Hall Effect","Keycaps","Switches","Parts/Tools","Accessories","Mouse","Mousepad","Deskpad","Glass-pad"]},
   {name:"HardwareCorpus", url:"https://hardwarecorpus.in/",                    cats:["Pre-built","Hall Effect","Barebone","Alice","Keycaps","Accessories","Mouse","Deskpad","PC Parts"],warning:true,warning_message:"Community reports mention delays and slow shipping."},
   {name:"KeebsMod",       url:"https://www.keebsmod.com/",                     cats:["Pre-built","Barebone","Keycaps","Switches","Parts/Tools","Accessories"]},

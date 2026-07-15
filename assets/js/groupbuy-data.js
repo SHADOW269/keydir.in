@@ -52,7 +52,7 @@ const GROUP_BUYS = [
     price: "₹11,000",
     moq: "MOQ: NOT SET",
     start_date: "08 Jun 2026",
-    end_date: "30 Jun 2026",
+    end_date: "12 Jul 2026",
     est_delivery: "Q4 2026",
     join_url: "https://neomacro.in/search?q=Kraze",
     discord: "https://discord.com/invite/W4ZzfmC8Me",
@@ -68,18 +68,18 @@ const GROUP_BUYS = [
     organizer_url: "https://keebforge.in/",
     icon: "⌨",
     category: "Keyboard",
-    status: "upcoming",
+    status: "closed",
     desc: "[IC] Mochi40 Compact 40% hotswap keyboard PCB with optional OLED, knob, and wireless support.",
     price: "₹4500",
     moq: "MOQ: NOT SET",
     start_date: "",
     end_date: "10 Jul 2026",
     est_delivery: "",
-    join_url: "https://docs.google.com/forms/d/e/1FAIpQLSddSWL0SI44ZFKoCSp17JBUTHfpAuB5ttDP2difW1jHNGdQhg/viewform",
+    join_url: "https://keebforge.in/",
     discord: "https://discord.com/users/843113968734437376",
     warning: false,
     warning_message: "",
-    outcome: ""
+    outcome: "MOQ not met, GB closed."
   },
 
   /* ── CLOSED GROUP BUYS ── */
